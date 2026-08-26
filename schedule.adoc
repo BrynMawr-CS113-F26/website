@@ -1,0 +1,217 @@
+[cols="1,2,4a,2a", options="header"]
+|===
+| Week 
+| Date 
+| Agenda
+| Reading
+
+//-----------------------------
+| 1
+| Sept 1, 3 anchor:week01[]
+| *Course Introduction, Terminal, Compilation, Data Types (Ints, Doubles, Strings)* 
+
+* Assignment 01: Hello World & Errors, Due Sept 4
+* Lab Sept 1: Terminal, Command Line, Text Editor
+
+|
+* Chapter 1: Computer Programming
+* Chapter 2: Variables & Operators
+
+//-----------------------------
+| 2 
+| Sept 8, 10 anchor:week02[]
+| *Input / Output, Methods I*
+
+* Assignment 02: Variables & I/O, Due Sept 11
+* Lab Sept 8: Variables, Converting Data Types, Input
+
+|
+* Chapter 3: Input & Output
+* Chapter 4: Methods & Testing
+
+//-----------------------------
+|3
+|Sept 15, 17 anchor:week03[]
+|*Methods II, Conditionals I*
+
+* Assignment 03: Methods, Due Sept 18
+* Lab Sept 15: Methods
+
+|
+* Chapter 5: Conditionals & Logic
+// * link:lectures/Lecture-Week03-Feb3-NCurses.pdf[Lecture Feb 3 - NCurses]
+// * link:lectures/Lecture-Week03-Feb5-DataStructures.pdf[Lecture Feb 5 - Data Structures]
+
+//-----------------------------
+|4
+|Sept 22, 24 anchor:week04[]
+|*Conditionals II, Recursion I* 
+
+* Assignment 04: Methods Conditionals, & Strings, Due Sept 25
+* Lab Sept 22: Conditionals  & Strings
+
+|
+// * link:lectures/Lecture-Week03-Feb5-DataStructures.pdf[Lecture Feb 10 - Data Structures]
+// * link:lectures/Lecture-Week04-Feb12-Binary.pdf[Lecture Feb 12 - Binary]
+* Chapter 6: Recursive Methods
+
+//-----------------------------
+|5
+|Sept 29, Oct 1 anchor:week05[]
+|*Recursion II, Loops I* 
+
+* Assignment 05: Recursion, Due Oct 2
+* Lab Sept 29: Recursion & Arrays
+
+|
+// * link:lectures/Lecture-Week04-Feb12-Binary.pdf[Lecture Feb 17 - Binary]
+// * link:lectures/Lecture-Week05-Feb17-BitOps.pdf[Lecture Feb 19 - Bitops]
+* Chapter 9: Loops 
+
+//-----------------------------
+|6
+|Oct 6, 8 anchor:week06[]
+|*Loops II, Arrays I*
+
+* Assignment 06: Recursion & Arrays, Due Oct 9
+* Lab Oct 8: Recursive Array Methods
+
+|
+// * link:lectures/Lecture-Week06-Feb24-IntroAssembly.pdf[Lecture Feb 24]
+// * link:lectures/Lecture-Week06-Feb26-Assembly.pdf[Lecture Feb 26] 
+* Chapter 8: Arrays and References
+
+//-----------------------------
+|7
+| Oct 13, 15 anchor:week07[]
+|*Fall Break*
+
+* *NO LECTURES, LABS, HOMEWORKS*
+
+|
+
+// |*Multidimensional Arrays, Class Design* 
+//
+// * Topics: Tracing assembly, loops, conditionals
+// * Topics: what is an operating system?, System calls
+// * Lab March 3: **Quiz 02**, link:studyguide2.html[Study Guide 2], link:studyguide3.html[StudyGuide 3]
+// * link:assts/asst07.html[Assignment 07]: Due March 17th in class, no extensions
+//
+// |
+// * link:lectures/Lecture-Week07-March3-AssemblyBranch.pdf[Lectures March 3,5] 
+
+//-----------------------------
+|8
+|Oct 20, 22 anchor:week08[]
+|*Midterm Review, Midterm Exam*
+|
+
+//-----------------------------
+|9
+|Oct 27, 29 anchor:week09[]
+|*Arrays II, Mutable vs Immutable Objects* 
+
+// * Topics: Processes, fork, signals
+* Assignment 07: Loops, Due Oct 30
+* Lab Oct 27: Loops and 2D Arrays
+// * link:assts/asst08.html[Assignment 08]: Image Conscious. Due March 20th at midnight
+
+| 
+// link:lectures/Lecture-Week09-March17-OS-Processes.pdf[Lectures - March 17 and 19]
+* Chapter 10: Immutable Objects
+* Chapter 11: Mutable Objects
+
+
+//-----------------------------
+|10
+|Nov 3, 5 anchor:week10[]
+|*Class Design* 
+
+// * Topics: Threads vs processes, designing concurrent algorithms, pthreads
+* Assignment 08: Game (TBD), Due Nov 6
+* Lab Nov 3: TBD (Probably Files and Exceptions)
+// * link:assts/asst09.html[Assignment 09]: Trust the process. Due March 27th at midnight
+
+|
+// * link:lectures/Lecture-Week10-March31-Threads1.pdf[Lectures - March 24 and 16]
+* Chapter 12: Designing Classes
+// * link:lectures/threads-min.c[threads-min.c]
+
+//-----------------------------
+|11
+|Nov 10, 12 anchor:week11[]
+|*Inheritance* 
+
+// * Topics: synchronization, deadlock, producer/consumer pattern
+// * link:assts/asst10.html[Assignment 10]: Mandelthreads. Due April 3rd
+* Assignment 09: Object Oriented Programming, Due Nov 13
+* Lab Nov 10: Class Design
+
+|
+// * link:lectures/Lecture-Week11-March31-ThreadsConcurrency.pdf[Lectures - March 31, April 2]
+* Chapter 15: Extending Classes
+// * link:lectures/threads-count.c[threads-count.c]
+
+
+//-----------------------------
+|12
+|Nov 17, 19 anchor:week12[]
+|*Interfaces, Linear Search* 
+
+// * Topics: Thread safety, thread performance
+// * Topics: Memory hierarchy, spatial/temporal locality, caching
+* Assignment 10: Objects, Classes, & Interfaces, Due Nov 20
+* Lab Nov 17: Interfaces
+
+|
+// * link:lectures/Lecture-Week12-April7-ThreadPerformance.pdf[Lecture April 7]
+* Chapter 18.7: Interfaces 
+// * link:lectures/Lecture-Week12-April9-MemoryHierarchy.pdf[Lecture April 9]
+
+//-----------------------------
+|13
+|Nov 24 anchor:week13[]
+|*Binary Search*
+
+// * link:assts/asst12.html[Assignment 12]: Hold on to your memories. Due April 17th. ** Worksheet due tuesday April 21**
+// * Practice Quiz 04 link:studyguide5.html[Study Guide 05]
+// * Assignment 12: No homework! Happy Thanksgiving!
+// * Lab Nov 24: No lab! Happy Thanksgiving!
+* No labs and no homework! Happy Thanksgiving!
+
+|
+// * link:lectures/Lecture-Week12-April9-Malloc.pdf[Lecture April 14]
+// * link:lectures/Lecture-Week13-April16-CodeOpt.pdf[Lecture April 16]
+* Chapter 13.8: Binary Search
+
+//-----------------------------
+|14
+|Dec 1, 3 anchor:week14[]
+|*Sorting* 
+
+// * C++ classes (operators, constructors, destructors), references, STL (list, vector, map), simple templates
+// * link:assts/asst13.html[(Optional/Extra Credit) Assignment 13]: C++ Image Class. Due May 1st.
+
+* Assignment 11: Sorting, Due Dec 4
+* Lab Dec 1: Sorting
+
+|
+* Chapter 13: Objects of Arrays
+// * link:lectures/Lecture-Week14-April21-C++.pdf[Lecture April 21, 23]
+// * link:lectures/mystring.cpp[mystring.cpp]
+
+
+//-----------------------------
+|15
+|Dec 8, 10 anchor:week15[]
+|*Runtime Analysis, Final Review* 
+
+// * link:studyguide-final.html[Final Study Guide]
+// * Class April 28: Review Quizzo and party
+* Lab Dec 8: Runtime Analysis
+
+|
+
+|===
+
+

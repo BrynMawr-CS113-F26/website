@@ -1,0 +1,97 @@
+include::header.adoc[]
+//override default to include table css
+:stylesheet: front.css
+:leveloffset: -1
+
+:course: CMSC 113
+:title: Introduction to Computer Science
+:term: Fall 2026
+
+= {course}: {title} 
+
+Term: {term}
+
+Instructor: Kelly Shiptoski
+
+// [.anns]
+//
+// * link:final-practice.html[Final Exam Flashcards]
+// * link:assts/asst13.html[Assignment 13]: C++ Photoshop. Due Friday, May 1 at midnight. 
+// * Final Exam: 3 hours, Closed Book with one written cheatsheet, May 6th, 9:30AM-12:30PM. Park 200A/200D
+
+== Course Info
+
+**Welcome to CS113: Introduction to Computer Science**! 
+
+// image::matrix_original.jpg[]
+This is an introduction to the discipline of computer science, suitable for those students with a mature quantitative ability.
+This fast-paced course covers the basics of computer programming, with an emphasis on program design, problem decomposition, 
+and object-oriented programming in Java. Graduates of this course will be able to write small computer programs independently;
+examples include data processing for a data-based science course, small games, or estimating likelihood of probabilistic events, 
+etc. No computer programming experience is necessary or expected. Students are required to register for a weekly lab.
+
+// http://svslibrary.pbworks.com/f/Data+Structures+and+Algorithm+Analysis+in+C+-+Mark+Allen+Weiss.pdf
+// http://cslabcms.nju.edu.cn/problem_solving/images/c/cc/The_C_Programming_Language_%282nd_Edition_Ritchie_Kernighan%29.pdf
+
+=== Meeting Times
+
+[.center,options="header,autowidth"]
+|===
+| Activity | Location | Time
+
+| Lecture | Park 245 | Tuesdays and Thursdays 1:10 PM - 2:30 PM
+| Lab | Park 231 | Tuesdays 2:40 PM - 4:00 PM 
+| Office Hours - Prof. Kelly Shiptoski | Park 204 | Tuesdays 4:00 PM - 5:00 PM, and Flexible 1 Hr Zoom
+| TA Office Hours - TBA | TBA | TBA 
+
+|===
+
+== **Schedule**
+
+The syllabus may change during the semester. Please check here every week for updates 
+on lecture content, worksheets, and assignments.
+
+include::schedule.adoc[]
+
+== Text and Tools
+
+* link:thinkjava-textbook.pdf[Textbook: Think Java]
+// *  **Dive into Systems** by Suzanne J. Matthews, Tia Newhall, and Kevin C. Webb.  Available free online from link:https://diveintosystems.org/[Dive into Systems]
+// * link:https://patilsai.wordpress.com/wp-content/uploads/2019/07/data_structures_and_algorithm_analysis_in_c.pdf[Data Structures in C by Mark Allen Weiss]
+// *  **Github Account** Please go to link:https://github.com/[github.com] and register. You will be using github to submit assignments. 
+// *  **Slack** Please go to link:https://slack.com/signin[slack.com]. Our workspace is BrynMawr-CS223-S26. You can ask questions and request one-on-one help over zoom using this course's slack channel. 
+
+
+== Grading Policies
+
+All graded work will receive a grade, 4.0, 3.7, 3.3, 3.0, 2.7, 2.3, 2.0, 1.7,
+1.3, 1.0, or 0.0. At the end of the semester, final grades will be calculated
+as a weighted average of all grades according to the following weights:
+
+|===
+|35% | Final Exam
+|35% | Midterm Exam
+|10% | Assignments
+|15% | Labs and Quizzes
+| 5% | Participation and Attendance
+|===
+
+include::quizzes.adoc[]
+
+include::latePolicy.adoc[]
+
+include::integrity.adoc[]
+
+include::accomodations.adoc[]
+
+include::covidpolicy.adoc[]
+
+== Academic support
+ 
+* link:https://www.brynmawr.edu/academicsupport/academic-and-student-support-services[Academic Support, including help with math and quantitative skills!]
+
+include::legal.adoc[]
+
+// [unstyled]
+//  * This site was generated with link:https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/[asciidoctor]
+// t cheat

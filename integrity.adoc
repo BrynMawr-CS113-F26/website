@@ -1,0 +1,20 @@
+== Academic Integrity
+
+At Bryn Mawr, we assume students are trustworthy and work with honesty and
+integrity.
+link:https://www.brynmawr.edu/deans/academic-and-community-integrity[Look here
+for information about Bryn Mawr's Honor Code.]. 
+
+Midterms and the final will be 
+closed book. 
+
+Lab coding challenges will be open-book and closed-internet. 
+Thus, you cannot use VS Code, internet browsers, and other programming aids.  
+However, you can use the text book and your class notes. These challenges will be completed in pairs.
+
+Code for homework assignments must be written by *you*. In addition to the code itself, each assignment will
+require the submission of a README file explaining how the code works, why it was written that way, and,
+if applicable, what parts are not working and your reasoning behind those issues. Cheating is taken very seriously,
+and the use of AI tools is considered cheating.
+
+You can ask questions in class, in office hours, and on slack. We are here to help. 

@@ -1,0 +1,22 @@
+
+=== Labs, quizzes, exams
+
+Labs and Quizzes are mandatory. No credit is possible for missed quizzes.  If
+you must miss a quiz, you must make arrangements to take the quiz at another
+time *BEFORE* the scheduled quiz. If you miss a quiz for medical reasons, you must
+provide a doctor's note.  
+
+Labs will consist of hands-on practice in teams, alternating each week between 
+written exercises and timed coding sessions. Coding sessions will be graded and 
+count towards your quiz grade. Worksheets count towards your participation grade. 
+
+Labs will consist of hands-on programming challenges (completed in teams) and 
+closed book quizzes. Quizzes will be announced the week prior.
+
+There will be one midterm exam and final exam for the semester. Details and dates will be
+released during the semester.  Please read the section on
+link:#_accommodations[accommodations] if you are in need of extra time.  You
+must inform us of accommodations or conflicts *at least 2 weeks in advance* of
+the exam.
+
+Quizzes and exams will be closed book.
