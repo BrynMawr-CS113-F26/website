@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.26">
+<title>Lab 1: CS Lab Machines &amp; Command Line</title>
+<link rel="stylesheet" href="../style/cs21.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<h2 id="_lab_1_cs_lab_machines_command_line" class="discrete">Lab 1: CS Lab Machines &amp; Command Line</h2>
+<h2 id="_objectives" class="discrete">Objectives</h2>
+<div class="paragraph">
+<p>The main goals for this lab are:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Get familiar with the command line.</p>
+</li>
+<li>
+<p>Set up your course directory on the CS machines.</p>
+</li>
+<li>
+<p>Start using vim.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Make sure to write down your answers for each <strong>Question</strong> below. Whenever you see <strong>TODO</strong>,
+that means there is an action item for you to complete. When you see <strong>Question</strong>, that
+means you should fill in your answer on the worksheet provided to you.
+When you believe you have finished the lab, show Prof. Shiptoski your work.</p>
+</div>
+<hr>
+<h2 id="_cs_lab_machines_the_command_line" class="discrete">CS Lab Machines &amp; the Command Line</h2>
+<div class="paragraph">
+<p>The computers in the lab rooms (Park 230 and 231) are dual booted with Windows 10
+and Ubuntu (a version of linux). This means that you can use either the Windows
+or Linux operating systems (OS). For this course, we will be using Linux.</p>
+</div>
+<div class="paragraph">
+<p>You should have received an email from David Diaz with your credentials to the
+Computer Science lab machines. If you did not receive credentials from him,
+immediately stop by his office in Park 294.</p>
+</div>
+<div class="paragraph">
+<p><strong>TODO:</strong> Log into the Linux (Ubuntu) OS using the credentials you received from David.
+Note: These are not your BMC/HC credentials that you normally use.</p>
+</div>
+<div class="paragraph">
+<p>After logging in, click on the grid on the bottom left of the screen.
+This will launch a screen showing all the applications. In the search bar on
+top, type terminal, and then click on the application. This will launch the
+terminal. In this semester we will be working primarily in the terminal.</p>
+</div>
+<hr>
+<h3 id="_understanding_the_command_line" class="discrete">Understanding the Command Line</h3>
+<div class="paragraph">
+<p>As soon as the terminal application launches, you should see a
+black screen. This is where you will type command line
+commands. For now, we haven’t covered any commands in detail
+so just type anything into the terminal.</p>
+</div>
+<div class="paragraph">
+<p>To run a command in the terminal, click Enter. After typing
+anything into the terminal (here I mean actually mean anything),
+click <code>Enter</code>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Question 1:</strong> After you click <code>Enter</code>, what does the terminal
+tell you?</p>
+</div>
+<div class="paragraph">
+<p><strong>Answer:</strong> <em><em></em></em></p>
+</div>
+<hr>
+<h4 id="_change_your_password" class="discrete">Change Your Password</h4>
+<div class="paragraph">
+<p>You can completely interact with your computer using just the terminal! When a
+new account is created for you on any computer system, you should always
+change your password.</p>
+</div>
+<div class="paragraph">
+<p><strong>TODO:</strong> Change your password! In terminal, type the command <code>passwd</code> and then press <code>Enter</code>
+and then follow the instructions to change your password.</p>
+</div>
+<hr>
+<h4 id="_command_line_prompt" class="discrete">Command Line Prompt</h4>
+<div class="paragraph">
+<p>All of the text thats on the left of where you are typing
+commands is called the <code>prompt</code>. You should notice that there
+are two words in the prompt that are seperated by an <code>@</code>
+symbol. For example, <code>kshiptoski@goldengate:~$</code>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Question 2:</strong> What are the two words in your prompt? What
+does the first word indicate (the word infront of the <code>@</code>)?
+What does the second word indicate (the word after the <code>@</code>)?</p>
+</div>
+<div class="paragraph">
+<p><strong>Answer:</strong> <em><em></em></em></p>
+</div>
+<hr>
+<h4 id="_navigation_commands" class="discrete">Navigation Commands</h4>
+<div class="paragraph">
+<p>Now we are ready to start using command line arguments.
+We will be using these command lines today:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>ls</code></p>
+</li>
+<li>
+<p><code>cd</code></p>
+</li>
+<li>
+<p><code>mkdir</code></p>
+</li>
+<li>
+<p><code>wget</code></p>
+</li>
+<li>
+<p><code>cat</code></p>
+</li>
+<li>
+<p><code>wc</code></p>
+</li>
+</ul>
+</div>
+<hr>
+<h5 id="_pwd_command" class="discrete"><code>pwd</code> command</h5>
+<div class="paragraph">
+<p>The first command we’ll look at is <code>pwd</code>. This command prints
+the <strong>path</strong> to the <strong>working</strong> <strong>directory</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Computers are structured in a directory hierarchy where
+directories can contain other directories or files. A directory
+is just another way of saying a folder.</p>
+</div>
+<div class="paragraph">
+<p><strong>TODO:</strong> Run the command <code>pwd</code> (this means type <code>pwd</code> in the
+command line and click <code>Enter</code> - we’ll be use this
+terminology from here on out).</p>
+</div>
+<div class="paragraph">
+<p><strong>Question 3:</strong> What gets printed out? What do you think it means?</p>
+</div>
+<div class="paragraph">
+<p><strong>Answer:</strong> <em><em></em></em></p>
+</div>
+<hr>
+<h5 id="_ls_command" class="discrete"><code>ls</code> command</h5>
+<div class="paragraph">
+<p>The next command will look at is <code>ls</code>. Instead of us first describing this command,
+we’ll let you try it out yourself. Run the command <code>ls</code>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Question 4:</strong> What do you see printed out on in the terminal? What do you think all of that means?</p>
+</div>
+<div class="paragraph">
+<p><strong>Answer:</strong> <em><em></em></em></p>
+</div>
+<div class="paragraph">
+<p>We can add arguments to the <code>ls</code> command. After typing in <code>ls</code>, type the output of the <code>pwd</code> command. For example, I would run the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>ls /home/kshiptoski</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Question 5:</strong> When you run <code>ls</code> with the path to your working directory, what do you see? Do you see anything different than before when you ran just <code>ls</code>? Why or why not?</p>
+</div>
+<div class="paragraph">
+<p><strong>Answer:</strong> <em><em></em></em></p>
+</div>
+<hr>
+<h5 id="_piping" class="discrete">Piping</h5>
+<div class="paragraph">
+<p>We can pass the output from one command as an argument to another command by using the <code>|</code> symbol.</p>
+</div>
+<div class="paragraph">
+<p><strong>TODO:</strong> Run the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>pwd | ls</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Question 6:</strong> What do you see? Do you see anything different than before when you ran just <code>ls</code>? Why or why not?</p>
+</div>
+<div class="paragraph">
+<p><strong>Answer:</strong> <em><em></em></em></p>
+</div>
+<hr>
+<h4 id="_home_directory" class="discrete">Home Directory</h4>
+<div class="paragraph">
+<p>So far we’ve used ls to look at the files and folders in our home directory. A home directory is
+where all the files and folders that belong to a specific user exists.</p>
+</div>
+<div class="paragraph">
+<p><strong>TODO:</strong> Look carefully again at the command line prompt. At the end of the line after the name of the
+machine you are working on, you should see <strong>two</strong> characters. What symbols do you see?
+One of those represents your home directory - which one do you think it might be?</p>
+</div>
+<div class="paragraph">
+<p>We can answer this question by using the <code>ls</code> command. <strong>TODO:</strong> Run the <code>ls</code> command twice, each time
+add one of the characters/symbols as an argument to <code>ls</code>. For example, if the characters were <code>A</code> and <code>B</code>
+(they are not), you would run:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>ls A
+ls B</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The output of running <code>ls</code> with each character would give you a hint of which of the two symbols represents your home directory.</p>
+</div>
+<div class="paragraph">
+<p><strong>Question 7:</strong> So, which of the two characters/symbols represent your home directory?</p>
+</div>
+<div class="paragraph">
+<p><strong>Answer:</strong> <em><em></em></em></p>
+</div>
+<hr>
+<h4 id="_absolute_vs_relative_paths" class="discrete">Absolute vs Relative Paths</h4>
+<div class="paragraph">
+<p>So far we used <code>ls</code> to look at files in our own directory. When we run the command <code>ls /home/&lt;USERNAME&gt;</code>
+(here <code>&lt;USERNAME&gt;</code> is a placeholder for your actual username), the argument was an <strong>absolute path</strong>. An <strong>absolute path</strong>
+is the path from the root (or top) of the computer/file system. We can also specify <strong>relative paths</strong>. These are paths
+that go from the current working directory to another folder that we specify. For example, when we run <code>ls Downloads/</code>, that will tell us what files and folders exist in the Downloads directory.</p>
+</div>
+<div class="paragraph">
+<p><strong>Question 8:</strong> If we wanted to see what files exist in the Downloads directory but using an absolute path, what argument would we pass to ls?</p>
+</div>
+<div class="paragraph">
+<p><strong>Answer:</strong> <em><em></em></em></p>
+</div>
+<hr>
+<h4 id="_viewing_other_directories" class="discrete">Viewing Other Directories</h4>
+<div class="paragraph">
+<p>From <code>pwd</code>, we see that the path to our home directory was <code>/home/&lt;USERNAME&gt;</code>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Question 9:</strong> How do you think we could use <code>ls</code> to find out what other users have an account on the CS lab machines?</p>
+</div>
+<div class="paragraph">
+<p><strong>Answer:</strong> <em><em></em></em></p>
+</div>
+<div class="paragraph">
+<p>We can also use a relative path. From your own directory, run the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>ls ../</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Question 10:</strong> What do you think that did? What do you think <code>../</code> means?</p>
+</div>
+<div class="paragraph">
+<p><strong>Answer:</strong> <em><em></em></em></p>
+</div>
+<hr>
+<h5 id="_cd_command" class="discrete"><code>cd</code> command</h5>
+<div class="paragraph">
+<p>The next command will look at is <code>cd</code>, which stands for <strong>change directory</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Like <code>ls</code>, you can pass an argument to the <code>cd</code> command. Here the argument we pass in is the directory we want to move to.</p>
+</div>
+<div class="paragraph">
+<p><strong>TODO:</strong> Run the command <code>cd Downloads/</code>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Question 11:</strong> What changed in the command line prompt? What do you think that tells us?</p>
+</div>
+<div class="paragraph">
+<p><strong>Answer:</strong> <em><em></em></em></p>
+</div>
+<div class="paragraph">
+<p>We can also run <code>cd</code> without any arguments.</p>
+</div>
+<div class="paragraph">
+<p><strong>TODO:</strong> Run <code>cd</code> without any arguments.</p>
+</div>
+<div class="paragraph">
+<p><strong>Question 12:</strong> Based on the prompt, what directory do you think we are now in?</p>
+</div>
+<div class="paragraph">
+<p><strong>Answer:</strong> <em><em></em></em></p>
+</div>
+<div class="paragraph">
+<p><strong>Question 13:</strong> Think about the following command: <code>cd cs113</code>. What do you think will happen if we run this command?</p>
+</div>
+<div class="paragraph">
+<p><strong>Answer:</strong> <em><em></em></em></p>
+</div>
+<div class="paragraph">
+<p><strong>Question 14:</strong> Now run <code>cd cs113</code>. Did we move into that directory, why or why not?</p>
+</div>
+<div class="paragraph">
+<p><strong>Answer:</strong> <em><em></em></em></p>
+</div>
+<hr>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2026-08-28 16:21:36 -0400
+</div>
+</div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+})
+MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
+  MathJax.InputJax.AsciiMath.postfilterHooks.Add(function (data, node) {
+    if ((node = data.script.parentNode) && (node = node.parentNode) && node.classList.contains("stemblock")) {
+      data.math.root.display = "block"
+    }
+    return data
+  })
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>

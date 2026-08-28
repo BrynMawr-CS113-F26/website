@@ -1,0 +1,292 @@
+include::header.adoc[]
+
+:title: Lab 1: CS Lab Machines & Command Line
+:Author Initials: KRS
+:Date:    2026-08-27
+:Revision: 0.1
+
+[discrete]
+= {title}
+
+[discrete]
+= Objectives
+
+The main goals for this lab are:
+
+1. Get familiar with the command line.
+2. Set up your course directory on the CS machines.
+3. Start using vim.
+
+Make sure to write down your answers for each **Question** below. Whenever you see **TODO**, 
+that means there is an action item for you to complete. When you see **Question**, that
+means you should fill in your answer on the worksheet provided to you.
+When you believe you have finished the lab, show Prof. Shiptoski your work.
+
+// [source, subs="quotes"]
+// ----
+// $ **./make hello**
+// gcc -g -Wno-unused-variable -Wno-unused-but-set-variable   -Wl,-rpath=. hello.c -o hello 
+// $ **./hello**
+// Hello World
+// ----
+---
+[discrete]
+= CS Lab Machines & the Command Line
+The computers in the lab rooms (Park 230 and 231) are dual booted with Windows 10
+and Ubuntu (a version of linux). This means that you can use either the Windows 
+or Linux operating systems (OS). For this course, we will be using Linux.
+
+You should have received an email from David Diaz with your credentials to the 
+Computer Science lab machines. If you did not receive credentials from him, 
+immediately stop by his office in Park 294.
+
+**TODO:** Log into the Linux (Ubuntu) OS using the credentials you received from David. 
+Note: These are not your BMC/HC credentials that you normally use.
+
+After logging in, click on the grid on the bottom left of the screen. 
+This will launch a screen showing all the applications. In the search bar on 
+top, type terminal, and then click on the application. This will launch the
+terminal. In this semester we will be working primarily in the terminal.
+
+---
+[discrete]
+== Understanding the Command Line 
+As soon as the terminal application launches, you should see a 
+black screen. This is where you will type command line 
+commands. For now, we haven’t covered any commands in detail
+so just type anything into the terminal.
+
+To run a command in the terminal, click Enter. After typing
+anything into the terminal (here I mean actually mean anything), 
+click `Enter`.
+
+**Question 1:** After you click `Enter`, what does the terminal
+tell you?
+
+**Answer:** ______
+
+// [source, subs="quotes"]
+// ----
+// $ **make input**
+// $ **./input**
+// String: apple
+// Float: 3.14
+// Int: -3
+// Your output is: apple, 3.14, -3
+// ----
+---
+
+[discrete]
+=== Change Your Password
+You can completely interact with your computer using just the terminal! When a 
+new account is created for you on any computer system, you should always 
+change your password.
+
+**TODO:** Change your password! In terminal, type the command `passwd` and then press `Enter` 
+and then follow the instructions to change your password.
+
+// [source, subs="quotes"]
+// ----
+// $ **make input**
+// $ **./input**
+// String: apple
+// Float: 3.14
+// Int: -3
+// Your output is: apple, 3.14, -3
+// ----
+
+---
+[discrete]
+=== Command Line Prompt
+All of the text thats on the left of where you are typing 
+commands is called the `prompt`. You should notice that there 
+are two words in the prompt that are seperated by an `@` 
+symbol. For example, `kshiptoski@goldengate:~$`.
+
+**Question 2:** What are the two words in your prompt? What
+does the first word indicate (the word infront of the `@`)?
+What does the second word indicate (the word after the `@`)?
+
+**Answer:** ______
+
+---
+[discrete]
+=== Navigation Commands
+
+Now we are ready to start using command line arguments. 
+We will be using these command lines today:
+
+  - `ls`
+  - `cd`
+  - `mkdir`
+  - `wget`
+  - `cat`
+  - `wc`
+
+---
+[discrete]
+==== `pwd` command
+
+The first command we’ll look at is `pwd`. This command prints
+the **path** to the **working** **directory**.
+
+Computers are structured in a directory hierarchy where 
+directories can contain other directories or files. A directory
+is just another way of saying a folder.
+
+**TODO:** Run the command `pwd` (this means type `pwd` in the 
+command line and click `Enter` - we’ll be use this 
+terminology from here on out).
+
+**Question 3:** What gets printed out? What do you think it means?
+
+
+**Answer:** ______
+
+---
+
+[discrete]
+==== `ls` command
+
+The next command will look at is `ls`. Instead of us first describing this command, 
+we’ll let you try it out yourself. Run the command `ls`.
+
+**Question 4:** What do you see printed out on in the terminal? What do you think all of that means?
+
+
+**Answer:** ______
+
+
+We can add arguments to the `ls` command. After typing in `ls`, type the output of the `pwd` command. For example, I would run the following command:
+
+
+[source, subs="quotes"]
+----
+ls /home/kshiptoski
+----
+
+**Question 5:** When you run `ls` with the path to your working directory, what do you see? Do you see anything different than before when you ran just `ls`? Why or why not?
+
+**Answer:** ______
+
+---
+
+[discrete]
+==== Piping
+
+We can pass the output from one command as an argument to another command by using the `|` symbol.
+
+**TODO:** Run the following command:
+
+[source, subs="quotes"]
+----
+pwd | ls
+----
+
+**Question 6:** What do you see? Do you see anything different than before when you ran just `ls`? Why or why not?
+
+**Answer:** ______
+
+---
+
+
+[discrete]
+=== Home Directory
+
+So far we’ve used ls to look at the files and folders in our home directory. A home directory is 
+where all the files and folders that belong to a specific user exists.
+
+**TODO:** Look carefully again at the command line prompt. At the end of the line after the name of the 
+machine you are working on, you should see **two** characters. What symbols do you see? 
+One of those represents your home directory - which one do you think it might be?
+
+We can answer this question by using the `ls` command. **TODO:** Run the `ls` command twice, each time 
+add one of the characters/symbols as an argument to `ls`. For example, if the characters were `A` and `B` 
+(they are not), you would run:
+
+[source, subs="quotes"]
+----
+ls A
+ls B
+----
+
+The output of running `ls` with each character would give you a hint of which of the two symbols represents your home directory.
+
+**Question 7:** So, which of the two characters/symbols represent your home directory?
+
+**Answer:** ______
+
+
+---
+
+[discrete]
+=== Absolute vs Relative Paths
+
+So far we used `ls` to look at files in our own directory. When we run the command `ls /home/<USERNAME>` 
+(here `<USERNAME>` is a placeholder for your actual username), the argument was an **absolute path**. An **absolute path**
+is the path from the root (or top) of the computer/file system. We can also specify **relative paths**. These are paths 
+that go from the current working directory to another folder that we specify. For example, when we run `ls Downloads/`, that will tell us what files and folders exist in the Downloads directory.
+
+**Question 8:** If we wanted to see what files exist in the Downloads directory but using an absolute path, what argument would we pass to ls?
+
+**Answer:** ______
+
+---
+
+[discrete]
+=== Viewing Other Directories
+
+From `pwd`, we see that the path to our home directory was `/home/<USERNAME>`.
+
+**Question 9:** How do you think we could use `ls` to find out what other users have an account on the CS lab machines?
+
+
+**Answer:** ______
+
+We can also use a relative path. From your own directory, run the following command:
+
+
+[source, subs="quotes"]
+----
+ls ../
+----
+
+**Question 10:** What do you think that did? What do you think `../` means?
+
+
+**Answer:** ______
+
+---
+
+[discrete]
+==== `cd` command
+
+The next command will look at is `cd`, which stands for **change directory**.
+
+Like `ls`, you can pass an argument to the `cd` command. Here the argument we pass in is the directory we want to move to.
+
+**TODO:** Run the command `cd Downloads/`.
+
+**Question 11:** What changed in the command line prompt? What do you think that tells us?
+
+
+**Answer:** ______
+
+We can also run `cd` without any arguments.
+
+**TODO:** Run `cd` without any arguments.
+
+**Question 12:** Based on the prompt, what directory do you think we are now in?
+
+**Answer:** ______
+
+**Question 13:** Think about the following command: `cd cs113`. What do you think will happen if we run this command?
+
+**Answer:** ______
+
+**Question 14:** Now run `cd cs113`. Did we move into that directory, why or why not?
+
+
+**Answer:** ______
+
+---

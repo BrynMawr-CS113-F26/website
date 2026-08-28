@@ -11,7 +11,7 @@
 | *Course Introduction, Terminal, Compilation, Data Types (Ints, Doubles, Strings)* 
 
 * Assignment 01: Hello World & Errors, Due Sept 4
-* Lab Sept 1: Terminal, Command Line, Text Editor
+* Lab Sept 1: link:assts/lab01.html[Terminal, Command Line, Text Editor]
 
 |
 * Chapter 1: Computer Programming
