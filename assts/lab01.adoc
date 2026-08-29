@@ -423,3 +423,71 @@ obscure features that are not necessary). It will take about 30 minutes to run t
 6. Lesson 6.2 (a), 6.3 ( R ), and 6.4 (y and p)
 
 ---
+
+[discrete]
+= 3. Downloading & Viewing Files
+
+For the rest of this lab, you should be working in the `labs/lab1/` directory.
+
+[discrete]
+==== wget command
+
+We are now going to start looking at some data. `wget` is a “non-interactive network downloader,” in
+other words it is a command that will download files from the internet.
+
+**TODO:** Run `wget` and follow the instructions to figure out how it works.
+
+**Question 20:** What argument does `wget` require?
+
+**Answer:** ______
+
+We are going to download a book from link:https://www.gutenberg.org/[Project Gutenberg], an awesome 
+project that is dedicated to the creation and distribution of eBooks.
+
+**TODO:** On Project Gutenberg, search for a book that you are interested in. Then use `wget` to 
+download the book. 
+
+**Note:** Make sure to download the plaintext version. This can be found by clicking on 
+**Other formats & older devices**. Right click on **Plain Text** and click copy link.
+
+**Example Command:**
+
+[source, subs="quotes"]
+----
+wget https://www.gutenberg.org/ebooks/345.txt.utf-8
+----
+
+**Question 21:** What command can you use to determine that the file has downloaded? (Write your
+answer here, and then actually run the command to ensure it is there).
+
+**Answer:** ______
+
+[discrete]
+==== `mv` command
+
+`mv` is a command that can be used to move from one directory to another, or even rename files.
+
+**Question 22:** Use `mv` to rename the file to be the name of the book. Make sure to not have 
+any spaces in the name of the file and that the file name ends in .txt. Write down the command
+you used here.
+
+**Answer:** ______
+
+[discrete]
+==== `cat` command
+
+The last command we’ll use in this lab, is `cat`. We are going to figure out what `cat` 
+does by playing with it.
+
+**Question 23:** Run `cat`. Next, type a message into the command line and press `Enter`. What happened?
+
+**Answer:** ______
+
+Once you are finished with `cat`, hit `CTRl-C`, this will terminate the `cat` program.
+
+**TODO:** Using the same way we figured out how to use other commands, use the same method to read more about `cat`.
+
+**TODO:** Then, use `cat` to print out the entire book.
+
+**TODO:** Read the entire book. Just kidding! This is the end of the first lab, please give your
+completed worksheet to Professor Shiptoski.
