@@ -31,7 +31,7 @@ When you believe you have finished the lab, show Prof. Shiptoski your work.
 // ----
 ---
 [discrete]
-= CS Lab Machines & the Command Line
+= 1. CS Lab Machines & the Command Line
 The computers in the lab rooms (Park 230 and 231) are dual booted with Windows 10
 and Ubuntu (a version of linux). This means that you can use either the Windows 
 or Linux operating systems (OS). For this course, we will be using Linux.
@@ -290,3 +290,67 @@ We can also run `cd` without any arguments.
 **Answer:** ______
 
 ---
+
+[discrete]
+==== `mkdir` command
+
+We can create new directories in the command line using the command `mkdir`.
+
+**TODO:** Run `mkdir` without any arguments.
+
+**Question 15:** Were you able to create a new directory? If not, why not?
+
+**Answer:** ______
+
+
+**Question 16:** You should notice an error message. Read the error message.
+Are there any new technical terms in the error message? What do you think it means?
+
+**Answer:** ______
+
+The error message should also tell you an option or flag to use with `mkdir` 
+that can help you figure out how to use `mkdir`. We’ll use the term flag and option interchangably here.
+
+**Question 17:** What is that specific flag?
+
+**Answer:** ______
+
+Next, use that flag to read the instructions to figure out how to create a new directory using mkdir.
+
+There is another flag you can use when running `mkdir` that will tell us the version of `mkdir`. 
+
+**Question 18:** Based on the results from running `mkdir` with that flag, what version number 
+is the `mkdir` on the CS lab machines? Also, who is the author?
+
+**Answer:** ______
+
+**TODO:** Use `mkdir` to create a new directory called `cs113`.
+
+**Question 19:** Using a command that we’ve seen so far in today’s lab, how can we determine 
+that the directory cs113 was indeed created?
+
+**Answer:** ______
+
+---
+
+[discrete]
+== Setting Up Your CS113 Directory
+
+It's a good idea to stay organized through out the course. You 
+will be writing a lot of programs across many homeworks, labs,
+and in-class demo sessions. Therefore, we will now create that 
+structure.
+
+**TODO:** Using `mkdir`, `cd`, and `ls`, create the
+following directories and subdirectories in your `cs113` directory.
+
+[discrete]
+==== More Commands
+
+There are many more commands that you will be using during the semester. 
+These include `cp`, `rm`, `man`, and others. Using the `--help` flag, you can read about them 
+in the terminal.
+
+As the semester progresses, you will get more comfortable with and 
+even gain mastery over the command line. Programming is a skill that can 
+be developed like any other skill: practice, practice, practice!
