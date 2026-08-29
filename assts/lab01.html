@@ -378,6 +378,16 @@ structure.</p>
 <p><strong>TODO:</strong> Using <code>mkdir</code>, <code>cd</code>, and <code>ls</code>, create the
 following directories and subdirectories in your <code>cs113</code> directory.</p>
 </div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>cs113/
+    labs/
+        lab1/
+    homeworks/
+        hw1/
+    demos/</code></pre>
+</div>
+</div>
 <h5 id="_more_commands" class="discrete">More Commands</h5>
 <div class="paragraph">
 <p>There are many more commands that you will be using during the semester.
@@ -389,10 +399,96 @@ in the terminal.</p>
 even gain mastery over the command line. Programming is a skill that can
 be developed like any other skill: practice, practice, practice!</p>
 </div>
+<hr>
+<h2 id="_2_vim_editor" class="discrete">2. VIM Editor</h2>
+<div class="paragraph">
+<p>This semester we will use the <code>vim</code> editor for editing files on our system. You will primarily use
+<code>vim</code> to create and edit files containing the java program code to run on our system.</p>
+</div>
+<div class="paragraph">
+<p>The <code>vi</code> and <code>vim</code> (Vi IMproved) editors are available on every Unix system. <code>vim</code> is an efficient
+and lightweight text editor that is easy to use after learning a few basic commands, which you
+can learn by running though the <code>vimtutor</code> tutorial.</p>
+</div>
+<div class="paragraph">
+<p><code>vim</code> is particularly useful when working remotely over an ssh connection (an ssh connection is
+how you will connect to the lab machines remotely).</p>
+</div>
+<div class="paragraph">
+<p><code>vim</code> also has many advanced features and is very configurable through, e.g., the use of a <code>.vimrc</code> file.
+However, just a few basic commands are enough to get you started.</p>
+</div>
+<div class="paragraph">
+<p><code>vim</code> operates in two modes:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>insert mode: keystrokes are interpreted as inserts into the file contents at the point of the cursor.</p>
+</li>
+<li>
+<p>command or escape mode: keystrokes are interpreted as vim commands, which allow a user to do such things as saving, exiting, searching, or moving around in the file.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>To switch from insert mode to command mode, press the <code>ESC</code> key.</p>
+</div>
+<div class="paragraph">
+<p>There are many ways to switch from command mode to insert mode. One way is to press the <code>i</code> key.</p>
+</div>
+<div class="paragraph">
+<p><strong>TODO:</strong> Run the following commands in order and think about what each one is doing.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$ pwd                   # list your current working directory
+$ cd                    # go to home (root) directory from current directory
+$ ls                    # list root directory contents
+$ cd cs113/labs/lab1    # cd into your cs113/labs/lab1 directory
+$ pwd                   # should list /home/you/cs113/labs/lab1
+$ ls                    # list the contents of your /home/you/cs113/labs/lab1</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>TODO:</strong> You should now be in your cs113/labs/lab1 subdirectory. Run the <code>vim</code> tutorial:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$ vimtutor              # start the vim tutorial</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Question 22</strong>: Go through the sections listed below of <code>vimtutor</code> (the other sections cover more
+obscure features that are not necessary). It will take about 30 minutes to run through these lessons:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>All of Lesson 1 (moving around, x, i, A, :wq)</p>
+</li>
+<li>
+<p>Lesson 2.6 (dd)</p>
+</li>
+<li>
+<p>Lesson 2.7 (undo)</p>
+</li>
+<li>
+<p>Lesson 3.1 (p) and 3.2 (r)</p>
+</li>
+<li>
+<p>Lesson 4.1 (G) and 4.2 (searching)</p>
+</li>
+<li>
+<p>Lesson 6.2 (a), 6.3 ( R ), and 6.4 (y and p)</p>
+</li>
+</ol>
+</div>
+<hr>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-08-29 12:12:01 -0400
+Last updated 2026-08-29 16:22:44 -0400
 </div>
 </div>
 <script type="text/x-mathjax-config">

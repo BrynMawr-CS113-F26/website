@@ -344,6 +344,17 @@ structure.
 **TODO:** Using `mkdir`, `cd`, and `ls`, create the
 following directories and subdirectories in your `cs113` directory.
 
+
+[source, subs="quotes"]
+----
+cs113/
+    labs/
+        lab1/
+    homeworks/
+        hw1/
+    demos/
+----
+
 [discrete]
 ==== More Commands
 
@@ -354,3 +365,61 @@ in the terminal.
 As the semester progresses, you will get more comfortable with and 
 even gain mastery over the command line. Programming is a skill that can 
 be developed like any other skill: practice, practice, practice!
+
+---
+
+[discrete]
+= 2. VIM Editor
+
+This semester we will use the `vim` editor for editing files on our system. You will primarily use 
+`vim` to create and edit files containing the java program code to run on our system.
+
+The `vi` and `vim` (Vi IMproved) editors are available on every Unix system. `vim` is an efficient
+and lightweight text editor that is easy to use after learning a few basic commands, which you
+can learn by running though the `vimtutor` tutorial.
+
+`vim` is particularly useful when working remotely over an ssh connection (an ssh connection is 
+how you will connect to the lab machines remotely).
+
+`vim` also has many advanced features and is very configurable through, e.g., the use of a `.vimrc` file. 
+However, just a few basic commands are enough to get you started.
+
+`vim` operates in two modes:
+
+1. insert mode: keystrokes are interpreted as inserts into the file contents at the point of the cursor.
+2. command or escape mode: keystrokes are interpreted as vim commands, which allow a user to do such things as saving, exiting, searching, or moving around in the file.
+
+To switch from insert mode to command mode, press the `ESC` key.
+
+There are many ways to switch from command mode to insert mode. One way is to press the `i` key.
+
+**TODO:** Run the following commands in order and think about what each one is doing.
+
+[source, subs="quotes"]
+----
+$ pwd                   # list your current working directory
+$ cd                    # go to home (root) directory from current directory
+$ ls                    # list root directory contents
+$ cd cs113/labs/lab1    # cd into your cs113/labs/lab1 directory
+$ pwd                   # should list /home/you/cs113/labs/lab1
+$ ls                    # list the contents of your /home/you/cs113/labs/lab1
+----
+
+**TODO:** You should now be in your cs113/labs/lab1 subdirectory. Run the `vim` tutorial:
+
+[source, subs="quotes"]
+----
+$ vimtutor              # start the vim tutorial
+----
+
+**TODO**: Go through the sections listed below of `vimtutor` (the other sections cover more 
+obscure features that are not necessary). It will take about 30 minutes to run through these lessons:
+
+1. All of Lesson 1 (moving around, x, i, A, :wq)
+2. Lesson 2.6 (dd)
+3. Lesson 2.7 (undo)
+4. Lesson 3.1 (p) and 3.2 (r)
+5. Lesson 4.1 (G) and 4.2 (searching)
+6. Lesson 6.2 (a), 6.3 ( R ), and 6.4 (y and p)
+
+---
