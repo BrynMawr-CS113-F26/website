@@ -430,7 +430,7 @@ obscure features that are not necessary). It will take about 30 minutes to run t
 For the rest of this lab, you should be working in the `labs/lab1/` directory.
 
 [discrete]
-==== wget command
+==== `wget` command
 
 We are now going to start looking at some data. `wget` is a “non-interactive network downloader,” in
 other words it is a command that will download files from the internet.
@@ -462,6 +462,8 @@ answer here, and then actually run the command to ensure it is there).
 
 **Answer:** ______
 
+---
+
 [discrete]
 ==== `mv` command
 
@@ -472,6 +474,8 @@ any spaces in the name of the file and that the file name ends in .txt. Write do
 you used here.
 
 **Answer:** ______
+
+---
 
 [discrete]
 ==== `cat` command
