@@ -20,10 +20,10 @@
 //-----------------------------
 | 2 
 | Sept 8, 10 anchor:week02[]
-| *Input / Output, Methods I*
+| *Input / Output, Conditionals I*
 
 * Assignment 02: Variables & I/O, Due Sept 11
-* Lab Sept 8: Variables, Converting Data Types, Input
+* Lab Sept 8: link:assts/lab02.html[Variables, Converting Data Types, Input]
 
 |
 * Chapter 3: Input & Output
@@ -32,7 +32,7 @@
 //-----------------------------
 |3
 |Sept 15, 17 anchor:week03[]
-|*Methods II, Conditionals I*
+|*Conditionals II, Methods I*
 
 * Assignment 03: Methods, Due Sept 18
 * Lab Sept 15: Methods
@@ -45,7 +45,7 @@
 //-----------------------------
 |4
 |Sept 22, 24 anchor:week04[]
-|*Conditionals II, Recursion I* 
+|*Methods II, Recursion I* 
 
 * Assignment 04: Methods Conditionals, & Strings, Due Sept 25
 * Lab Sept 22: Conditionals  & Strings
