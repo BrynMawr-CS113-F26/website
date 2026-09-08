@@ -57,15 +57,45 @@ directory to your `/lab01` directory.
 [discrete]
 = 1. Expressions
 
+For each expression, write down the **value** of the expression, and the **date type**
+of the expression.
 
-[cols="1,2,4a,2a", options="header"]
-|===
-| Expression
-| Value
-| Type
-| 
+**1:** 2 + 3
 
-|===
+**Answer:** ______
+
+**2:** 2.0 + 3
+
+**Answer:** ______
+
+**3:** 5.5 / 10
+
+**Answer:** ______
+
+**4:** 5 - 2 * 3
+
+**Answer:** ______
+
+**5:** "123"
+
+**Answer:** ______
+
+**6:** 48 % 2
+
+**Answer:** ______
+
+**7:** 55 % 4
+
+**Answer:** ______
+
+**8:** 2 + 4 * 2 + 1
+
+**Answer:** ______
+
+**8:** "i" + "love" + "CS113!"
+
+**Answer:** ______
+
 ---
 [discrete]
 = 3. Downloading & Viewing Files
