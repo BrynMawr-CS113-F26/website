@@ -98,73 +98,79 @@ of the expression.
 
 ---
 [discrete]
-= 3. Downloading & Viewing Files
-
-For the rest of this lab, you should be working in the `labs/lab1/` directory.
+= 2. Sum.java
 
 [discrete]
-==== `wget` command
-
-We are now going to start looking at some data. `wget` is a “non-interactive network downloader,” in
-other words it is a command that will download files from the internet.
-
-**TODO:** Run `wget` and follow the instructions to figure out how it works.
-
-**Question 20:** What argument does `wget` require?
-
-**Answer:** ______
-
-We are going to download a book from link:https://www.gutenberg.org/[Project Gutenberg], an awesome 
-project that is dedicated to the creation and distribution of eBooks.
-
-**TODO:** On Project Gutenberg, search for a book that you are interested in. Then use `wget` to 
-download the book. 
-
-**Note:** Make sure to download the plaintext version. This can be found by clicking on 
-**Other formats & older devices**. Right click on **Plain Text** and click copy link.
-
-**Example Command:**
+== Sum1
+Write a program Sum1.java that asks the user for two integers and then prints the sum of the numbers. You can assume that the user will put in valid integers. When run, your program should do the following: 1) the program asks a user for a number 2) the user enters an integer 3) the program asks a user for a second number 4) the user enters an integer 5) the program prints the sum.
+See if you can exactly match the format below!
 
 [source, subs="quotes"]
 ----
-wget https://www.gutenberg.org/ebooks/345.txt.utf-8
+$ javac Sum1.java
+$ java Sum1
+Please give me one number:
+5
+Please give me a second number:
+2
+The sum of the two numbers is 7
 ----
 
-**Question 21:** What command can you use to determine that the file has downloaded? (Write your
-answer here, and then actually run the command to ensure it is there).
-
-**Answer:** ______
-
----
+**Checkpoint:** Before continuing, have Prof. Shiptoski check your work.
 
 [discrete]
-==== `mv` command
+== Sum2
 
-`mv` is a command that can be used to move from one directory to another, or even rename files.
+Write a program Sum2.java that asks the user for two numbers and then prints the sum of the numbers. This time, the numbers should be able to contain decimal points. Below is an example.
 
-**Question 22:** Use `mv` to rename the file to be the name of the book. Make sure to not have 
-any spaces in the name of the file and that the file name ends in .txt. Write down the command
-you used here.
+[source, subs="quotes"]
+----
+$ javac Sum2.java
+$ java Sum2
+Please give me one number:
+5.5
+Please give me a second number:
+2.6
+The sum of the two numbers is 8.1
+----
 
-**Answer:** ______
-
----
 
 [discrete]
-==== `cat` command
+== Sum3
+Write a program named Sum3.java that takes in two numbers **on the command line** 
+and then prints the sum of the two numbers. The numbers can contain decimals.
 
-The last command we’ll use in this lab, is `cat`. We are going to figure out what `cat` 
-does by playing with it.
+[source, subs="quotes"]
+----
+$ javac Sum3.java
+$ java Sum3 5.5 2.6
+The sum of the two numbers is 8.1
+----
 
-**Question 23:** Run `cat`. Next, type a message into the command line and press `Enter`. What happened?
+**Checkpoint:** Before continuing, have Prof. Shiptoski check your work.
 
-**Answer:** ______
 
-Once you are finished with `cat`, hit `CTRl-C`, this will terminate the `cat` program.
+---
+[discrete]
+= 3. Madlibs
 
-**TODO:** Using the same way we figured out how to use other commands, use the same method to read more about `cat`.
+Write a madlib program called Roses that asks the user for 2 colors and one adjective, then prints out the filled-in poem. 
 
-**TODO:** Then, use `cat` to print out the entire book.
+Below is an example of running the program.
 
-**TODO:** Read the entire book. Just kidding! This is the end of the first lab, please give your
-completed worksheet to Professor Shiptoski.
+[source, subs="quotes"]
+----
+$ javac Roses.java
+$ java Roses
+color: pink
+color: azure
+adjective: funny
+
+Roses are pink
+Violets are azure
+Sugar is funny
+and so are you!
+----
+
+**TODO:** This is the end of the second lab, please show Prof. Shiptoski your
+Madlibs code and hand in your completed worksheet.

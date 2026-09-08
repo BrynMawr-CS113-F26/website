@@ -131,93 +131,86 @@ of the expression.</p>
 <p><strong>Answer:</strong> <em><em></em></em></p>
 </div>
 <hr>
-<h2 id="_3_downloading_viewing_files" class="discrete">3. Downloading &amp; Viewing Files</h2>
+<h2 id="_2_sum_java" class="discrete">2. Sum.java</h2>
+<h3 id="_sum1" class="discrete">Sum1</h3>
 <div class="paragraph">
-<p>For the rest of this lab, you should be working in the <code>labs/lab1/</code> directory.</p>
-</div>
-<h5 id="_wget_command" class="discrete"><code>wget</code> command</h5>
-<div class="paragraph">
-<p>We are now going to start looking at some data. <code>wget</code> is a “non-interactive network downloader,” in
-other words it is a command that will download files from the internet.</p>
-</div>
-<div class="paragraph">
-<p><strong>TODO:</strong> Run <code>wget</code> and follow the instructions to figure out how it works.</p>
-</div>
-<div class="paragraph">
-<p><strong>Question 20:</strong> What argument does <code>wget</code> require?</p>
-</div>
-<div class="paragraph">
-<p><strong>Answer:</strong> <em><em></em></em></p>
-</div>
-<div class="paragraph">
-<p>We are going to download a book from <a href="https://www.gutenberg.org/">Project Gutenberg</a>, an awesome
-project that is dedicated to the creation and distribution of eBooks.</p>
-</div>
-<div class="paragraph">
-<p><strong>TODO:</strong> On Project Gutenberg, search for a book that you are interested in. Then use <code>wget</code> to
-download the book.</p>
-</div>
-<div class="paragraph">
-<p><strong>Note:</strong> Make sure to download the plaintext version. This can be found by clicking on
-<strong>Other formats &amp; older devices</strong>. Right click on <strong>Plain Text</strong> and click copy link.</p>
-</div>
-<div class="paragraph">
-<p><strong>Example Command:</strong></p>
+<p>Write a program Sum1.java that asks the user for two integers and then prints the sum of the numbers. You can assume that the user will put in valid integers. When run, your program should do the following: 1) the program asks a user for a number 2) the user enters an integer 3) the program asks a user for a second number 4) the user enters an integer 5) the program prints the sum.
+See if you can exactly match the format below!</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>wget https://www.gutenberg.org/ebooks/345.txt.utf-8</code></pre>
+<pre class="highlight"><code>$ javac Sum1.java
+$ java Sum1
+Please give me one number:
+5
+Please give me a second number:
+2
+The sum of the two numbers is 7</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p><strong>Question 21:</strong> What command can you use to determine that the file has downloaded? (Write your
-answer here, and then actually run the command to ensure it is there).</p>
+<p><strong>Checkpoint:</strong> Before continuing, have Prof. Shiptoski check your work.</p>
+</div>
+<h3 id="_sum2" class="discrete">Sum2</h3>
+<div class="paragraph">
+<p>Write a program Sum2.java that asks the user for two numbers and then prints the sum of the numbers. This time, the numbers should be able to contain decimal points. Below is an example.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$ javac Sum2.java
+$ java Sum2
+Please give me one number:
+5.5
+Please give me a second number:
+2.6
+The sum of the two numbers is 8.1</code></pre>
+</div>
+</div>
+<h3 id="_sum3" class="discrete">Sum3</h3>
+<div class="paragraph">
+<p>Write a program named Sum3.java that takes in two numbers <strong>on the command line</strong>
+and then prints the sum of the two numbers. The numbers can contain decimals.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$ javac Sum3.java
+$ java Sum3 5.5 2.6
+The sum of the two numbers is 8.1</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p><strong>Answer:</strong> <em><em></em></em></p>
+<p><strong>Checkpoint:</strong> Before continuing, have Prof. Shiptoski check your work.</p>
 </div>
 <hr>
-<h5 id="_mv_command" class="discrete"><code>mv</code> command</h5>
+<h2 id="_3_madlibs" class="discrete">3. Madlibs</h2>
 <div class="paragraph">
-<p><code>mv</code> is a command that can be used to move from one directory to another, or even rename files.</p>
+<p>Write a madlib program called Roses that asks the user for 2 colors and one adjective, then prints out the filled-in poem.</p>
 </div>
 <div class="paragraph">
-<p><strong>Question 22:</strong> Use <code>mv</code> to rename the file to be the name of the book. Make sure to not have
-any spaces in the name of the file and that the file name ends in .txt. Write down the command
-you used here.</p>
+<p>Below is an example of running the program.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$ javac Roses.java
+$ java Roses
+color: pink
+color: azure
+adjective: funny
+
+Roses are pink
+Violets are azure
+Sugar is funny
+and so are you!</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p><strong>Answer:</strong> <em><em></em></em></p>
-</div>
-<hr>
-<h5 id="_cat_command" class="discrete"><code>cat</code> command</h5>
-<div class="paragraph">
-<p>The last command we’ll use in this lab, is <code>cat</code>. We are going to figure out what <code>cat</code>
-does by playing with it.</p>
-</div>
-<div class="paragraph">
-<p><strong>Question 23:</strong> Run <code>cat</code>. Next, type a message into the command line and press <code>Enter</code>. What happened?</p>
-</div>
-<div class="paragraph">
-<p><strong>Answer:</strong> <em><em></em></em></p>
-</div>
-<div class="paragraph">
-<p>Once you are finished with <code>cat</code>, hit <code>CTRl-C</code>, this will terminate the <code>cat</code> program.</p>
-</div>
-<div class="paragraph">
-<p><strong>TODO:</strong> Using the same way we figured out how to use other commands, use the same method to read more about <code>cat</code>.</p>
-</div>
-<div class="paragraph">
-<p><strong>TODO:</strong> Then, use <code>cat</code> to print out the entire book.</p>
-</div>
-<div class="paragraph">
-<p><strong>TODO:</strong> Read the entire book. Just kidding! This is the end of the first lab, please give your
-completed worksheet to Professor Shiptoski.</p>
+<p><strong>TODO:</strong> This is the end of the second lab, please show Prof. Shiptoski your
+Madlibs code and hand in your completed worksheet.</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-09-07 20:35:43 -0400
+Last updated 2026-09-07 20:47:59 -0400
 </div>
 </div>
 <script type="text/x-mathjax-config">
