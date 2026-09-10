@@ -1,0 +1,153 @@
+include::header.adoc[]
+
+:title: Homework 1: Variables & Input / Output
+:Author Initials: KRS
+:Date:    2026-08-27
+:Revision: 0.1
+
+[discrete]
+= {title}
+
+[discrete]
+= Set Up
+
+In this assignment you will be working with variables, and reading in user data. 
+
+To work on this homework, follow these steps:
+
+1. On Mac, open the Terminal program. On Windows, open the PowerShell program.
+2. Log into goldengate by using the ssh command from your personal laptop: `ssh your-username@goldengate.cs.brynmawr.edu`.
+3. Run these commands:
+
+
+[source, subs="quotes"]
+----
+$ cd cs113
+$ ls 
+----
+
+If you see a homeworks directory, cd into it. Then, call `mkdir hw1` to create your homework 1
+directory. Finally, call `cd hw1`.
+
+For each of the problems below, we will use the vim editor. You will need to create a java file
+for each problem. For example, for the first problem you will call `vim Groceries.java`.
+
+Remember your vim commands:
+- `vim Filename.java`: creates a file named Filename.java
+- `i`:  enter insert mode
+- `esc`: exit insert mode (you must exit insert mode in order to save and quit)
+- `:wq`: save the file and close vim
+
+
+---
+[discrete]
+= 1. Groceries
+Write a program called Groceries.java that computes the cost of groceries per week. Each person buys a different amount of groceries per week. You will ask a user to input
+
+1. how many times they bought groceries that week
+2. an estimate of how much each trip to the store costs
+
+The program will then print out how much thaat person spends on groceries each week.
+
+[source, subs="quotes"]
+----
+$ java Groceries.java
+$ java Groceries
+How many times do you go to the grocery store each week?
+*2*
+How much do you spend on each trip?
+*50.25*
+This week you spent $100.50 on groceries.
+----
+
+Your program should be able to handle numbers with decimal points.
+
+---
+[discrete]
+= 2. Hotel Bill
+
+Write a program called Bill that takes a user’s hotel room rate and outputs the cost of a 6% sales tax and 10.5% city tourism fee. The program should then output the total bill. Below is an example:
+
+[source, subs="quotes"]
+----
+$ javac Bill.java
+$ java Bill
+Room rate
+100
+Total nights
+3
+
+Tax: $ 18.0
+Tourism Fee: $ 31.5
+Total: $ 349.50
+----
+
+
+---
+
+[discrete]
+= 3. Reading Code
+
+For parts 3.1 and 3.2, put your answers in a text file. Call `vim answers.txt`
+to create a `answers.txt` file where you can put your answers.
+
+
+[discrete]
+== 3.1 Cats
+Read the following program. What is the output of the program?
+
+[source, subs="quotes"]
+----
+public class Cats {
+   public static void main(String[] args) {
+       String type = "tuxedo";
+       int fish = 3;
+
+       System.out.println("The "+type+" cat caught "+fish+" fish.");
+   }
+}
+----
+
+[discrete]
+== 3.2 Mystery
+
+[source, subs="quotes"]
+----
+public class Mystery1 {
+
+    public static void main(String[] args) {
+    
+        String input = System.console().readLine()
+        int value = Integer.parseInt(input);
+        double fraction = value / 10
+        System.out.println("The fraction is "+fraction);
+    }
+}
+----
+
+What is the error? How can we fix the problem?
+
+
+[discrete]
+= Submitting
+
+
+In a text file (call `vim readme.txt`) answer the following questions:
+
+1. How much time did you spend on the homework?
+2. What did you learn from the homework?
+
+Finally, you need to copy your files from the server to your personal computer for submission.
+
+Close your connection to goldengate (type `exit`), and then run the following command:
+
+`$ scp -r <username>@goldengate.cs.brynmawr.edu:/home/<username>/cs113/homeworks/hw1/ .`
+
+Make sure to replace `<username>` with your username. There is a space between `hw1/` and `.`. scp is a command to secure-copy files from one server to another. In this case, from goldengate to your own machine.
+
+Submit the following files to the assignment called `HW01` on Gradescope.
+
+1. `Groceries.java`
+2. `Bill.java`
+3. `answers.txt`
+4. `readme.txt`

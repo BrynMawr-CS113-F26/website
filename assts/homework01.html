@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.26">
+<title>Homework 1: Variables &amp; Input / Output</title>
+<link rel="stylesheet" href="../style/cs21.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<h2 id="_homework_1_variables_input_output" class="discrete">Homework 1: Variables &amp; Input / Output</h2>
+<h2 id="_set_up" class="discrete">Set Up</h2>
+<div class="paragraph">
+<p>In this assignment you will be working with variables, and reading in user data.</p>
+</div>
+<div class="paragraph">
+<p>To work on this homework, follow these steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>On Mac, open the Terminal program. On Windows, open the PowerShell program.</p>
+</li>
+<li>
+<p>Log into goldengate by using the ssh command from your personal laptop: <code>ssh <a href="mailto:your-username@goldengate.cs.brynmawr.edu">your-username@goldengate.cs.brynmawr.edu</a></code>.</p>
+</li>
+<li>
+<p>Run these commands:</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$ cd cs113
+$ ls</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you see a homeworks directory, cd into it. Then, call <code>mkdir hw1</code> to create your homework 1
+directory. Finally, call <code>cd hw1</code>.</p>
+</div>
+<div class="paragraph">
+<p>For each of the problems below, we will use the vim editor. You will need to create a java file
+for each problem. For example, for the first problem you will call <code>vim Groceries.java</code>.</p>
+</div>
+<div class="paragraph">
+<p>Remember your vim commands:
+- <code>vim Filename.java</code>: creates a file named Filename.java
+- <code>i</code>:  enter insert mode
+- <code>esc</code>: exit insert mode (you must exit insert mode in order to save and quit)
+- <code>:wq</code>: save the file and close vim</p>
+</div>
+<hr>
+<h2 id="_1_groceries" class="discrete">1. Groceries</h2>
+<div class="paragraph">
+<p>Write a program called Groceries.java that computes the cost of groceries per week. Each person buys a different amount of groceries per week. You will ask a user to input</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>how many times they bought groceries that week</p>
+</li>
+<li>
+<p>an estimate of how much each trip to the store costs</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The program will then print out how much thaat person spends on groceries each week.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$ java Groceries.java
+$ java Groceries
+How many times do you go to the grocery store each week?
+<strong>2</strong>
+How much do you spend on each trip?
+<strong>50.25</strong>
+This week you spent $100.50 on groceries.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Your program should be able to handle numbers with decimal points.</p>
+</div>
+<hr>
+<h2 id="_2_hotel_bill" class="discrete">2. Hotel Bill</h2>
+<div class="paragraph">
+<p>Write a program called Bill that takes a user’s hotel room rate and outputs the cost of a 6% sales tax and 10.5% city tourism fee. The program should then output the total bill. Below is an example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$ javac Bill.java
+$ java Bill
+Room rate
+100
+Total nights
+3
+
+Tax: $ 18.0
+Tourism Fee: $ 31.5
+Total: $ 349.50</code></pre>
+</div>
+</div>
+<hr>
+<h2 id="_3_reading_code" class="discrete">3. Reading Code</h2>
+<div class="paragraph">
+<p>For parts 3.1 and 3.2, put your answers in a text file. Call <code>vim answers.txt</code>
+to create a <code>answers.txt</code> file where you can put your answers.</p>
+</div>
+<h3 id="_3_1_cats" class="discrete">3.1 Cats</h3>
+<div class="paragraph">
+<p>Read the following program. What is the output of the program?</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>public class Cats {
+   public static void main(String[] args) {
+       String type = "tuxedo";
+       int fish = 3;
+
+       System.out.println("The "+type+" cat caught "+fish+" fish.");
+   }
+}</code></pre>
+</div>
+</div>
+<h3 id="_3_2_mystery" class="discrete">3.2 Mystery</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>public class Mystery1 {
+
+    public static void main(String[] args) {
+
+        String input = System.console().readLine()
+        int value = Integer.parseInt(input);
+        double fraction = value / 10
+        System.out.println("The fraction is "+fraction);
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>What is the error? How can we fix the problem?</p>
+</div>
+<h2 id="_submitting" class="discrete">Submitting</h2>
+<div class="paragraph">
+<p>In a text file (call <code>vim readme.txt</code>) answer the following questions:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>How much time did you spend on the homework?</p>
+</li>
+<li>
+<p>What did you learn from the homework?</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Finally, you need to copy your files from the server to your personal computer for submission.</p>
+</div>
+<div class="paragraph">
+<p>Close your connection to goldengate (type <code>exit</code>), and then run the following command:</p>
+</div>
+<div class="paragraph">
+<p><code>$ scp -r &lt;username&gt;@goldengate.cs.brynmawr.edu:/home/&lt;username&gt;/cs113/homeworks/hw1/ .</code></p>
+</div>
+<div class="paragraph">
+<p>Make sure to replace <code>&lt;username&gt;</code> with your username. There is a space between <code>hw1/</code> and <code>.</code>. scp is a command to secure-copy files from one server to another. In this case, from goldengate to your own machine.</p>
+</div>
+<div class="paragraph">
+<p>Submit the following files to the assignment called <code>HW01</code> on Gradescope.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>Groceries.java</code></p>
+</li>
+<li>
+<p><code>Bill.java</code></p>
+</li>
+<li>
+<p><code>answers.txt</code></p>
+</li>
+<li>
+<p><code>readme.txt</code></p>
+</li>
+</ol>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2026-09-09 20:21:15 -0400
+</div>
+</div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+})
+MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
+  MathJax.InputJax.AsciiMath.postfilterHooks.Add(function (data, node) {
+    if ((node = data.script.parentNode) && (node = node.parentNode) && node.classList.contains("stemblock")) {
+      data.math.root.display = "block"
+    }
+    return data
+  })
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>

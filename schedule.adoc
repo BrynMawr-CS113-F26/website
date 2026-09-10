@@ -10,7 +10,6 @@
 | Sept 1, 3 anchor:week01[]
 | *Course Introduction, Terminal, Compilation, Data Types (Ints, Doubles, Strings)* 
 
-* Assignment 01: Hello World & Errors, Due Sept 4
 * Lab Sept 1: link:assts/lab01.html[Terminal, Command Line, Text Editor]
 
 |
@@ -24,7 +23,7 @@
 | Sept 8, 10 anchor:week02[]
 | *Input / Output, Conditionals I*
 
-* Assignment 02: Variables & I/O, Due Sept 11
+* Assignment 01: link:assts/homework01.html[Variables & I/O, Due Sept 15]
 * Lab Sept 8: link:assts/lab02.html[Variables, Converting Data Types, Input]
 
 |
