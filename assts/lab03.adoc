@@ -11,15 +11,10 @@ include::header.adoc[]
 [discrete]
 = Objectives
 
-1. The main goals for this lab are: TODO
+The main goals for this lab are:
 
-TODO need to make a new folder for lab2
-
-
-Make sure to write down your answers for each **Question** below. Whenever you see **TODO**, 
-that means there is an action item for you to complete. When you see **Question**, that
-means you should fill in your answer on the worksheet provided to you.
-When you believe you have finished the lab, show Prof. Shiptoski your work.
+1. To learn some more vim commands and use them while programming.
+2. To get comfortable with writing and using methods.
 
 ---
 [discrete]
@@ -47,6 +42,7 @@ To try out these commands, open one of your java files from lab1,
 for example: `vim Sum1.java`. Using these commands will alter your file,
 this is totally fine, do not worry about preserving the old code.
 
+---
 [discrete]
 == 1.1 Entering & Exiting Insert Mode
 
@@ -54,6 +50,7 @@ this is totally fine, do not worry about preserving the old code.
 * `o` - Create a new line **below** the current line and start typing
 * `esc` - Exit insert mode (return to normal mode)
 
+---
 [discrete]
 == 1.2 Moving Around
 
@@ -70,6 +67,7 @@ the arrow keys.
 * `gg` - Go to the top of the file
 
 
+---
 [discrete]
 == 1.3 Deleting Text
 
@@ -80,6 +78,7 @@ Make sure you are in normal mode first.
 * `D` - Delete from the cursor to the end of the line
 
 
+---
 [discrete]
 == 1.4 Undo and Redo
 
@@ -91,6 +90,7 @@ Made a mistake? You can undo and redo easily in vim.
 Try deleting a line with `dd`, and then restoring it with `u`.
 
 
+---
 [discrete]
 == 1.5 Copying and Pasting
 
@@ -108,6 +108,7 @@ the code
 6. Press `p` to paste the code there
 
 
+---
 [discrete]
 == 1.6 Searching
 
@@ -120,6 +121,7 @@ For example, to search for the word "cat" in your file type:
 * `N` - go to previous match
 
 
+---
 [discrete]
 == 1.7 Saving and Quitting
 
@@ -144,6 +146,7 @@ our entire algorithm in the main method, we will break out program down into mul
 
 Try using a couple of the new vim commands you learned as you work on this section.
 
+---
 [discrete]
 == 2.1 Prompt user for number
 
@@ -240,9 +243,23 @@ class LabThree {
 == 2.4 Putting it all together
 
 Now inside your main method, use your new methods to:
+
 1. Ask the user for three numbers.
 2. Sum the three numbers.
 3. Print out the sum.
 
+[source, subs="quotes"]
+----
+$ javac Sum.java
+$ java Sum
+Please give me a number:
+10.2
+Please give me a number:
+8.6
+Please give me a number:
+2.1
+
+The sum of your numbers is: 20.9
+----
 
 **TODO**: Show Prof. Shiptoski your work and then you are all done with lab 3.
