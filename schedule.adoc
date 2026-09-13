@@ -36,8 +36,7 @@
 |Sept 15, 17 anchor:week03[]
 |*Conditionals II, Methods I*
 
-* Assignment 03: Methods, Due Sept 18
-* Lab Sept 15: Methods
+* Lab Sept 15: link:assts/lab03.html[Methods]
 
 |
 * Chapter 5: Conditionals & Logic
@@ -49,7 +48,7 @@
 |Sept 22, 24 anchor:week04[]
 |*Methods II, Recursion I* 
 
-* Assignment 04: Methods Conditionals, & Strings, Due Sept 25
+// * Assignment 04: Methods Conditionals, & Strings, Due Sept 25
 * Lab Sept 22: Conditionals  & Strings
 
 |
@@ -62,7 +61,7 @@
 |Sept 29, Oct 1 anchor:week05[]
 |*Recursion II, Loops I* 
 
-* Assignment 05: Recursion, Due Oct 2
+// * Assignment 05: Recursion, Due Oct 2
 * Lab Sept 29: Recursion & Arrays
 
 |
@@ -75,7 +74,7 @@
 |Oct 6, 8 anchor:week06[]
 |*Loops II, Arrays I*
 
-* Assignment 06: Recursion & Arrays, Due Oct 9
+// * Assignment 06: Recursion & Arrays, Due Oct 9
 * Lab Oct 8: Recursive Array Methods
 
 |
@@ -114,7 +113,7 @@
 |*Arrays II, Mutable vs Immutable Objects* 
 
 // * Topics: Processes, fork, signals
-* Assignment 07: Loops, Due Oct 30
+// * Assignment 07: Loops, Due Oct 30
 * Lab Oct 27: Loops and 2D Arrays
 // * link:assts/asst08.html[Assignment 08]: Image Conscious. Due March 20th at midnight
 
@@ -130,7 +129,7 @@
 |*Class Design* 
 
 // * Topics: Threads vs processes, designing concurrent algorithms, pthreads
-* Assignment 08: Game (TBD), Due Nov 6
+// * Assignment 08: Game (TBD), Due Nov 6
 * Lab Nov 3: TBD (Probably Files and Exceptions)
 // * link:assts/asst09.html[Assignment 09]: Trust the process. Due March 27th at midnight
 
@@ -146,7 +145,7 @@
 
 // * Topics: synchronization, deadlock, producer/consumer pattern
 // * link:assts/asst10.html[Assignment 10]: Mandelthreads. Due April 3rd
-* Assignment 09: Object Oriented Programming, Due Nov 13
+// * Assignment 09: Object Oriented Programming, Due Nov 13
 * Lab Nov 10: Class Design
 
 |
@@ -162,7 +161,7 @@
 
 // * Topics: Thread safety, thread performance
 // * Topics: Memory hierarchy, spatial/temporal locality, caching
-* Assignment 10: Objects, Classes, & Interfaces, Due Nov 20
+// * Assignment 10: Objects, Classes, & Interfaces, Due Nov 20
 * Lab Nov 17: Interfaces
 
 |
@@ -194,7 +193,7 @@
 // * C++ classes (operators, constructors, destructors), references, STL (list, vector, map), simple templates
 // * link:assts/asst13.html[(Optional/Extra Credit) Assignment 13]: C++ Image Class. Due May 1st.
 
-* Assignment 11: Sorting, Due Dec 4
+// * Assignment 11: Sorting, Due Dec 4
 * Lab Dec 1: Sorting
 
 |

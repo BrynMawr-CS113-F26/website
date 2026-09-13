@@ -1,0 +1,248 @@
+include::header.adoc[]
+
+:title: Lab 3: Methods 
+:Author Initials: KRS
+:Date:    2026-08-27
+:Revision: 0.1
+
+[discrete]
+= {title}
+
+[discrete]
+= Objectives
+
+1. The main goals for this lab are: TODO
+
+TODO need to make a new folder for lab2
+
+
+Make sure to write down your answers for each **Question** below. Whenever you see **TODO**, 
+that means there is an action item for you to complete. When you see **Question**, that
+means you should fill in your answer on the worksheet provided to you.
+When you believe you have finished the lab, show Prof. Shiptoski your work.
+
+---
+[discrete]
+= 1. Vim Survival Guide
+
+For this part of the lab, we will go over some of my favorite and most
+used vim commands that I think will make programming much smoother for you.
+There are **many** vim commands, so this is just my selection.
+
+Remember, to develop muscle memory for these commands, you just need
+practice. My suggestion is to pick one or two commands at a time to
+introduce into your workflow so you don't get overwhelmed.
+
+Vim has different modes. The two you will use most are:
+
+1. Normal mode - for moving around and editing text
+2. Insert mode - for actually typing text
+
+Press `esc` at any time to return to normal mode.
+
+Navigate to your `lab1` / `lab01` (whatever you called it) folder:
+`cd /home/your-username/cs113/labs/lab01`
+
+To try out these commands, open one of your java files from lab1,
+for example: `vim Sum1.java`. Using these commands will alter your file,
+this is totally fine, do not worry about preserving the old code.
+
+[discrete]
+== 1.1 Entering & Exiting Insert Mode
+
+* `i` - Start typing **before** the cursor
+* `o` - Create a new line **below** the current line and start typing
+* `esc` - Exit insert mode (return to normal mode)
+
+[discrete]
+== 1.2 Moving Around
+
+You must be in normal mode to move around. Hit `esc` if you
+are in insert mode.
+
+You can move around with your arrow keys, but here are some
+other useful commands that are typically faster to use than
+the arrow keys.
+
+* `0` - Go to beginning of line
+* `shift + a` - Go to the end of the line and enter insert mode
+* `G` - Go to the bottom of the file
+* `gg` - Go to the top of the file
+
+
+[discrete]
+== 1.3 Deleting Text
+
+Make sure you are in normal mode first.
+
+* `x` - Delete the character under the cursor
+* `dd` - Delete the entire current line
+* `D` - Delete from the cursor to the end of the line
+
+
+[discrete]
+== 1.4 Undo and Redo
+
+Made a mistake? You can undo and redo easily in vim.
+
+* `u` - Undo
+* `ctrl + r` - Redo
+
+Try deleting a line with `dd`, and then restoring it with `u`.
+
+
+[discrete]
+== 1.5 Copying and Pasting
+
+In vim, copying is called yanking.
+
+To copy and paste:
+
+1. Make sure you are in normal mode (hit `esc`)
+2. Hit `shift + y`. Your current line should now be highlighted
+3. Use your up and down arrow keys to highlight the block of code you want
+to copy
+4. Once you have highlighted all the code you want to copy, hit `y`
+5. Use your arrow keys to navigate to the line where you want to paste
+the code
+6. Press `p` to paste the code there
+
+
+[discrete]
+== 1.6 Searching
+
+To search for the next occurence of text in your file, use `/`. 
+
+For example, to search for the word "cat" in your file type: 
+`/cat` and then press enter.
+
+* `n` - go to next match
+* `N` - go to previous match
+
+
+[discrete]
+== 1.7 Saving and Quitting
+
+Press `esc` to enter normal mode.
+
+* `:w` - Save
+* `:wq` - Save and quit
+* `:q!` - Quit without saving
+
+Saving regularly is good practice:
+
+1. Hit `esc`
+2. Type `:wq`
+
+
+---
+[discrete]
+= 2. Method Madness
+Last week we asked a user for numbers and computed the sum of the numbers. 
+This week we will compute the average of a set of numbers. Instead of implementing 
+our entire algorithm in the main method, we will break out program down into multiple methods.
+
+Try using a couple of the new vim commands you learned as you work on this section.
+
+[discrete]
+== 2.1 Prompt user for number
+
+1. Navigate to your `/labs` directory: `cd ..`
+2. Create a new lab3 directory: `mkdir lab3`
+3. Change to the lab3 directory: `cd lab3`
+
+Now we are ready to start. Create a new java file: `vim LabThree.java`.
+Write a method called `getUserNumber()`. It should return a `double`. Below
+is starter code you can use.
+
+[source, subs="quotes"]
+----
+class LabThree {
+  public static void main() {
+
+  }
+
+  public static double getUserNumber() {
+
+  }
+}
+----
+
+Think about how you can break this method into steps: asking the user for input, and
+getting that input and saving it, converting the user input to a double, and then
+returning that double.
+
+**TODO:** Show Prof. Shiptoski your work before continuing.
+
+---
+[discrete]
+== 2.2 Sum two numbers
+
+Now write a method called `sumTwo` which takes in two doubles, and returns
+their sum.
+
+[source, subs="quotes"]
+----
+class LabThree {
+  public static void main() {
+
+  }
+
+  public static double getUserNumber() {
+
+  }
+  
+  public static double sumTwo(double firstNum, double secondNum) {
+
+  }
+}
+----
+
+**TODO:** Show Prof. Shiptoski your work before continuing.
+
+
+---
+[discrete]
+== 2.3 Sum three numbers
+
+Now write a method called `sumThree()` which takes in three doubles and returns
+their sum.
+
+Hint: You should called your `sumTwo` function from your `sumThree` function. There are
+a few different ways to do this. 
+
+
+[source, subs="quotes"]
+----
+class LabThree {
+  public static void main() {
+
+  }
+
+  public static double getUserNumber() {
+
+  }
+  
+  public static double sumTwo(double firstNum, double secondNum) {
+
+  }
+
+  public static double sumThree(double firstNum, double secondNum, double thirdNum) {
+
+  }
+}
+----
+
+**TODO:** Show Prof. Shiptoski your work before continuing.
+
+---
+[discrete]
+== 2.4 Putting it all together
+
+Now inside your main method, use your new methods to:
+1. Ask the user for three numbers.
+2. Sum the three numbers.
+3. Print out the sum.
+
+
+**TODO**: Show Prof. Shiptoski your work and then you are all done with lab 3.
