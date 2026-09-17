@@ -37,6 +37,7 @@
 |Sept 15, 17 anchor:week03[]
 |*Conditionals II, Methods I*
 
+* Assignment 02: link:assts/homework02.html[Methods]
 * Lab Sept 15: link:assts/lab03.html[Methods]
 
 |

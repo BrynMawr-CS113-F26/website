@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.26">
+<title>Homework 2: Methods</title>
+<link rel="stylesheet" href="../style/cs21.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<h2 id="_homework_2_methods" class="discrete">Homework 2: Methods</h2>
+<h2 id="_set_up" class="discrete">Set Up</h2>
+<div class="paragraph">
+<p>In this assignment you will be working with variables, and reading in user data with the Scanner class, and creating methods.</p>
+</div>
+<div class="paragraph">
+<p>To work on this homework, follow these steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>On Mac, open the Terminal program. On Windows, open the PowerShell program.</p>
+</li>
+<li>
+<p>Log into goldengate by using the ssh command from your personal laptop: <code>ssh <a href="mailto:your-username@goldengate.cs.brynmawr.edu">your-username@goldengate.cs.brynmawr.edu</a></code>.</p>
+</li>
+<li>
+<p>Run these commands:</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$ cd cs113
+$ ls</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you see a homeworks directory, cd into it. Then, call <code>mkdir hw2</code> to create your homework 2
+directory. Finally, call <code>cd hw2</code>.</p>
+</div>
+<div class="paragraph">
+<p>For each of the problems below, we will use the vim editor. You will need to create a java file
+for each problem. For example, for the first problem you will call <code>vim Dates.java</code>.</p>
+</div>
+<div class="paragraph">
+<p>Remember your vim commands:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>vim Filename.java</code>: creates a file named Filename.java</p>
+</li>
+<li>
+<p><code>i</code>:  enter insert mode</p>
+</li>
+<li>
+<p><code>esc</code>: exit insert mode (you must exit insert mode in order to save and quit)</p>
+</li>
+<li>
+<p><code>:wq</code>: save the file and close vim</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>NOTE:</strong> Every method you create should be tested by calling it from the main method.</p>
+</div>
+<hr>
+<h2 id="_1_dates" class="discrete">1. Dates</h2>
+<div class="paragraph">
+<p>Write a program called <code>Dates.java</code> that will print out dates in
+different formats. The program should ask the user for the
+following information:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Day of the week (ex: Sunday, Monday)</p>
+</li>
+<li>
+<p>Month (ex: June, July)</p>
+</li>
+<li>
+<p>The day of the month (ex: 10)</p>
+</li>
+<li>
+<p>The year (ex: 1994)</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Then create the following two methods:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>printEuropean</code>: this prints the information in the European format.</p>
+</li>
+<li>
+<p><code>printAmerican</code>: this prints the information in the American format.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Both methods should take in four parameters. For example:</p>
+</div>
+<div class="paragraph">
+<p><code>public static void printAmerican(String dayOfWeek, String month, String dayOfMonth, String year)</code></p>
+</div>
+<div class="paragraph">
+<p>Notice that you do not need to parse the inputs to integers.
+This is because we are simply taking in user input and printing it in a certain format.</p>
+</div>
+<div class="paragraph">
+<p>Your main function should get the week, month, day of the month,
+and year from the user. It should then call <code>printAmerican()</code>
+and <code>printEuropean()</code>.</p>
+</div>
+<div class="paragraph">
+<p>Here is an example of how your program should work.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$ javac Dates.java
+$ java Dates
+Give me a day of the week.
+<strong>Monday</strong>
+Give me a month.
+<strong>September</strong>
+Give me a day of the month.
+<strong>16</strong>
+Give me a year.
+<strong>2024</strong>
+
+
+American format: Monday, September 16, 2024
+European format: Monday 16 September 2024</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Your program should be able to handle numbers with decimal points.</p>
+</div>
+<hr>
+<h2 id="_2_payments" class="discrete">2. Payments</h2>
+<div class="paragraph">
+<p>BMC needs a program to calculate how much to pay their hourly employees.
+The US Department of Labor requires that employees get paid time and a half
+for any hours over 40 that they work in a single week. For example,
+if an employee works 45 hours, they get 5 hours of overtime, at 1.5 times their base pay.
+BMC employees are paid at $15.00 an hour.
+Employees are not allowed to work more than 60 hours in a week.</p>
+</div>
+<div class="paragraph">
+<p>Rules:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>An employee gets paid (hours worked) × (base pay), for each hour up to 40 hours.</p>
+</li>
+<li>
+<p>For every hour over 40, they get overtime = (base pay) × 1.5.</p>
+</li>
+<li>
+<p>The base pay must not be less than the minimum wage ($15.00 an hour). If it is, print a message.</p>
+</li>
+<li>
+<p>If the number of hours is greater than 60, print an error message.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Directions:</p>
+</div>
+<div class="paragraph">
+<p>Create a new file called Payments: vim Payments.java.</p>
+</div>
+<div class="paragraph">
+<p>Paste in this base code:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>class Payments {
+  public static void main(String[] args) {
+
+  }
+
+  public static void pay(double basePay, int hours) {
+
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In your <code>main()</code> method, call <code>pay()</code> for each of these employees, and print out their payment amount:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Base pay: $22.50 Hours: 48</p>
+</li>
+<li>
+<p>Base pay: $14.90 Hours: 38</p>
+</li>
+<li>
+<p>Base pay: $30.92 Hours: 70</p>
+</li>
+<li>
+<p>Base pay: $16.75 Hours: 29</p>
+</li>
+</ul>
+</div>
+<hr>
+<h2 id="_3_more_mysteries" class="discrete">3. More Mysteries</h2>
+<div class="paragraph">
+<p>For parts 3.1 and 3.2, put your answers in a text file. Call <code>vim answers.txt</code>
+to create an <code>answers.txt</code> file where you can put your answers.</p>
+</div>
+<div class="paragraph">
+<p>For each program below, identify the error, label the type of error it is, and explain
+how it can be fixed.</p>
+</div>
+<div class="paragraph">
+<p>As a reminder, these are the different types of errors we have discussed in class:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Syntax</strong> errors are issues that a compiler will catch that will prevent the program from compiling</p>
+</li>
+<li>
+<p><strong>Runtime</strong> errors are issues that cause the program to crash when the program is running.</p>
+</li>
+<li>
+<p><strong>Logic</strong> errors are issues in the algorithm. For example, say we set minimum wage to $13.00 / hr instead
+of $15.00 as is specified by the rules in problem 2 (payments).</p>
+</li>
+</ul>
+</div>
+<h3 id="_3_1_mystery_2" class="discrete">3.1 Mystery 2</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>import java.util.Scanner;
+
+public class Mystery2 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String userInput = input.nextLine();
+        int value = Integer.parseInt(input);
+        double fraction = value / 10;
+        System.out.println("The fraction is "+fraction);
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>What is the error? Is the error is syntax error, runtime error, or logic error? How can we fix the problem?</p>
+</div>
+<div class="paragraph">
+<p>Hint: what happens when you divide two integers, and save the result
+as a double?</p>
+</div>
+<h3 id="_3_2_mystery_3" class="discrete">3.2 Mystery 3</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>import java.util.Scanner;
+
+public class Mystery3 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String userInput = input.nextLine();
+        int value = Integer.parseInt(input);
+        double fraction = value / 0;
+        System.out.println("The fraction is "+fraction);
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>What is the error? Is the error is syntax error, runtime error, or logic error? How can we fix the problem?</p>
+</div>
+<hr>
+<h2 id="_4_control_flow" class="discrete">4. Control Flow</h2>
+<div class="paragraph">
+<p>For this problem you will walk through the flow of execution
+of a program with multiple methods.
+Read the following code and answer the questions in a
+file called <code>controlFlow.txt</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>  1   public static int leaveHome(int num) {
+  2     System.out.printf("%d little ducks went out one day\n", num);
+  3     return num - 1;
+  4   }
+  5
+  6   public static void whereTheyGo() {
+  7     System.out.printf("over the hill and far away,\n");
+  8   }
+  9
+ 10   public static void mommaSay() {
+ 11     System.out.printf("Momma duck said quak quak quak quak\n");
+ 12   }
+ 13
+ 14   public static void comeHome(int returnDucks) {
+ 15     System.out.printf("but only %d ducks came back", returnDucks);
+ 16   }
+ 17
+ 18   public static void whereTheyGo(String terrain) {
+ 19     System.out.printf("over the %s and far away,\n", terrain);
+ 20   }
+ 21
+ 22   public static void jumping(String animal, int num) {
+ 23     System.out.printf("There were %d %s jumping on the bed", num, animal);
+ 24   }
+ 25
+ 26   public static void song(String animal, String place, int num) {
+ 27     num = leaveHome(num);
+ 28     whereTheyGo();
+ 29     mommaSay();
+ 30     comeHome(num);
+ 31     num = leaveHome(num);
+ 32     whereTheyGo(place);
+ 33     mommaSay();
+ 34     comeHome(num) // was accidently num = comeHome(num);
+ 35     jumping(animal, num);
+ 36     comeHome(num) // was accidently num = comeHome(num);
+ 37   }
+ 38
+ 43   public static void main(String[] args) {
+ 44     song("monkeys", "mountain", 4);
+ 45   }
+ 46 }</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Write down the line numbers in the order of which they are executed. For example, if java we executed the foo method shown below, you would write just 71, 72, 73 - you do not need to include the method signature or the lines with just closing brackets.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code> 70 void foo() {
+ 71   int a = 0;
+ 72   double b = a + 5.0;
+ 73   return;
+ 74 }</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>What is the value of the parameter <code>num</code> in the <code>void jumping(String animal, int num)</code> method the first time that method is called?</p>
+</li>
+<li>
+<p>What is the output of this program?</p>
+</li>
+</ul>
+</div>
+<hr>
+<h2 id="_grading_rubric" class="discrete">Grading Rubric</h2>
+<div class="paragraph">
+<p>This assignment will be out of 10 points:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Dates: 2 points</p>
+</li>
+<li>
+<p>Payments: 3 points</p>
+</li>
+<li>
+<p>Mysteries: 2 points</p>
+</li>
+<li>
+<p>Control Flow: 3 points</p>
+</li>
+</ul>
+</div>
+<hr>
+<h2 id="_submitting" class="discrete">Submitting</h2>
+<div class="paragraph">
+<p>In a text file (call <code>vim readme.txt</code>) answer the following questions:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>How much time did you spend on the homework?</p>
+</li>
+<li>
+<p>What did you learn from the homework?</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>For 2 extra credit points:</strong> Run this command on your java files before submitting: <code>astyle --style=java Example.java</code>.
+Replace <code>Example</code> with the name of your java file, f example: <code>Dates</code>.</p>
+</div>
+<div class="paragraph">
+<p>Finally, you need to copy your files from the server to your personal computer for submission.</p>
+</div>
+<div class="paragraph">
+<p>Close your connection to goldengate (type <code>exit</code>), and then run the following command:</p>
+</div>
+<div class="paragraph">
+<p><code>$ scp -r &lt;username&gt;@goldengate.cs.brynmawr.edu:/home/&lt;username&gt;/cs113/homeworks/hw2/ .</code></p>
+</div>
+<div class="paragraph">
+<p>Make sure to replace <code>&lt;username&gt;</code> with your username. There is a space between <code>hw2/</code> and <code>.</code>. scp is a command to secure-copy files from one server to another. In this case, from goldengate to your own machine.</p>
+</div>
+<div class="paragraph">
+<p>Submit the following files to the assignment called <code>HW02</code> on Gradescope.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>Dates.java</code></p>
+</li>
+<li>
+<p><code>Payments.java</code></p>
+</li>
+<li>
+<p><code>answers.txt</code></p>
+</li>
+<li>
+<p><code>controlFlow.txt</code></p>
+</li>
+<li>
+<p><code>readme.txt</code></p>
+</li>
+</ol>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2026-09-18 12:13:14 -0400
+</div>
+</div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+})
+MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
+  MathJax.InputJax.AsciiMath.postfilterHooks.Add(function (data, node) {
+    if ((node = data.script.parentNode) && (node = node.parentNode) && node.classList.contains("stemblock")) {
+      data.math.root.display = "block"
+    }
+    return data
+  })
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>
