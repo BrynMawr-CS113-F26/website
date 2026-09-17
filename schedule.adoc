@@ -30,6 +30,7 @@
 * Chapter 3: Input & Output
 * Chapter 4: Methods & Testing
 * link:lectures/week2lecture1.pdf[Week 2 Lecture 1]
+* link:lectures/week2lecture2.pdf[Week 2 Lecture 2]
 
 //-----------------------------
 |3
@@ -40,8 +41,8 @@
 
 |
 * Chapter 5: Conditionals & Logic
-// * link:lectures/Lecture-Week03-Feb3-NCurses.pdf[Lecture Feb 3 - NCurses]
-// * link:lectures/Lecture-Week03-Feb5-DataStructures.pdf[Lecture Feb 5 - Data Structures]
+* link:lectures/week3lecture1.pdf[Week 3 Lecture 1]
+// * link:lectures/week3lecture2.pdf[Week 3 Lecture 1]
 
 //-----------------------------
 |4
