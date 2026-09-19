@@ -302,7 +302,7 @@ In a text file (call `vim readme.txt`) answer the following questions:
 2. What did you learn from the homework?
 
 **For 2 extra credit points:** Run this command on your java files before submitting: `astyle --style=java Example.java`.
-Replace `Example` with the name of your java file, f example: `Dates`.
+Replace `Example` with the name of your java file, for example: `Dates`.
 
 Finally, you need to copy your files from the server to your personal computer for submission.
 

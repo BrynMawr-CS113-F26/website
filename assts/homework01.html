@@ -131,16 +131,14 @@ to create a <code>answers.txt</code> file where you can put your answers.</p>
 <h3 id="_3_2_mystery" class="discrete">3.2 Mystery</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>import java.util.Scanner;
-
-public class Mystery1 {
+<pre class="highlight"><code>public class Mystery1 {
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        String userInput = input.nextLine();
-        int value = Integer.parseInt(userInput);
+
+        String input = System.console().readLine()
+        int value = Integer.parseInt(input);
         double fraction = value / 10
-        System.out.println("The fraction is " + fraction);
+        System.out.println("The fraction is "+fraction);
     }
 }</code></pre>
 </div>
@@ -196,7 +194,7 @@ public class Mystery1 {
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-09-10 18:02:38 -0400
+Last updated 2026-09-19 17:42:26 -0400
 </div>
 </div>
 <script type="text/x-mathjax-config">
