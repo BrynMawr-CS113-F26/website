@@ -1,0 +1,216 @@
+include::header.adoc[]
+
+:title: Lab 4: Conditionals & Stack Diagrams
+:Author Initials: KRS
+:Date:    2026-08-27
+:Revision: 0.1
+
+[discrete]
+= {title}
+
+[discrete]
+= Objectives
+
+The main goals for this lab are:
+
+1. Practice drawing stack diagrams.
+2. Practice reading code and evaluating logical expressions.
+
+---
+[discrete]
+= 1. Stack Diagrams
+
+For each of the follow programs, draw a stack diagram to trace out what happens as the program executes. 
+
+---
+[discrete]
+== 1.1 Add
+
+[source, subs="quotes"]
+----
+class Add {
+  public static int add(int a, int b) {
+    int result = a + b;
+    return result; 
+  }
+
+  public static void main(String[] args) {
+    int a = 4;
+    int b = 8;
+    int c = add(b, a);
+    System.out.println(a + " + " + b + " = " + c);
+  }
+}
+
+----
+
+Draw the stack diagram below.
+
+[cols="1",frame=none,grid=none]
+|===
+|
+|
+|
+|
+|
+|
+|
+|
+|===
+
+[cols="1",frame=none,grid=none]
+|===
+|
+|
+|
+|
+|
+|
+|
+|
+|===
+
+---
+[discrete]
+== 1.2 Add2
+
+[source, subs="quotes"]
+----
+class Add2 {
+  public static int add(int a, int b) {
+    a = 2;
+    int result = a + b;
+    return result;
+  }
+
+  public static void main(String[] args) {
+    int a = 4;
+    int b = 8;
+    int c = add(a, b);
+    System.out.println(a + " + " + b + " = " + c);
+  }
+}
+----
+
+Draw the stack diagram below.
+
+[cols="1",frame=none,grid=none]
+|===
+|
+|
+|
+|
+|
+|
+|
+|
+|===
+
+[cols="1",frame=none,grid=none]
+|===
+|
+|
+|
+|
+|
+|
+|
+|
+|===
+
+**TODO**: Show Prof. Shiptoski your work before continuing on to the next section.
+---
+[discrete]
+= 2. Expressions
+
+For each expression, write down the **value** of the expression, and the **date type**
+of the expression.
+
+[source, subs="quotes"]
+----
+int x = 5;
+int y = 13;
+int z = 15;
+String message = "cat!";
+boolean Done = false;
+----
+
+
+**1:** (x < 10) && (y < 10)
+
+**Answer:** ______
+
+**2:** (x < 10) || (y < 10) 
+
+**Answer:** ______
+
+**3:** (x < 10) && (x > 0)
+
+**Answer:** ______
+
+**4:** (x > 10) || (x < 0)
+
+**Answer:** ______
+
+**5:** (5 / x) > 7.0
+
+**Answer:** ______
+
+**6:** (z / 2) > 7.0
+
+**Answer:** ______
+
+**7:** message.compareTo(“cats”) == 0
+
+
+**Answer:** ______
+
+**8:** !Done
+
+**Answer:** ______
+
+**9:** Done || (x < 6 && y > 10)
+
+**Answer:** ______
+
+
+**TODO**: Show Prof. Shiptoski your work before continuing on to the next section.
+
+
+---
+[discrete]
+= 3. Colors
+
+Consider the following code.
+
+[source, subs="quotes"]
+----
+String colorName = "purple";
+
+if (colorName.compareTo("red") != 0) {
+  System.out.println(colorName + " is not primary");
+} else if (colorName.compareTo("blue") != 0 {
+  System.out.println(colorName + " is not primary");
+} else if (colorName.compareTo("yellow") != 0) {
+  System.out.println(colorName + " is not primary");
+} else {
+  System.out.println(colorName + " is primary");
+}
+----
+
+**1:** What does the above code print out when `colorName = "purple"`?
+
+**Answer:** ______
+
+**2:** What does the above code print out when `colorName = "red"`?
+
+**Answer:** ______
+
+**3:** What does the above code print out when `colorName = "yellow"`?
+
+**Answer:** ______
+
+
+---
+
+**TODO**: Show Prof. Shiptoski your work and then you are all done with lab 4.

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.26">
+<title>Lab 4: Conditionals &amp; Stack Diagrams</title>
+<link rel="stylesheet" href="../style/cs21.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<h2 id="_lab_4_conditionals_stack_diagrams" class="discrete">Lab 4: Conditionals &amp; Stack Diagrams</h2>
+<h2 id="_objectives" class="discrete">Objectives</h2>
+<div class="paragraph">
+<p>The main goals for this lab are:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Practice drawing stack diagrams.</p>
+</li>
+<li>
+<p>Practice reading code and evaluating logical expressions.</p>
+</li>
+</ol>
+</div>
+<hr>
+<h2 id="_1_stack_diagrams" class="discrete">1. Stack Diagrams</h2>
+<div class="paragraph">
+<p>For each of the follow programs, draw a stack diagram to trace out what happens as the program executes.</p>
+</div>
+<hr>
+<h3 id="_1_1_add" class="discrete">1.1 Add</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>class Add {
+  public static int add(int a, int b) {
+    int result = a + b;
+    return result;
+  }
+
+  public static void main(String[] args) {
+    int a = 4;
+    int b = 8;
+    int c = add(b, a);
+    System.out.println(a + " + " + b + " = " + c);
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Draw the stack diagram below.</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="_1_2_add2" class="discrete">1.2 Add2</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>class Add2 {
+  public static int add(int a, int b) {
+    a = 2;
+    int result = a + b;
+    return result;
+  }
+
+  public static void main(String[] args) {
+    int a = 4;
+    int b = 8;
+    int c = add(a, b);
+    System.out.println(a + " + " + b + " = " + c);
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Draw the stack diagram below.</p>
+</div>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-none grid-none stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>TODO</strong>: Show Prof. Shiptoski your work before continuing on to the next section.
+---</p>
+</div>
+<h2 id="_2_expressions" class="discrete">2. Expressions</h2>
+<div class="paragraph">
+<p>For each expression, write down the <strong>value</strong> of the expression, and the <strong>date type</strong>
+of the expression.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>int x = 5;
+int y = 13;
+int z = 15;
+String message = "cat!";
+boolean Done = false;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>1:</strong> (x &lt; 10) &amp;&amp; (y &lt; 10)</p>
+</div>
+<div class="paragraph">
+<p><strong>Answer:</strong> <em><em></em></em></p>
+</div>
+<div class="paragraph">
+<p><strong>2:</strong> (x &lt; 10) || (y &lt; 10)</p>
+</div>
+<div class="paragraph">
+<p><strong>Answer:</strong> <em><em></em></em></p>
+</div>
+<div class="paragraph">
+<p><strong>3:</strong> (x &lt; 10) &amp;&amp; (x &gt; 0)</p>
+</div>
+<div class="paragraph">
+<p><strong>Answer:</strong> <em><em></em></em></p>
+</div>
+<div class="paragraph">
+<p><strong>4:</strong> (x &gt; 10) || (x &lt; 0)</p>
+</div>
+<div class="paragraph">
+<p><strong>Answer:</strong> <em><em></em></em></p>
+</div>
+<div class="paragraph">
+<p><strong>5:</strong> (5 / x) &gt; 7.0</p>
+</div>
+<div class="paragraph">
+<p><strong>Answer:</strong> <em><em></em></em></p>
+</div>
+<div class="paragraph">
+<p><strong>6:</strong> (z / 2) &gt; 7.0</p>
+</div>
+<div class="paragraph">
+<p><strong>Answer:</strong> <em><em></em></em></p>
+</div>
+<div class="paragraph">
+<p><strong>7:</strong> message.compareTo(“cats”) == 0</p>
+</div>
+<div class="paragraph">
+<p><strong>Answer:</strong> <em><em></em></em></p>
+</div>
+<div class="paragraph">
+<p><strong>8:</strong> !Done</p>
+</div>
+<div class="paragraph">
+<p><strong>Answer:</strong> <em><em></em></em></p>
+</div>
+<div class="paragraph">
+<p><strong>9:</strong> Done || (x &lt; 6 &amp;&amp; y &gt; 10)</p>
+</div>
+<div class="paragraph">
+<p><strong>Answer:</strong> <em><em></em></em></p>
+</div>
+<div class="paragraph">
+<p><strong>TODO</strong>: Show Prof. Shiptoski your work before continuing on to the next section.</p>
+</div>
+<hr>
+<h2 id="_3_colors" class="discrete">3. Colors</h2>
+<div class="paragraph">
+<p>Consider the following code.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>String colorName = "purple";
+
+if (colorName.compareTo("red") != 0) {
+  System.out.println(colorName + " is not primary");
+} else if (colorName.compareTo("blue") != 0 {
+  System.out.println(colorName + " is not primary");
+} else if (colorName.compareTo("yellow") != 0) {
+  System.out.println(colorName + " is not primary");
+} else {
+  System.out.println(colorName + " is primary");
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>1:</strong> What does the above code print out when <code>colorName = "purple"</code>?</p>
+</div>
+<div class="paragraph">
+<p><strong>Answer:</strong> <em><em></em></em></p>
+</div>
+<div class="paragraph">
+<p><strong>2:</strong> What does the above code print out when <code>colorName = "red"</code>?</p>
+</div>
+<div class="paragraph">
+<p><strong>Answer:</strong> <em><em></em></em></p>
+</div>
+<div class="paragraph">
+<p><strong>3:</strong> What does the above code print out when <code>colorName = "yellow"</code>?</p>
+</div>
+<div class="paragraph">
+<p><strong>Answer:</strong> <em><em></em></em></p>
+</div>
+<hr>
+<div class="paragraph">
+<p><strong>TODO</strong>: Show Prof. Shiptoski your work and then you are all done with lab 3.</p>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2026-09-20 12:43:25 -0400
+</div>
+</div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+})
+MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
+  MathJax.InputJax.AsciiMath.postfilterHooks.Add(function (data, node) {
+    if ((node = data.script.parentNode) && (node = node.parentNode) && node.classList.contains("stemblock")) {
+      data.math.root.display = "block"
+    }
+    return data
+  })
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>

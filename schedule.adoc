@@ -51,7 +51,7 @@
 |*Methods II, Recursion I* 
 
 // * Assignment 04: Methods Conditionals, & Strings, Due Sept 25
-* Lab Sept 22: Conditionals  & Strings
+* Lab Sept 22: link:assts/lab04.html[Conditionals & Stack Diagrams]
 
 |
 // * link:lectures/Lecture-Week03-Feb5-DataStructures.pdf[Lecture Feb 10 - Data Structures]
