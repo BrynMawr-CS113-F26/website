@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.26">
+<title>Homework 3: Recursion, Loops, and Conditionals</title>
+<link rel="stylesheet" href="../style/cs21.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<h2 id="_homework_3_recursion_loops_and_conditionals" class="discrete">Homework 3: Recursion, Loops, and Conditionals</h2>
+<h2 id="_set_up" class="discrete">Set Up</h2>
+<div class="paragraph">
+<p>In this assignment you will solve some problems using both recursion and loops.</p>
+</div>
+<div class="paragraph">
+<p>To work on this homework, follow these steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>On Mac, open the Terminal program. On Windows, open the PowerShell program.</p>
+</li>
+<li>
+<p>Log into goldengate by using the ssh command from your personal laptop: <code>ssh <a href="mailto:your-username@goldengate.cs.brynmawr.edu">your-username@goldengate.cs.brynmawr.edu</a></code>.</p>
+</li>
+<li>
+<p>Run these commands:</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$ cd cs113
+$ ls</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you see a homeworks directory, cd into it. Then, call <code>mkdir hw3</code> to create your homework 3
+directory. Finally, call <code>cd hw3</code>.</p>
+</div>
+<div class="paragraph">
+<p>For each of the problems below, we will use the vim editor. You will need to create a java file
+for each problem. For example, for the first problem you will call <code>vim NumbersRecursion.java</code>.</p>
+</div>
+<div class="paragraph">
+<p>Remember your vim commands:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>vim Filename.java</code>: creates a file named Filename.java</p>
+</li>
+<li>
+<p><code>i</code>:  enter insert mode</p>
+</li>
+<li>
+<p><code>esc</code>: exit insert mode (you must exit insert mode in order to save and quit)</p>
+</li>
+<li>
+<p><code>:wq</code>: save the file and close vim</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>NOTE:</strong> For problems 2 and 3, you will need to get input from the user.
+For problem 1, you do not need to do this, just test out your function
+in your <code>main</code> function.</p>
+</div>
+<hr>
+<h2 id="_1_numbers" class="discrete">1. Numbers</h2>
+<div class="paragraph">
+<p>Write a program called <code>Numbers.java</code> that implements the following methods. Make sure to test the methods in the file’s <code>main</code> method.</p>
+</div>
+<hr>
+<h3 id="_1_1_previous_even" class="discrete">1.1 Previous Even</h3>
+<div class="paragraph">
+<p>For this problem, we want to write two functions that solve the same problem, first using recursion, and then using loops.
+The methods should each take an integer and print out all the previous even numbers.</p>
+</div>
+<div class="paragraph">
+<p>For example, <code>previousEven(6)</code> should print out <code>6 4 2</code>, <code>previousEven(9)</code> should print out <code>8 6 4 2</code>. Make sure to put a space between the numbers and print all the numbers on one line.
+It is okay if there is a space  after the last number.</p>
+</div>
+<div class="paragraph">
+<p>Be sure to try calling the function from your <code>main</code> function to test it out.
+You do not need to accept user input, but can if you would like to use it for testing purposes.</p>
+</div>
+<div class="paragraph">
+<p>TODO: Write a method called <code>previousEvenRec</code> that solves this problem recursively.
+TODO: Write a method called <code>previousEvenLoop</code> that solves this problem with loops.</p>
+</div>
+<hr>
+<h3 id="_1_2_product_of_previous_odd" class="discrete">1.2 Product of Previous Odd</h3>
+<div class="paragraph">
+<p>For this problem, we want to write two functions that solve the same problem, first using recursion, and then using loops.
+The methods should each take an integer and print out the product of the previous odd numbers.</p>
+</div>
+<div class="paragraph">
+<p>For example, <code>productOfPreviousOdd(9)</code> would return <code>945</code> because it would multiply <code>9</code> by <code>7</code> by <code>5</code> by <code>3</code> by <code>1</code>.</p>
+</div>
+<div class="paragraph">
+<p>TODO: Write a method called <code>productOfPreviousOddRec</code> that solves this problem recursively.
+TODO: Write a method called <code>productOfPreviousOddLoop</code> that solves this problem with loops.</p>
+</div>
+<hr>
+<h2 id="_2_calendar" class="discrete">2. Calendar:</h2>
+<div class="paragraph">
+<p>Write a program called <code>Month.java</code> that gets an integer representing a month from the user and prints the corresponding month name.</p>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If the input is 1, the program should print January.</p>
+</li>
+<li>
+<p>If the input is 2, the program should print February.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$ java Month
+Enter an integer: 1
+January
+
+$ java Month
+Enter an integer: 10
+October</code></pre>
+</div>
+</div>
+<hr>
+<h3 id="_3_timer" class="discrete">3. Timer</h3>
+<div class="paragraph">
+<p>Write a program, <code>Timer.java</code> that computes the time when the user will finish all of their tasks. The program should ask the user for the following information:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The current time</p>
+</li>
+<li>
+<p>How many tasks they need to complete</p>
+</li>
+<li>
+<p>How long a task takes (you can assume that each task takes the same amount of time).</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Below is an example of how your program should work.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$ javac Tasks.java
+$ java Tasks
+Enter the current hour:
+<strong>23</strong>
+Enter the number of tasks:
+<strong>1</strong>
+Enter the number of hours a task takes:
+<strong>5</strong>
+
+You will finish at 4:00 o'clock.
+
+$ javac Tasks.java
+$ java Tasks
+Enter the current hour:
+<strong>9</strong>
+Enter the number of tasks:
+<strong>3</strong>
+Enter the number of hours a task takes:
+<strong>2</strong>
+
+You will finish at 15:00 o'clock.</code></pre>
+</div>
+</div>
+<hr>
+<h2 id="_grading_rubric" class="discrete">Grading Rubric</h2>
+<div class="paragraph">
+<p>This assignment will be out of 12 points:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Numbers: 6 points</p>
+</li>
+<li>
+<p>Calendar: 2 points</p>
+</li>
+<li>
+<p>Tasks: 4 points</p>
+</li>
+</ul>
+</div>
+<hr>
+<h2 id="_submitting" class="discrete">Submitting</h2>
+<div class="paragraph">
+<p>In a text file (call <code>vim readme.txt</code>) answer the following questions:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>How much time did you spend on the homework?</p>
+</li>
+<li>
+<p>What did you learn from the homework?</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>For 2 extra credit points:</strong> Run this command on your java files before submitting: <code>astyle --style=java Example.java</code>.
+Replace <code>Example</code> with the name of your java file, for example: <code>Numbers</code>.</p>
+</div>
+<div class="paragraph">
+<p>Finally, you need to copy your files from the server to your personal computer for submission.</p>
+</div>
+<div class="paragraph">
+<p>Close your connection to goldengate (type <code>exit</code>), and then run the following command:</p>
+</div>
+<div class="paragraph">
+<p><code>$ scp -r &lt;username&gt;@goldengate.cs.brynmawr.edu:/home/&lt;username&gt;/cs113/homeworks/hw3/ .</code></p>
+</div>
+<div class="paragraph">
+<p>Make sure to replace <code>&lt;username&gt;</code> with your username. There is a space between <code>hw3/</code> and <code>.</code>. scp is a command to secure-copy files from one server to another. In this case, from goldengate to your own machine.</p>
+</div>
+<div class="paragraph">
+<p>Submit the following files to the assignment called <code>HW03</code> on Gradescope.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>Numbers.java</code></p>
+</li>
+<li>
+<p><code>Calendar.java</code></p>
+</li>
+<li>
+<p><code>Tasks.java</code></p>
+</li>
+<li>
+<p><code>readme.txt</code></p>
+</li>
+</ol>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2026-09-26 10:43:42 -0400
+</div>
+</div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+})
+MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
+  MathJax.InputJax.AsciiMath.postfilterHooks.Add(function (data, node) {
+    if ((node = data.script.parentNode) && (node = node.parentNode) && node.classList.contains("stemblock")) {
+      data.math.root.display = "block"
+    }
+    return data
+  })
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>
