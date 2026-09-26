@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.26">
+<title>Lab 5: Useful String Methods</title>
+<link rel="stylesheet" href="../style/cs21.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<h2 id="_lab_5_useful_string_methods" class="discrete">Lab 5: Useful String Methods</h2>
+<h2 id="_objectives" class="discrete">Objectives</h2>
+<div class="paragraph">
+<p>The main goals for this lab are:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>To get practice with useful String methods.</p>
+</li>
+</ol>
+</div>
+<hr>
+<h2 id="_1_simple_strings" class="discrete">1. Simple Strings</h2>
+<div class="paragraph">
+<p>Now we will look at a few String methods.</p>
+</div>
+<div class="paragraph">
+<p>If we have a String, we can determine the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>how long the string is</p>
+</li>
+<li>
+<p>how many times a certain character appears in a string</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Write a program called WordInfo.java where you will ask a user for a word and then a character. The program will then tell the user:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>how long the word is</p>
+</li>
+<li>
+<p>where in the word that character appears. By where we mean is it the 1st letter, the 2nd letter, etc. If the character appears multiple times, you only need to tell the user where the character first appears.</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$ javac WordInfo.java
+$ java WordInfo
+Please give me a word: <strong>character</strong>
+Please give me a character: <strong>a</strong>
+character has 9 letters, a is the #3 letter in the character</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>TODO</strong>: Show Prof. Shiptoski your work before continuing.</p>
+</div>
+<hr>
+<h2 id="_2_more_strings" class="discrete">2. More Strings</h2>
+<hr>
+<h3 id="_2_1_even_length" class="discrete">2.1 Even Length</h3>
+<div class="paragraph">
+<p>Write a method, isEvenLength, which returns true if the given String has an even number of characters and false otherwise. Implement tests in main to check your answer. For example,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>isEvenLength("cat") returns false</p>
+</li>
+<li>
+<p>isEvenLength("") returns true</p>
+</li>
+<li>
+<p>isEvenLength("a") returns false</p>
+</li>
+</ul>
+</div>
+<hr>
+<h3 id="_2_2_substrings" class="discrete">2.2 Substrings</h3>
+<div class="paragraph">
+<p>Write a method called subStringN with 2 paramaters, a string and an integer n.</p>
+</div>
+<div class="paragraph">
+<p>The method should print 2 substrings:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>the first n characters of the string</p>
+</li>
+<li>
+<p>the last n characters of the string.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>subStringN("hello", 2) should print he on one line and then lo on another</p>
+</li>
+<li>
+<p>subStringN("Antidisestablishmentarianism", 4) should print Anti on one line and then nism on another.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If the length of the string is shorter than N, print a message telling the user.</p>
+</div>
+<div class="paragraph">
+<p><strong>TODO</strong>: Show Prof. Shiptoski your work and then you are all done with lab 5.</p>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2026-09-26 18:06:38 -0400
+</div>
+</div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+})
+MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
+  MathJax.InputJax.AsciiMath.postfilterHooks.Add(function (data, node) {
+    if ((node = data.script.parentNode) && (node = node.parentNode) && node.classList.contains("stemblock")) {
+      data.math.root.display = "block"
+    }
+    return data
+  })
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+include::header.adoc[]
+
+:title: Lab 5: Useful String Methods
+:Author Initials: KRS
+:Date:    2026-08-27
+:Revision: 0.1
+
+[discrete]
+= {title}
+
+[discrete]
+= Objectives
+
+The main goals for this lab are:
+
+1. To get practice with useful String methods.
+
+
+---
+[discrete]
+= 1. Simple Strings
+
+Now we will look at a few String methods.
+
+If we have a String, we can determine the following information:
+
+* how long the string is
+* how many times a certain character appears in a string
+
+Write a program called WordInfo.java where you will ask a user for a word and then a character. The program will then tell the user:
+
+1. how long the word is
+2. where in the word that character appears. By where we mean is it the 1st letter, the 2nd letter, etc. If the character appears multiple times, you only need to tell the user where the character first appears.
+
+[source, subs="quotes"]
+----
+$ javac WordInfo.java
+$ java WordInfo
+Please give me a word: *character*
+Please give me a character: *a*
+character has 9 letters, a is the #3 letter in the character
+----
+
+**TODO**: Show Prof. Shiptoski your work before continuing.
+
+---
+[discrete]
+= 2. More Strings
+
+---
+[discrete]
+== 2.1 Even Length
+
+Write a method, isEvenLength, which returns true if the given String has an even number of characters and false otherwise. Implement tests in main to check your answer. For example,
+
+* isEvenLength("cat") returns false
+* isEvenLength("") returns true
+* isEvenLength("a") returns false
+
+---
+[discrete]
+== 2.2 Substrings
+
+Write a method called subStringN with 2 paramaters, a string and an integer n.
+
+The method should print 2 substrings: 
+
+1. the first n characters of the string
+2. the last n characters of the string. 
+
+Examples:
+
+
+* subStringN("hello", 2) should print he on one line and then lo on another
+* subStringN("Antidisestablishmentarianism", 4) should print Anti on one line and then nism on another.
+
+If the length of the string is shorter than N, print a message telling the user.
+
+**TODO**: Show Prof. Shiptoski your work and then you are all done with lab 5.
