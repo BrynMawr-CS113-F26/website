@@ -1,6 +1,6 @@
 include::header.adoc[]
 
-:title: Lab 5: Useful String Methods
+:title: Lab 5: Useful String Methods & Recursion
 :Author Initials: KRS
 :Date:    2026-08-27
 :Revision: 0.1
@@ -14,6 +14,7 @@ include::header.adoc[]
 The main goals for this lab are:
 
 1. To get practice with useful String methods.
+2. To practice writing recursive functions.
 
 
 ---
@@ -47,7 +48,6 @@ character has 9 letters, a is the #3 letter in the character
 [discrete]
 = 2. More Strings
 
----
 [discrete]
 == 2.1 Even Length
 
@@ -75,5 +75,84 @@ Examples:
 * subStringN("Antidisestablishmentarianism", 4) should print Anti on one line and then nism on another.
 
 If the length of the string is shorter than N, print a message telling the user.
+
+---
+[discrete]
+= 3. Recursion
+
+[discrete]
+== 3.1 Sum of Numbers
+
+Given a `String` of numbers, write a method called `sum` that returns the sum of all the numbers in the `String`. 
+`sum` should have one parameter, the string of numbers.
+
+For example `sum("1234")` should return `10`.
+
+Below we are going to implement this together. The following questions will help guide you.
+
+**Question 1:** Consider the `charAt()` function in Java. How could we use this function in our recursive function, to get the digits
+out of the string?
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+
+**Question 2:** Let’s now think about our base case, i.e. when we no longer want to make a recursive call. 
+What would be special about the value assigned to this parameter (the `String` that is passed in to the method) 
+to tell us to stop making a recursive call?
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+
+**TODO**: Implement the base case in the method.
+
+**Question 3:** During each recursive step, what do we want to keep track off, and what do we want to punt down the line?
+**HINT:** What is the result of `1 + sum("234")`?
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+
+**Question 4:** Given the string "1234", how can we extract the `1`?
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+
+**Question 5:** Given the character '1', how can we get the integer value `1`?
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+
+**Question 6:** Given the `String` "1234", how can we get the substring "234"?
+**HINT:** Think about the `substring()` method we discussed in class.
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+
+**TODO:** Implement the recursive step right after your base case.
+
+**TODO:** In your `main` method, test `sum()` by invoking the method with the following arugments:
+
+* `sum("234")` should return 9
+* `sum("2222")` should return 8
+* `sum("19802")` should return 20
+* `sum("00020")` should return 2
+
 
 **TODO**: Show Prof. Shiptoski your work and then you are all done with lab 5.

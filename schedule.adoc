@@ -65,7 +65,7 @@
 |*Recursion II, Loops I* 
 
 // * Assignment 05: Recursion, Due Oct 2
-* Lab Sept 29: link:assts/lab05.html[Useful String Methods]
+* Lab Sept 29: link:assts/lab05.html[Useful String Methods, Recursion]
 
 |
 // * link:lectures/Lecture-Week04-Feb12-Binary.pdf[Lecture Feb 17 - Binary]
