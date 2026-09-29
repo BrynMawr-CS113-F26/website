@@ -51,7 +51,6 @@
 |*Methods II, Recursion I* 
 
 // * Assignment 04: Methods Conditionals, & Strings, Due Sept 25
-* Assignment 03: link:assts/homework03.html[Recursion, Loops, and Conditionals]
 * Lab Sept 22: link:assts/lab04.html[Conditionals & Stack Diagrams]
 
 |
@@ -65,6 +64,7 @@
 |*Recursion II, Loops I* 
 
 // * Assignment 05: Recursion, Due Oct 2
+* Assignment 03: link:assts/homework03.html[Recursion, Loops, and Conditionals], due Oct. 6 at midnight
 * Lab Sept 29: link:assts/lab05.html[Useful String Methods, Recursion]
 
 |
