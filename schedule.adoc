@@ -88,6 +88,10 @@
 * link:lectures/week5lecture1.pdf[Week 5 Lecture 1]
 * link:lectures/113week5lecture1notes.pdf[Week 5 Lecture 1 Notes]
 * link:lectures/113week5lecture2notes.pdf[Week 5 Lecture 2 Notes]
+* link:lecture_examples/Palindrome.java[Palindrome.java]
+* link:lecture_examples/ArrayAvg.java[ArrayAvg.java]
+* link:lecture_examples/StringFun.java[StringFun.java]
+
 
 //-----------------------------
 |6
