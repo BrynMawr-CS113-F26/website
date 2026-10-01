@@ -65,6 +65,13 @@
 // * link:lectures/Lecture-Week04-Feb12-Binary.pdf[Lecture Feb 12 - Binary]
 * Chapter 6: Recursive Methods
 
+* link:lectures/week4lecture1.pdf[Week 4 Lecture 1]
+* link:lectures/113week4lecture1notes.pdf[Week 4 Lecture 1 Notes]
+* link:lectures/week4lecture2.pdf[Week 4 Lecture 2]
+* link:lectures/113week4lecture2notes.pdf[Week 4 Lecture 2 Notes]
+* link:lecture_examples/LabThree.java[LabThree.java]
+* link:lecture_examples/WeekFour.java[WeekFour.java]
+
 //-----------------------------
 |5
 |Sept 29, Oct 1 anchor:week05[]
