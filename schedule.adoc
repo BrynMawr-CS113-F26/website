@@ -43,7 +43,14 @@
 |
 * Chapter 5: Conditionals & Logic
 * link:lectures/week3lecture1.pdf[Week 3 Lecture 1]
-// * link:lectures/week3lecture2.pdf[Week 3 Lecture 1]
+* link:lectures/week3lecture2.pdf[Week 3 Lecture 2]
+* link:lecture_examples/RecExs.java[RecExs.java]
+* link:lecture_examples/Height.java[Height.java]
+* link:lecture_examples/Blackjack.java[Blackjack.java]
+* link:lecture_examples/Primary.java[Primary.java]
+* link:lecture_examples/Sqrt.java[Sqrt.java]
+
+
 
 //-----------------------------
 |4
