@@ -96,10 +96,11 @@
 //-----------------------------
 |6
 |Oct 6, 8 anchor:week06[]
-|*Loops II, Arrays I*
+|*Loops II, Arrays, ArrayLists*
 
 // * Assignment 06: Recursion & Arrays, Due Oct 9
-* Lab Oct 8: Recursive Array Methods
+* Lab Oct 6: Finish last week's lab
+* Quiz 01 Oct 8: Java basics, conditionals, loops, recursion
 
 |
 // * link:lectures/Lecture-Week06-Feb24-IntroAssembly.pdf[Lecture Feb 24]
@@ -115,21 +116,17 @@
 
 |
 
-// |*Multidimensional Arrays, Class Design* 
-//
-// * Topics: Tracing assembly, loops, conditionals
-// * Topics: what is an operating system?, System calls
-// * Lab March 3: **Quiz 02**, link:studyguide2.html[Study Guide 2], link:studyguide3.html[StudyGuide 3]
-// * link:assts/asst07.html[Assignment 07]: Due March 17th in class, no extensions
-//
-// |
-// * link:lectures/Lecture-Week07-March3-AssemblyBranch.pdf[Lectures March 3,5] 
 
 //-----------------------------
 |8
 |Oct 20, 22 anchor:week08[]
-|*Midterm Review, Midterm Exam*
-|
+|*Multidimensional Arrays, Mutable vs Immutable Objects*
+
+* Lab Oct 20: Loops and 2D Arrays
+| 
+// link:lectures/Lecture-Week09-March17-OS-Processes.pdf[Lectures - March 17 and 19]
+* Chapter 10: Immutable Objects
+* Chapter 11: Mutable Objects
 
 //-----------------------------
 |9
