@@ -100,6 +100,7 @@
 
 // * Assignment 06: Recursion & Arrays, Due Oct 9
 * Lab Oct 6: Finish last week's lab
+* link:assts/practicequiz01.html[Practice Quiz with Solutions]
 * Quiz 01 Oct 8: Java basics, conditionals, loops, recursion
 
 |

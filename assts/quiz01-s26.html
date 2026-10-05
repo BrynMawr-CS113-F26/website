@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.26">
+<title>CS223: Systems Programming - Quiz 1 (Spring 2026)</title>
+<link rel="stylesheet" href="../style/cs21.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<h2 id="_cs223_systems_programming_quiz_1_spring_2026" class="discrete">CS223: Systems Programming - Quiz 1 (Spring 2026)</h2>
+<div class="paragraph">
+<p>Name:
+&#160;<br>
+&#160;<br>
+&#160;<br></p>
+</div>
+<div class="paragraph">
+<p>Complete the following exercises in 50 minutes. This quiz is closed book with the
+exception of one cheat sheet.</p>
+</div>
+<div class="pagebreak"> </div>
+<h2 id="_question_1" class="discrete">Question 1</h2>
+<div class="paragraph">
+<p>Consider the following sequence of commands. On each line, list what each command
+does. If the command produces output, list what the output would be. Assume that
+the first command runs in the directory <code>/home/zu</code></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Command</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mkdir A</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cd A</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">echo "hello" &gt; A.txt</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cat A.txt</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ls</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mkdir B</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mkdir C</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cd B</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ls ..</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>In the space below, draw the file hierarchy under the directory `/home/zu.</p>
+</div>
+<div class="paragraph">
+<p>&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br></p>
+</div>
+<div class="paragraph">
+<p>What is the current working directory after running the above commands?</p>
+</div>
+<div class="paragraph">
+<p>&#160;<br>
+&#160;<br></p>
+</div>
+<div class="paragraph">
+<p>What is the absolute path to the file <code>A.txt</code>?</p>
+</div>
+<div class="paragraph">
+<p>&#160;<br>
+&#160;<br></p>
+</div>
+<div class="paragraph">
+<p>What is the relative path to the file <code>A.txt</code> from the home directory, <code>/home/zu</code>?</p>
+</div>
+<div class="pagebreak"> </div>
+<h2 id="_question_2" class="discrete">Question 2</h2>
+<div class="paragraph">
+<p>Give the sizes in bytes for the following variables based on their
+declarations. Make sure to give a rationale for your answer.
+Assume standard sizes for basic data types (on a 64 bit
+system), such as those in your book, <em>Dive into Systems</em>. If the variable is
+a pointer give the size of the data it points to.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>struct mystery {
+  int flag;
+  char message[4];
+  int* status;
+  struct mystery* next;
+};</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Variable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Size and Rationale</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>float a = 8.5;</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&amp;a</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>const char* code = "-3";</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>struct mystery* m = malloc(sizeof(struct mystery) * 3);</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>m&#8594;next</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>m.flag</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>m.message[3]</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>m.message</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>*(m&#8594;status)</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="pagebreak"> </div>
+<h2 id="_question_3" class="discrete">Question 3</h2>
+<div class="paragraph">
+<p>A) Draw the function stack at the line indicated by the comment in <code>foo</code>.
+Please include intermediate values in your diagram, including the variable <code>i</code>.</p>
+</div>
+<div class="paragraph">
+<p>B) What is the output of this program? E.g. what is printed?</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+char* foo(char* str, char c)
+{
+  int n = strlen(str);
+  for(int i = 0; i &lt; n; i++)
+  {
+    if (str[i] == c)
+    {
+      str[i] = '\0';
+      return str;
+    }
+  }
+  return NULL;
+}
+
+int main()
+{
+  char buffer[8];
+  strcpy(buffer, "a,b,c");
+
+  char* s = foo(buffer, ',');
+  printf("%s\n", s);
+}</code></pre>
+</div>
+</div>
+<div class="pagebreak"> </div>
+<h2 id="_question_4" class="discrete">Question 4</h2>
+<div class="paragraph">
+<p>Consider the following program.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Suppose we would like to create a 5 by 2 array using an array or arrays method. Show how we can fill in the code below to create a 2D array with the right size.</p>
+</li>
+<li>
+<p>How much memory is allocated on the heap to create the array?</p>
+</li>
+<li>
+<p>Draw the stack diagram on the line indicated by the comment.</p>
+</li>
+<li>
+<p>In the space below this program, write code to initialize the same 5x2 array using a flat array.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>  5 int main() {
+  6     int** array = malloc(sizeof(int*) * ____);
+  7     assert(array != NULL); // abort program on error
+  8
+  9     int idx = 2;
+ 10     for (int i = 0; i &lt; ____; i++) {
+ 11         array[i] = malloc(sizeof(int) * ___);
+ 12         for (int j = 0; j &lt; ___; j++) {
+ 13             array[i][j] = idx;
+ 14               idx = idx + 2;
+ 15         }
+ 16     }
+ 17     // Draw the stack here!
+ 18</code></pre>
+</div>
+</div>
+<div class="pagebreak"> </div>
+<h2 id="_question_5" class="discrete">Question 5</h2>
+<div class="paragraph">
+<p>When Cedric runs his program with valgrind, he gets the following error.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>==798== Conditional jump or move depends on uninitialised value(s)
+==798==    at 0x48DFAD6: __vfprintf_internal (vfprintf-internal.c:1516)
+==798==    by 0x48C979E: printf (printf.c:33)
+==798==    by 0x1091F0: printValues (cedric-f24.c:6)
+==798==    by 0x10924E: main (cedric-f24.c:15)
+==798==
+==798== Use of uninitialised value of size 8
+==798==    at 0x48C32EB: _itoa_word (_itoa.c:177)
+==798==    by 0x48DEABD: __vfprintf_internal (vfprintf-internal.c:1516)
+==798==    by 0x48C979E: printf (printf.c:33)
+==798==    by 0x1091F0: printValues (cedric-f24.c:6)
+==798==    by 0x10924E: main (cedric-f24.c:15)
+0 0 0 0 0 0 0 0 0 0
+==798== Invalid free() / delete / delete[] / realloc()
+==798==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==798==    by 0x10925A: main (cedric-f24.c:16)
+==798==  Address 0x4a95040 is 0 bytes inside a block of size 40 free'd
+==798==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==798==    by 0x109212: printValues (cedric-f24.c:9)
+==798==    by 0x10924E: main (cedric-f24.c:15)
+==798==  Block was alloc'd at
+==798==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==798==    by 0x109239: main (cedric-f24.c:14)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here is his code.  What do the valgrind errors mean and how can Cedric fix his
+program? Write your answer in the space below, next to Cedric&#8217;s program.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>void printValues(int* v, int n) {
+  for (int i = 0; i &lt; n; i++) {
+    printf("%d ", v[i]);
+  }
+  printf("\n");
+  free(v);
+}
+
+int main() {
+  int n = 10;
+  int *values = malloc(sizeof(int) * n);
+  printValues(values, n);
+  free(values);
+  return 0;
+}</code></pre>
+</div>
+</div>
+<div class="pagebreak"> </div>
+<h2 id="_question_6" class="discrete">Question 6</h2>
+<div class="paragraph">
+<p>Part 1: Draw a stack diagram for the following code.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>  3 struct dataT {
+  4   int i, b, c;
+  5 };
+  6
+  7 struct nodeT {
+  8   struct dataT* first;
+  9   struct dataT* second;
+ 10 };
+ 11
+ 12 int main() {
+ 13
+ 14   struct dataT data1 = {1, 2, 3};
+ 15   struct dataT data2 = {-10, -20, -30};
+ 16   struct nodeT* node = malloc(sizeof(struct nodeT));
+ 17   node-&gt;first = &amp;data1;
+ 18   node-&gt;second = &amp;data2;
+ 19
+ 20   // Draw stack here
+ 21   free(node);
+ 22 }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Part 2: Suppose we wish to refactor the above code so that <code>node</code> is created and initialized
+using a function called <code>init</code>, as shown below. Show how you would define and implement the
+function <code>init</code> such that <code>node</code> is created in the same way as before.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>int main() {
+
+  struct dataT data1 = {1, 2, 3};
+  struct dataT data2 = {-10, -20, -30};
+  struct nodeT* node = init(&amp;data1, &amp;data2);
+
+  free(node);
+}</code></pre>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2026-10-05 16:49:53 -0400
+</div>
+</div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+})
+MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
+  MathJax.InputJax.AsciiMath.postfilterHooks.Add(function (data, node) {
+    if ((node = data.script.parentNode) && (node = node.parentNode) && node.classList.contains("stemblock")) {
+      data.math.root.display = "block"
+    }
+    return data
+  })
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+include::header.adoc[]
+
+:title: CS113: Quiz 1 (Fall 2026)
+:Author Initials: KRS
+:Date:    2026-10-05
+:Revision: 0.1
+
+[discrete]
+= {title}
+
+
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+
+
+++++
+<div class="pagebreak"> </div>
+++++
+
+[discrete]
+= Question 1
+
+Examine the following program. What does it output? Explain your reasoning.
+
+[source]
+----
+public static int void main(String[] args {
+  int x = 3;
+  int y = 8;
+
+  if (x < y) {
+    x = x + 2;
+  }
+
+  if (x == 5) {
+    System.out.println("hello");
+  }
+
+System.out.println(x);
+----
+
+**Solution:**
+
+[source]
+----
+hello
+5
+----
+
+
+{nbsp} +
+{nbsp} +
+
+
+{nbsp} +
+{nbsp} +
+
+
+++++
+<div class="pagebreak"> </div>
+++++
+
+[discrete]
+= Question 2
+
+Write two methods called `countDownRec` and `countDownLoop` that each an integer `n` and print every number from `n` down to `1`.
+`countDownRec` should be solved recursively, and `countDownLoop` should be solved with a loop.
+
+
+For example:
+
+[source]
+----
+countDown(4);
+----
+
+Should print:
+
+[source]
+----
+4
+3
+2
+1
+----
+
+**Solution:**
+
+Possible recursive solution:
+
+[source]
+----
+public static void countDown(int n) {
+    if (n == 0) {
+        return;
+    }
+
+    System.out.println(n);
+    countDown(n - 1);
+}
+----
+
+Possible loop solution:
+
+[source]
+----
+public static void countDown(int n) {
+    while (n > 0) {
+        System.out.println(n);
+        n--;
+    }
+}
+----
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+
+++++
+<div class="pagebreak"> </div>
+++++
+
+[discrete]
+= Question 3
+
+This method is supposed to return the sum of the numbers from `1` through `n`.
+
+[source]
+----
+public static int sum(int n) {
+    if (n == 0) {
+        return 0;
+    }
+
+    return sum(n - 1);
+}
+----
+
+What is the bug? How can you fix it?
+
+**Solution:**
+
+The recursive step needs to include `n`.
+
+[source]
+----
+public static int sum(int n) {
+    if (n == 0) {
+        return 0;
+    }
+
+    // Next line is the fix
+    return n + sum(n - 1);
+}
+----
+
+

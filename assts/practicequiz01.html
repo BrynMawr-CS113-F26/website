@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.26">
+<title>CS113: Quiz 1 (Fall 2026)</title>
+<link rel="stylesheet" href="../style/cs21.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<h2 id="_cs113_quiz_1_fall_2026" class="discrete">CS113: Quiz 1 (Fall 2026)</h2>
+<div class="paragraph">
+<p>&#160;<br>
+&#160;<br>
+&#160;<br></p>
+</div>
+<div class="pagebreak"> </div>
+<h2 id="_question_1" class="discrete">Question 1</h2>
+<div class="paragraph">
+<p>Examine the following program. What does it output? Explain your reasoning.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>public static int void main(String[] args {
+  int x = 3;
+  int y = 8;
+
+  if (x &lt; y) {
+    x = x + 2;
+  }
+
+  if (x == 5) {
+    System.out.println("hello");
+  }
+
+System.out.println(x);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Solution:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>hello
+5</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br>
+&#160;<br></p>
+</div>
+<div class="paragraph">
+<p>&#160;<br>
+&#160;<br></p>
+</div>
+<div class="pagebreak"> </div>
+<h2 id="_question_2" class="discrete">Question 2</h2>
+<div class="paragraph">
+<p>Write two methods called <code>countDownRec</code> and <code>countDownLoop</code> that each an integer <code>n</code> and print every number from <code>n</code> down to <code>1</code>.
+<code>countDownRec</code> should be solved recursively, and <code>countDownLoop</code> should be solved with a loop.</p>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>countDown(4);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Should print:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>4
+3
+2
+1</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Solution:</strong></p>
+</div>
+<div class="paragraph">
+<p>Possible recursive solution:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>public static void countDown(int n) {
+    if (n == 0) {
+        return;
+    }
+
+    System.out.println(n);
+    countDown(n - 1);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Possible loop solution:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>public static void countDown(int n) {
+    while (n &gt; 0) {
+        System.out.println(n);
+        n--;
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>&#160;<br>
+&#160;<br>
+&#160;<br></p>
+</div>
+<div class="pagebreak"> </div>
+<h2 id="_question_3" class="discrete">Question 3</h2>
+<div class="paragraph">
+<p>This method is supposed to return the sum of the numbers from <code>1</code> through <code>n</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>public static int sum(int n) {
+    if (n == 0) {
+        return 0;
+    }
+
+    return sum(n - 1);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>What is the bug? How can you fix it?</p>
+</div>
+<div class="paragraph">
+<p><strong>Solution:</strong></p>
+</div>
+<div class="paragraph">
+<p>The recursive step needs to include <code>n</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>public static int sum(int n) {
+    if (n == 0) {
+        return 0;
+    }
+
+    // Next line is the fix
+    return n + sum(n - 1);
+}</code></pre>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2026-10-05 19:43:38 -0400
+</div>
+</div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+})
+MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
+  MathJax.InputJax.AsciiMath.postfilterHooks.Add(function (data, node) {
+    if ((node = data.script.parentNode) && (node = node.parentNode) && node.classList.contains("stemblock")) {
+      data.math.root.display = "block"
+    }
+    return data
+  })
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>
