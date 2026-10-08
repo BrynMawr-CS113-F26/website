@@ -38,7 +38,7 @@ class RecExs {
       return 1;
     }
 
-    return n * fact(n);
+    return n * fact(n - 1);
   }
 
 }
