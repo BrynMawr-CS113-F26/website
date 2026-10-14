@@ -41,7 +41,7 @@ etc. No computer programming experience is necessary or expected. Students are r
 
 | Lecture | Park 245 | Tuesdays and Thursdays 1:10 PM - 2:30 PM
 | Lab | Park 231 | Tuesdays 2:40 PM - 4:00 PM 
-| Office Hours - Prof. Kelly Shiptoski | Park 204 | Tuesdays 4:00 PM - 5:00 PM, and Flexible 1 Hr Zoom
+| Office Hours - Prof. Kelly Shiptoski | Park 204 | Tuesdays 11:00 AM - 12:00 PM, and Flexible 1 Hr Zoom
 | TA Office Hours - TBA | TBA | TBA 
 
 |===
@@ -69,11 +69,11 @@ All graded work will receive a grade, 4.0, 3.7, 3.3, 3.0, 2.7, 2.3, 2.0, 1.7,
 as a weighted average of all grades according to the following weights:
 
 |===
-|35% | Final Exam
-|35% | Midterm Exam
-|10% | Assignments
+|30% | Final Exam
+|35% | Quizzes
+|15% | Homeworks 
 |15% | Labs and Quizzes
-| 5% | Participation and Attendance
+| 5% | Attendance / Participation
 |===
 
 include::quizzes.adoc[]

@@ -127,9 +127,11 @@
 //-----------------------------
 |8
 |Oct 20, 22 anchor:week08[]
-|*Multidimensional Arrays, Mutable vs Immutable Objects*
+|*Multidimensional Arrays, Nested Conditionals, Mutable vs Immutable Objects*
 
+* Assignment 04: TBD
 * Lab Oct 20: Loops and 2D Arrays
+
 | 
 // link:lectures/Lecture-Week09-March17-OS-Processes.pdf[Lectures - March 17 and 19]
 * Chapter 10: Immutable Objects
@@ -138,48 +140,37 @@
 //-----------------------------
 |9
 |Oct 27, 29 anchor:week09[]
-|*Arrays II, Mutable vs Immutable Objects* 
+|*Class Design, Files & Exceptions* 
 
-// * Topics: Processes, fork, signals
-// * Assignment 07: Loops, Due Oct 30
-* Lab Oct 27: Loops and 2D Arrays
+* Lab Oct 27: TBD
+* Quiz 02 Oct 29: TBD
 // * link:assts/asst08.html[Assignment 08]: Image Conscious. Due March 20th at midnight
 
 | 
-// link:lectures/Lecture-Week09-March17-OS-Processes.pdf[Lectures - March 17 and 19]
-* Chapter 10: Immutable Objects
-* Chapter 11: Mutable Objects
+* Chapter 12: Designing Classes
 
 
 //-----------------------------
 |10
 |Nov 3, 5 anchor:week10[]
-|*Class Design* 
+|*Arrays of Objects* 
 
-// * Topics: Threads vs processes, designing concurrent algorithms, pthreads
-// * Assignment 08: Game (TBD), Due Nov 6
+* Assignment 05: TBD
 * Lab Nov 3: TBD (Probably Files and Exceptions)
-// * link:assts/asst09.html[Assignment 09]: Trust the process. Due March 27th at midnight
 
 |
-// * link:lectures/Lecture-Week10-March31-Threads1.pdf[Lectures - March 24 and 16]
-* Chapter 12: Designing Classes
-// * link:lectures/threads-min.c[threads-min.c]
+* Chapter 13: Arrays of Objects
 
 //-----------------------------
 |11
 |Nov 10, 12 anchor:week11[]
 |*Inheritance* 
 
-// * Topics: synchronization, deadlock, producer/consumer pattern
-// * link:assts/asst10.html[Assignment 10]: Mandelthreads. Due April 3rd
-// * Assignment 09: Object Oriented Programming, Due Nov 13
 * Lab Nov 10: Class Design
+* Quiz 03 Nov 12: TBD
 
 |
-// * link:lectures/Lecture-Week11-March31-ThreadsConcurrency.pdf[Lectures - March 31, April 2]
 * Chapter 15: Extending Classes
-// * link:lectures/threads-count.c[threads-count.c]
 
 
 //-----------------------------
@@ -187,30 +178,20 @@
 |Nov 17, 19 anchor:week12[]
 |*Interfaces, Linear Search* 
 
-// * Topics: Thread safety, thread performance
-// * Topics: Memory hierarchy, spatial/temporal locality, caching
-// * Assignment 10: Objects, Classes, & Interfaces, Due Nov 20
-* Lab Nov 17: Interfaces
+* Assignment 06: TBD
+* Lab Nov 17: TBD
 
 |
-// * link:lectures/Lecture-Week12-April7-ThreadPerformance.pdf[Lecture April 7]
 * Chapter 18.7: Interfaces 
-// * link:lectures/Lecture-Week12-April9-MemoryHierarchy.pdf[Lecture April 9]
 
 //-----------------------------
 |13
 |Nov 24 anchor:week13[]
 |*Binary Search*
 
-// * link:assts/asst12.html[Assignment 12]: Hold on to your memories. Due April 17th. ** Worksheet due tuesday April 21**
-// * Practice Quiz 04 link:studyguide5.html[Study Guide 05]
-// * Assignment 12: No homework! Happy Thanksgiving!
-// * Lab Nov 24: No lab! Happy Thanksgiving!
-* No labs and no homework! Happy Thanksgiving!
+* Quiz 04 Nov 24: In Lab
 
 |
-// * link:lectures/Lecture-Week12-April9-Malloc.pdf[Lecture April 14]
-// * link:lectures/Lecture-Week13-April16-CodeOpt.pdf[Lecture April 16]
 * Chapter 13.8: Binary Search
 
 //-----------------------------
@@ -218,10 +199,9 @@
 |Dec 1, 3 anchor:week14[]
 |*Sorting* 
 
-// * C++ classes (operators, constructors, destructors), references, STL (list, vector, map), simple templates
-// * link:assts/asst13.html[(Optional/Extra Credit) Assignment 13]: C++ Image Class. Due May 1st.
 
 // * Assignment 11: Sorting, Due Dec 4
+* Assignment 07: TBD
 * Lab Dec 1: Sorting
 
 |
