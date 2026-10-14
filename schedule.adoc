@@ -89,7 +89,6 @@
 * link:lectures/113week5lecture1notes.pdf[Week 5 Lecture 1 Notes]
 * link:lectures/113week5lecture2notes.pdf[Week 5 Lecture 2 Notes]
 * link:lecture_examples/Palindrome.java[Palindrome.java]
-* link:lecture_examples/ArrayAvg.java[ArrayAvg.java]
 * link:lecture_examples/StringFun.java[StringFun.java]
 
 
@@ -107,6 +106,13 @@
 // * link:lectures/Lecture-Week06-Feb24-IntroAssembly.pdf[Lecture Feb 24]
 // * link:lectures/Lecture-Week06-Feb26-Assembly.pdf[Lecture Feb 26] 
 * Chapter 8: Arrays and References
+* link:lectures/week6lecture1.pdf[Week 6 Lecture 1]
+* link:lectures/week6lecture2.pdf[Week 6 Lecture 2]
+* link:lecture_examples/Array.java[Array.java]
+* link:lecture_examples/ArrayAvg.java[ArrayAvg.java]
+* link:lecture_examples/ArrayList2.java[ArrayList2.java]
+* link:lecture_examples/RevArrayList.java[RevArrayList.java]
+* link:lecture_examples/RevArray.java[RevArray.java]
 
 //-----------------------------
 |7
