@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.26">
+<title>Lab 6: 2D Arrays: Tic Tac Toe!</title>
+<link rel="stylesheet" href="../style/cs21.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<h2 id="_lab_6_2d_arrays_tic_tac_toe" class="discrete">Lab 6: 2D Arrays: Tic Tac Toe!</h2>
+<h2 id="_objectives" class="discrete">Objectives</h2>
+<div class="paragraph">
+<p>The main goals for this lab are:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>To get practice using multidimensional arrays.</p>
+</li>
+<li>
+<p>To develop the ability to break a larger problem down into smaller steps.</p>
+</li>
+</ol>
+</div>
+<hr>
+<h2 id="_1_tic_tac_toe" class="discrete">1. Tic Tac Toe</h2>
+<div class="paragraph">
+<p>Lets begin by making sure you are familiar with tic tac toe. If you aren&#8217;t, briefly look at
+<a href="https://en.wikipedia.org/wiki/Tic-tac-toe">wikipedia</a>.</p>
+</div>
+<hr>
+<h2 id="_2_top_down_approach" class="discrete">2. Top Down Approach</h2>
+<div class="paragraph">
+<p>When designing a program, its a good idea to take a top-down approach. In a top down approach, we use the following steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Identify features of the program</p>
+</li>
+<li>
+<p>Identify the verbs and nouns in the feature list</p>
+</li>
+<li>
+<p>Sketch out major steps</p>
+</li>
+<li>
+<p>Write the program skeleton</p>
+</li>
+<li>
+<p>Implement and test functions one at a time</p>
+</li>
+</ol>
+</div>
+<h3 id="_2_1_even_length" class="discrete">2.1 Even Length</h3>
+<div class="paragraph">
+<p>Write a method, isEvenLength, which returns true if the given String has an even number of characters and false otherwise. Implement tests in main to check your answer. For example,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>isEvenLength("cat") returns false</p>
+</li>
+<li>
+<p>isEvenLength("") returns true</p>
+</li>
+<li>
+<p>isEvenLength("a") returns false</p>
+</li>
+</ul>
+</div>
+<hr>
+<h3 id="_2_2_substrings" class="discrete">2.2 Substrings</h3>
+<div class="paragraph">
+<p>Write a method called subStringN with 2 paramaters, a string and an integer n.</p>
+</div>
+<div class="paragraph">
+<p>The method should print 2 substrings:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>the first n characters of the string</p>
+</li>
+<li>
+<p>the last n characters of the string.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>subStringN("hello", 2) should print he on one line and then lo on another</p>
+</li>
+<li>
+<p>subStringN("Antidisestablishmentarianism", 4) should print Anti on one line and then nism on another.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If the length of the string is shorter than N, print a message telling the user.</p>
+</div>
+<hr>
+<h2 id="_3_recursion" class="discrete">3. Recursion</h2>
+<h3 id="_3_1_sum_of_numbers" class="discrete">3.1 Sum of Numbers</h3>
+<div class="paragraph">
+<p>Given a <code>String</code> of numbers, write a method called <code>sum</code> that returns the sum of all the numbers in the <code>String</code>.
+<code>sum</code> should have one parameter, the string of numbers.</p>
+</div>
+<div class="paragraph">
+<p>For example <code>sum("1234")</code> should return <code>10</code>.</p>
+</div>
+<div class="paragraph">
+<p>Below we are going to implement this together. The following questions will help guide you.</p>
+</div>
+<div class="paragraph">
+<p><strong>Question 1:</strong> Consider the <code>charAt()</code> function in Java. How could we use this function in our recursive function, to get the digits
+out of the string?</p>
+</div>
+<div class="paragraph">
+<p>&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br></p>
+</div>
+<div class="paragraph">
+<p><strong>Question 2:</strong> Let’s now think about our base case, i.e. when we no longer want to make a recursive call.
+What would be special about the value assigned to this parameter (the <code>String</code> that is passed in to the method)
+to tell us to stop making a recursive call?</p>
+</div>
+<div class="paragraph">
+<p>&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br></p>
+</div>
+<div class="paragraph">
+<p><strong>TODO</strong>: Implement the base case in the method.</p>
+</div>
+<div class="paragraph">
+<p><strong>Question 3:</strong> During each recursive step, what do we want to keep track off, and what do we want to punt down the line?
+<strong>HINT:</strong> What is the result of <code>1 + sum("234")</code>?</p>
+</div>
+<div class="paragraph">
+<p>&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br></p>
+</div>
+<div class="paragraph">
+<p><strong>Question 4:</strong> Given the string "1234", how can we extract the <code>1</code>?</p>
+</div>
+<div class="paragraph">
+<p>&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br></p>
+</div>
+<div class="paragraph">
+<p><strong>Question 5:</strong> Given the character '1', how can we get the integer value <code>1</code>?</p>
+</div>
+<div class="paragraph">
+<p>&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br></p>
+</div>
+<div class="paragraph">
+<p><strong>Question 6:</strong> Given the <code>String</code> "1234", how can we get the substring "234"?
+<strong>HINT:</strong> Think about the <code>substring()</code> method we discussed in class.</p>
+</div>
+<div class="paragraph">
+<p>&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br></p>
+</div>
+<div class="paragraph">
+<p><strong>TODO:</strong> Implement the recursive step right after your base case.</p>
+</div>
+<div class="paragraph">
+<p><strong>TODO:</strong> In your <code>main</code> method, test <code>sum()</code> by invoking the method with the following arugments:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>sum("234")</code> should return 9</p>
+</li>
+<li>
+<p><code>sum("2222")</code> should return 8</p>
+</li>
+<li>
+<p><code>sum("19802")</code> should return 20</p>
+</li>
+<li>
+<p><code>sum("00020")</code> should return 2</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>TODO</strong>: Show Prof. Shiptoski your work and then you are all done with lab 5.</p>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2026-10-15 08:20:31 -0400
+</div>
+</div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+})
+MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
+  MathJax.InputJax.AsciiMath.postfilterHooks.Add(function (data, node) {
+    if ((node = data.script.parentNode) && (node = node.parentNode) && node.classList.contains("stemblock")) {
+      data.math.root.display = "block"
+    }
+    return data
+  })
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>

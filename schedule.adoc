@@ -130,7 +130,7 @@
 |*Multidimensional Arrays, Nested Conditionals, Mutable vs Immutable Objects*
 
 * Assignment 04: TBD
-* Lab Oct 20: Loops and 2D Arrays
+* Lab Oct 20: link:assts/lab06.html[2D Arrays: Tic Tac Toe!]
 
 | 
 // link:lectures/Lecture-Week09-March17-OS-Processes.pdf[Lectures - March 17 and 19]
