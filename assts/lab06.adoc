@@ -25,8 +25,8 @@ Complete all tasks that are labeled as **TODO**.
 [discrete]
 = 1. Tic Tac Toe
 
-Lets begin by making sure you are familiar with tic tac toe. If you aren't, briefly look at
-link:https://en.wikipedia.org/wiki/Tic-tac-toe[wikipedia].
+Lets begin by making sure you are familiar with tic tac toe. If you aren't, briefly look
+at wikipedia.
 
 ---
 [discrete]
@@ -40,6 +40,7 @@ When designing a program, its a good idea to take a top-down approach. In a top 
 4. Write the program skeleton
 5. Implement and test functions one at a time
 
+---
 [discrete]
 == 2.1 Identify Features of the Program
 
@@ -54,6 +55,21 @@ Some ideas to consider:
 5. How will the players see the game grid?
 6. When should the players see the game grid?
 
+**TODO:** Write your answers in the space below.
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+
 ---
 [discrete]
 == 2.2 Categorize Our Features
@@ -62,6 +78,19 @@ After listing our features, we need to figure out which of our features should b
 
 1. What variables do we need?
 2. What methods do we need?
+
+**TODO:** Write your answers in the space below.
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+
 
 ---
 [discrete]
@@ -83,13 +112,38 @@ List out the steps for your program. The first three steps are provided for you:
 
 **Note:** You will probably have more than 9 steps.
 
+**TODO:** Write your algorithm in the space below.
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+
 When you have the first draft of your algorithm, pause and play
 a game of Tic-tac-toe with yourself, and follow every step of
 of your algorithm. This will help you find errors, mistakes, and 
 missing steps in your algorithm.
 
-How did your algorithm change when you played through the Tic-tac-toe
+**TODO**: How did your algorithm change when you played through the Tic-tac-toe
 game on your own?
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
 
 **TODO:** Show Prof. Shiptoski your work before continuing.
 
@@ -101,6 +155,12 @@ Before we write out our methods in our code, its important think about what type
 
 **TODO:** What type of variable should we use to represent our board?
 
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
 
 ---
 [discrete]
@@ -127,7 +187,7 @@ the next one.
 
 ---
 [discrete]
-== 2.7 Implementation
+== 2.7 Gametime
 
 Congrats! You have implemented TicTacToe! Try out your program and see
 how it does.
