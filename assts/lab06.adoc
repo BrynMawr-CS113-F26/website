@@ -16,6 +16,10 @@ The main goals for this lab are:
 1. To get practice using multidimensional arrays.
 2. To develop the ability to break a larger problem down into smaller steps.
 
+Start by creating a `/lab6` folder for yourself. You will write your code
+in a file you create called `TicTacToe.java`.
+
+Complete all tasks that are labeled as **TODO**.
 
 ---
 [discrete]
@@ -37,110 +41,104 @@ When designing a program, its a good idea to take a top-down approach. In a top 
 5. Implement and test functions one at a time
 
 [discrete]
-== 2.1 Even Length
+== 2.1 Identify Features of the Program
 
-Write a method, isEvenLength, which returns true if the given String has an even number of characters and false otherwise. Implement tests in main to check your answer. For example,
+What features are necessary for our tic tac toe program?
 
-* isEvenLength("cat") returns false
-* isEvenLength("") returns true
-* isEvenLength("a") returns false
+Some ideas to consider:
 
----
-[discrete]
-== 2.2 Substrings
-
-Write a method called subStringN with 2 paramaters, a string and an integer n.
-
-The method should print 2 substrings: 
-
-1. the first n characters of the string
-2. the last n characters of the string. 
-
-Examples:
-
-
-* subStringN("hello", 2) should print he on one line and then lo on another
-* subStringN("Antidisestablishmentarianism", 4) should print Anti on one line and then nism on another.
-
-If the length of the string is shorter than N, print a message telling the user.
+1. What do we need to keep track of and how will we do it? (think: the game grid, the current state of the game, whose turn it is, etc)
+2. What does each player need to do? (think: make a move based on the current state of the board)
+3. What is the flow of the program? (think: player 1 goes, game grid updates, player 2 goes, game grid updates...)
+4. What do we need to check on each turn? (think: is this move legal? does this move cause the game to end?)
+5. How will the players see the game grid?
+6. When should the players see the game grid?
 
 ---
 [discrete]
-= 3. Recursion
+== 2.2 Categorize Our Features
 
+After listing our features, we need to figure out which of our features should be variables and which of the features should be methods.
+
+1. What variables do we need?
+2. What methods do we need?
+
+---
 [discrete]
-== 3.1 Sum of Numbers
+== 2.3 Algorithm Time
 
-Given a `String` of numbers, write a method called `sum` that returns the sum of all the numbers in the `String`. 
-`sum` should have one parameter, the string of numbers.
+Now that we outlined what our methods and variables should be, we can go ahead and sketch out the major steps of the program. In esence, we are outlining how the features should fit together.
 
-For example `sum("1234")` should return `10`.
+List out the steps for your program. The first three steps are provided for you:
 
-Below we are going to implement this together. The following questions will help guide you.
+1. Ask the players for their names.
+2. Create an empty board.
+3. Display an empty board.
+4. Ask player 1 to make their move.
+5. Get their input, and update the board accordingly.
+6. Display the board to the players.
+7. ...
+8. ...
+9. ...
 
-**Question 1:** Consider the `charAt()` function in Java. How could we use this function in our recursive function, to get the digits
-out of the string?
+**Note:** You will probably have more than 9 steps.
 
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
+When you have the first draft of your algorithm, pause and play
+a game of Tic-tac-toe with yourself, and follow every step of
+of your algorithm. This will help you find errors, mistakes, and 
+missing steps in your algorithm.
 
-**Question 2:** Let’s now think about our base case, i.e. when we no longer want to make a recursive call. 
-What would be special about the value assigned to this parameter (the `String` that is passed in to the method) 
-to tell us to stop making a recursive call?
+How did your algorithm change when you played through the Tic-tac-toe
+game on your own?
 
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
+**TODO:** Show Prof. Shiptoski your work before continuing.
 
-**TODO**: Implement the base case in the method.
+---
+[discrete]
+== 2.4 Designing Your Variables
 
-**Question 3:** During each recursive step, what do we want to keep track off, and what do we want to punt down the line?
-**HINT:** What is the result of `1 + sum("234")`?
+Before we write out our methods in our code, its important think about what type of variables should we use. The most complicated variable we will need to keep track of is the board.
 
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-
-**Question 4:** Given the string "1234", how can we extract the `1`?
-
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-
-**Question 5:** Given the character '1', how can we get the integer value `1`?
-
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-
-**Question 6:** Given the `String` "1234", how can we get the substring "234"?
-**HINT:** Think about the `substring()` method we discussed in class.
-
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-
-**TODO:** Implement the recursive step right after your base case.
-
-**TODO:** In your `main` method, test `sum()` by invoking the method with the following arugments:
-
-* `sum("234")` should return 9
-* `sum("2222")` should return 8
-* `sum("19802")` should return 20
-* `sum("00020")` should return 2
+**TODO:** What type of variable should we use to represent our board?
 
 
-**TODO**: Show Prof. Shiptoski your work and then you are all done with lab 5.
+---
+[discrete]
+== 2.5 Skeleton Time
+
+Now that we have convinced ourselves that we have a sufficient algorithm for implementing tic-tac-toe, its time to start programming! But, we dont want to program everything at once, instead we will implement one method at a time.
+
+Lets begin by writing out the skeleton of the program. A skeleton of a program is a list of method stubs (these are placeholders for our functions).
+
+**TODO:** Write out the skeleton of your program in `TicTacToe.java`. Make sure to
+have a method stub for each of the methods you identified in 2.2.
+
+**TODO:** Show Prof. Shiptoski your work before continuing.
+
+---
+[discrete]
+== 2.6 Implementation
+
+Now that we’ve written out our skeleton, we can implement each method.
+
+**TODO:** In your java program, now implement each method.
+Be sure to test each method in the main function before implementing
+the next one.
+
+---
+[discrete]
+== 2.7 Implementation
+
+Congrats! You have implemented TicTacToe! Try out your program and see
+how it does.
+
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+
+
+
+**TODO**: Show Prof. Shiptoski your work and then you are all done with lab 6.
