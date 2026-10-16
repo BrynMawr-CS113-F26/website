@@ -129,7 +129,7 @@
 |Oct 20, 22 anchor:week08[]
 |*Multidimensional Arrays, Nested Conditionals, Mutable vs Immutable Objects*
 
-* Assignment 04: TBD
+* Assignment 04: link:assts/homework04.html[Word Play & Blackjack], due Oct 26 at midnight
 * Lab Oct 20: link:assts/lab06.html[2D Arrays: Tic Tac Toe!]
 
 | 

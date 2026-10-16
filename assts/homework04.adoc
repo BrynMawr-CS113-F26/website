@@ -1,0 +1,224 @@
+include::header.adoc[]
+
+:title: Homework 4: Word Play & Blackjack
+:Author Initials: KRS
+:Date:    2026-09-25
+:Revision: 0.1
+
+[discrete]
+= {title}
+
+[discrete]
+= Set Up
+
+In this assignment you will solve some problems using both recursion and loops.
+
+To work on this homework, follow these steps:
+
+1. On Mac, open the Terminal program. On Windows, open the PowerShell program.
+2. Log into goldengate by using the ssh command from your personal laptop: `ssh your-username@goldengate.cs.brynmawr.edu`.
+3. Run these commands:
+
+[source, subs="quotes"]
+----
+$ cd cs113
+$ ls 
+----
+
+If you see a homeworks directory, cd into it. Then, call `mkdir hw4` to create your homework 4 
+directory. Finally, call `cd hw4`.
+
+For each of the problems below, we will use the vim editor. You will need to create a java file
+for each problem. For example, for the first problem you will call `vim WordLoops.java`.
+
+Remember your vim commands:
+
+* `vim Filename.java`: creates a file named Filename.java
+* `i`:  enter insert mode
+* `esc`: exit insert mode (you must exit insert mode in order to save and quit)
+* `:wq`: save the file and close vim
+
+
+---
+[discrete]
+= 1. Word Play
+
+Write a program called `WordLoops.java` that implements the following methods. Make sure to test the methods in the file’s `main` method.
+
+---
+[discrete]
+== 1.1 removeLetter
+
+Write a method called `removeLetter` that takes a `String` and an array of letters and returns the 
+`String` but will all instances of the letters removed. Implement this method using a **for loop**.
+
+For example:
+
+[source, subs="quotes"]
+----
+class WordLoops {
+  public static void main(String[] args) {
+    String s = removeLetter("asdfghsassaaaae", 'a');
+    System.out.println(s);
+    // will print: sdfghssse
+  }
+
+  public static String removeLetter(String s, char c) {
+    // Your code here    
+  }
+  
+}
+----
+
+**NOTE:** You may NOT use the `replace()` function. Use of this function will give you zero credit on this problem.
+
+---
+[discrete]
+== 1.2 removeLetters
+Write a method called `removeLetters` that takes in a `String` and an array of letters and returns a
+`String` but will all instances of the letters removed. Implement this method using a **while loop**.
+
+For example:
+
+[source, subs="quotes"]
+----
+class WordLoops {
+  public static void main(String[] args) {
+    String s = removeLetters("asdfghsassaaaae", ['a', 's']);
+    System.out.println(s);
+    // will print: dfghe
+  }
+
+  public static String removeLetters(String s, char[] chars) {
+    // Your code here
+      
+  }
+  
+}
+----
+
+**NOTE:** You should use your `removeLetter` function from section 1.1.
+
+---
+[discrete]
+= 2. Blackjack
+Write a program called `BlackJack.java` that will allow a user to play a simplified version of BlackJack. 
+The rules of BlackJack are as follows:
+
+* Each card has a value ranging from 1 to 11 (inclusive).
+* The player starts with two cards.
+* The house starts with two cards. The player is shown just one of the house’s cards.
+* Until the value of the player’s hand (i.e. the sum of the value of their cards) is greater than or equal to 21, the player has two options: “Hit” or “Stand”.
+* If the player chooses “Hit”, they are given another card.
+* If the value of the player’s hand is ever greater than 21, the player automatically looses.
+* Once the player chooses “Stand”, their turn ends
+* If the value of the dealer’s hand is less than 15, then give them another card chosen at random.
+* If the value of the dealer’s hand is greater than or equal to the player’s hand, the dealer wins. Otherwise the player wins (assuming they did not go over 21).
+
+Below are multiple examples showing how your program should work.
+
+**Example 1**
+
+[source, subs="quotes"]
+----
+$ java BlackJack
+One of the dealer's cards is 5
+Your hand's value is 12. What would you like to do:
+*HIT*
+Your hand's new value is 22. 
+You lost - goodbye!
+----
+
+**Example 2**
+
+[source, subs="quotes"]
+----
+$ java BlackJack
+One of the dealer's cards is 10
+Your hand's value is 13. What would you like to do:
+*HIT*
+Your hand's new value is 20. What would you like to do:
+*STAY*
+The dealer's hand is 19.
+You won - congrats! 
+----
+
+**Example 3**
+
+[source, subs="quotes"]
+----
+$ java BlackJack
+One of the dealer's cards is 11
+Your hand's value is 22. 
+You lost - goodbye!
+----
+
+**Example 4**
+
+[source, subs="quotes"]
+----
+$ java BlackJack
+One of the dealer's cards is 9
+Your hand's value is 5. What would you like to do:
+*HIT*
+Your hand's new value is 7. What would you like to do:
+*HIT*
+Your hand's new value is 11. What would you like to do:
+*HIT*
+Your hand's new value is 18. What would you like to do:
+*STAY*
+The dealer's hand is 12.
+The dealer's hand is 15.
+The dealer's hand is 21.
+You lost - goodbye!
+----
+
+**Note 1:** To generate a random number for a card value:
+[source, subs="quotes"]
+----
+int randomNum = (int) (Math.random() * 11) + 1;
+----
+
+**Note 2:** Your random cards can have values from 1 to 11.
+
+**Note 3:** You do not need to keep track of what cards have been used in the deck. You can just create random cards each
+time you need them. 
+
+---
+
+[discrete]
+= Grading Rubric
+
+This assignment will be out of 12 points:
+
+* Word Play: 4 points
+* Blackjack: 8 points
+
+---
+[discrete]
+= Submitting
+
+In a text file (call `vim readme.txt`) answer the following questions:
+
+1. How much time did you spend on the homework?
+2. What did you learn from the homework?
+
+**For 2 extra credit points:** Run this command on your java files before submitting: `astyle --style=java Example.java`.
+Replace `Example` with the name of your java file, for example: `Numbers`.
+
+Finally, you need to copy your files from the server to your personal computer for submission.
+
+Close your connection to goldengate (type `exit`), and then run the following command:
+
+`$ scp -r <username>@goldengate.cs.brynmawr.edu:/home/<username>/cs113/homeworks/hw4/ .`
+
+Make sure to replace `<username>` with your username. There is a space between `hw4/` and `.`. scp is a command to secure-copy files from one server to another. In this case, from goldengate to your own machine.
+
+Submit the following files to the assignment called `HW04` on Gradescope.
+
+1. `WordPlay.java`
+2. `Blackjack.java`
+3. `readme.txt`
+
+
+
