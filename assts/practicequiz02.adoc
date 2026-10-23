@@ -167,37 +167,48 @@ how? Explain your reasoning.
 ++++
 
 [discrete]
-= Question 3
+= Question 3: What Changes?
 
-This method is supposed to return the sum of the numbers from `1` through `n`.
-
-[source]
-----
-public static int sum(int n) {
-    if (n == 0) {
-        return 0;
-    }
-
-    return sum(n - 1);
-}
-----
-
-What is the bug? How can you fix it?
-
-**Solution:**
-
-The recursive step needs to include `n`.
+Consider the following program.
 
 [source]
 ----
-public static int sum(int n) {
-    if (n == 0) {
-        return 0;
+class ReferencePractice {
+    public static void mystery(int[] data, int number) {
+        data[0] = number;
+        number = 20;
+
+        data = new int[]{7, 8, 9};
+        data[1] = 100;
     }
 
-    // Next line is the fix
-    return n + sum(n - 1);
+    public static void main(String[] args) {
+        int x = 5;
+        int y = x;
+
+        int[] a = {1, 2, 3};
+        int[] b = a;
+
+        y = 10;
+        b[2] = 15;
+
+        mystery(a, x);
+
+        System.out.println(x);
+        System.out.println(y);
+        System.out.println(a[0]);
+        System.out.println(a[1]);
+        System.out.println(b[2]);
+    }
 }
 ----
 
+1. Write the exact output of the program, one value per line.
+
+2. Draw a memory diagram showing `a` and `b` and the array they refer to at the end of `main()`.
+
+3. Explain why changing `y` does not change `x`, but changing `b[2]` changes the array accessed through `a`.
+
+4. Does the statement `data = new int[]{7, 8, 9}` (in the `mystery()` function) affect the array `a` in `main()`
+refers to? Why or why not?
 

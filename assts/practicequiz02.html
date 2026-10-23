@@ -168,46 +168,63 @@ how? Explain your reasoning.</p>
 &#160;<br></p>
 </div>
 <div class="pagebreak"> </div>
-<h2 id="_question_3" class="discrete">Question 3</h2>
+<h2 id="_question_3_what_changes" class="discrete">Question 3: What Changes?</h2>
 <div class="paragraph">
-<p>This method is supposed to return the sum of the numbers from <code>1</code> through <code>n</code>.</p>
+<p>Consider the following program.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>public static int sum(int n) {
-    if (n == 0) {
-        return 0;
+<pre class="highlight"><code>class ReferencePractice {
+    public static void mystery(int[] data, int number) {
+        data[0] = number;
+        number = 20;
+
+        data = new int[]{7, 8, 9};
+        data[1] = 100;
     }
 
-    return sum(n - 1);
+    public static void main(String[] args) {
+        int x = 5;
+        int y = x;
+
+        int[] a = {1, 2, 3};
+        int[] b = a;
+
+        y = 10;
+        b[2] = 15;
+
+        mystery(a, x);
+
+        System.out.println(x);
+        System.out.println(y);
+        System.out.println(a[0]);
+        System.out.println(a[1]);
+        System.out.println(b[2]);
+    }
 }</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>What is the bug? How can you fix it?</p>
-</div>
-<div class="paragraph">
-<p><strong>Solution:</strong></p>
-</div>
-<div class="paragraph">
-<p>The recursive step needs to include <code>n</code>.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>public static int sum(int n) {
-    if (n == 0) {
-        return 0;
-    }
-
-    // Next line is the fix
-    return n + sum(n - 1);
-}</code></pre>
-</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Write the exact output of the program, one value per line.</p>
+</li>
+<li>
+<p>Draw a memory diagram showing <code>a</code> and <code>b</code> and the array they refer to at the end of <code>main()</code>.</p>
+</li>
+<li>
+<p>Explain why changing <code>y</code> does not change <code>x</code>, but changing <code>b[2]</code> changes the array accessed through <code>a</code>.</p>
+</li>
+<li>
+<p>Does the statement <code>data = new int[]{7, 8, 9}</code> (in the <code>mystery()</code> function) affect the array <code>a</code> in <code>main()</code>
+refers to? Why or why not?</p>
+</li>
+</ol>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-23 11:08:06 -0400
+Last updated 2026-10-23 11:17:31 -0400
 </div>
 </div>
 <script type="text/x-mathjax-config">
