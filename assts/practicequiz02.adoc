@@ -212,3 +212,36 @@ class ReferencePractice {
 4. Does the statement `data = new int[]{7, 8, 9}` (in the `mystery()` function) affect the array `a` in `main()`
 refers to? Why or why not?
 
+++++
+<div class="pagebreak"> </div>
+++++
+
+[discrete]
+= Question 4: Write a Method
+
+We are writing a program that processes a two-dimensional array representing seats in a theater. 
+Each seat contains a character:
+
+* `X` represents an occupied seat.
+* `O` represents an available seat.
+
+For example:
+
+[source]
+----
+char[] seats = {
+                  {`X`, `O`, `X`, `O`},
+                  {`X`, `X`, `O`, `O`},
+                  {`O`, `O`, `O`, `X`}
+               };
+----
+
+1. Write a method called `countAvailable()` that takes a 2D character array and returns the total number
+of available seats.
+
+2. Write a method called `hasAvailableSeat()` that takes a single row of seats and returns true if at
+least one seat is available, and false otherwise.
+
+3. Use `hasAvailableSeat()` to write another method that determines whether any
+row in the theater contains an available seat. It should take in a 2D character array and returns
+true if any row contains an available seat, and false otherwise.
