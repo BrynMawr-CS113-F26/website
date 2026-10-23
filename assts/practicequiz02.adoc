@@ -99,56 +99,64 @@ public class ArrayPractice {
 ++++
 
 [discrete]
-= Question 2
+= Question 2: Working with a Grid
 
-Write two methods called `countDownRec` and `countDownLoop` that each an integer `n` and print every number from `n` down to `1`.
-`countDownRec` should be solved recursively, and `countDownLoop` should be solved with a loop.
-
-
-For example:
+Consider the following program.
 
 [source]
 ----
-countDown(4);
-----
-
-Should print:
-
-[source]
-----
-4
-3
-2
-1
-----
-
-**Solution:**
-
-Possible recursive solution:
-
-[source]
-----
-public static void countDown(int n) {
-    if (n == 0) {
-        return;
+public class GridPractice {
+    public static void modify(int[][] grid) {
+        for (int row = 0; row < grid.length; row++) {
+            for (int col = 0; col < grid[row].length; col++) {
+                if (row == col) {
+                    grid[row][col] += 5;
+                } else if (row < col) {
+                    grid[row][col] *= 2;
+                } else {
+                    grid[row][col] -= 1;
+                }
+            }
+        }
     }
 
-    System.out.println(n);
-    countDown(n - 1);
+    public static int countLarge(int[][] grid) {
+        int count = 0;
+
+        for (int row = 0; row < grid.length; row++) {
+            for (int col = 0; col < grid[row].length; col++) {
+                if (grid[row][col] >= 6) {
+                    count++;
+                }
+            }
+        }
+
+        return count;
+    }
+
+    public static void main(String[] args) {
+        int[][] numbers = {
+                            {1, 2, 3},
+                            {4, 5, 6},
+                            {7, 8, 9}
+                          };
+
+        modify(numbers);
+
+        int answer = countLarge(numbers);
+        System.out.println(answer);
+    }
 }
 ----
 
-Possible loop solution:
+1. What are the contents of `numbers` after `modify()` finishes executing?
 
-[source]
-----
-public static void countDown(int n) {
-    while (n > 0) {
-        System.out.println(n);
-        n--;
-    }
-}
-----
+2. What does `countLarge(numbers)` return?
+
+3. Explain the purpose of each condition inside modify: `row == col`, `row < col`, and the final `else`.
+
+4. Suppose we changed the condition in `countLarge()` from `>= 6` to `> 6`. Would the result change? If so,
+how? Explain your reasoning.
 
 {nbsp} +
 {nbsp} +

@@ -95,60 +95,72 @@
 &#160;<br></p>
 </div>
 <div class="pagebreak"> </div>
-<h2 id="_question_2" class="discrete">Question 2</h2>
+<h2 id="_question_2_working_with_a_grid" class="discrete">Question 2: Working with a Grid</h2>
 <div class="paragraph">
-<p>Write two methods called <code>countDownRec</code> and <code>countDownLoop</code> that each an integer <code>n</code> and print every number from <code>n</code> down to <code>1</code>.
-<code>countDownRec</code> should be solved recursively, and <code>countDownLoop</code> should be solved with a loop.</p>
-</div>
-<div class="paragraph">
-<p>For example:</p>
+<p>Consider the following program.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>countDown(4);</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Should print:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>4
-3
-2
-1</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Solution:</strong></p>
-</div>
-<div class="paragraph">
-<p>Possible recursive solution:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>public static void countDown(int n) {
-    if (n == 0) {
-        return;
+<pre class="highlight"><code>public class GridPractice {
+    public static void modify(int[][] grid) {
+        for (int row = 0; row &lt; grid.length; row++) {
+            for (int col = 0; col &lt; grid[row].length; col++) {
+                if (row == col) {
+                    grid[row][col] += 5;
+                } else if (row &lt; col) {
+                    grid[row][col] *= 2;
+                } else {
+                    grid[row][col] -= 1;
+                }
+            }
+        }
     }
 
-    System.out.println(n);
-    countDown(n - 1);
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Possible loop solution:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>public static void countDown(int n) {
-    while (n &gt; 0) {
-        System.out.println(n);
-        n--;
+    public static int countLarge(int[][] grid) {
+        int count = 0;
+
+        for (int row = 0; row &lt; grid.length; row++) {
+            for (int col = 0; col &lt; grid[row].length; col++) {
+                if (grid[row][col] &gt;= 6) {
+                    count++;
+                }
+            }
+        }
+
+        return count;
+    }
+
+    public static void main(String[] args) {
+        int[][] numbers = {
+                            {1, 2, 3},
+                            {4, 5, 6},
+                            {7, 8, 9}
+                          };
+
+        modify(numbers);
+
+        int answer = countLarge(numbers);
+        System.out.println(answer);
     }
 }</code></pre>
 </div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>What are the contents of <code>numbers</code> after <code>modify()</code> finishes executing?</p>
+</li>
+<li>
+<p>What does <code>countLarge(numbers)</code> return?</p>
+</li>
+<li>
+<p>Explain the purpose of each condition inside modify: <code>row == col</code>, <code>row &lt; col</code>, and the final <code>else</code>.</p>
+</li>
+<li>
+<p>Suppose we changed the condition in <code>countLarge()</code> from <code>&gt;= 6</code> to <code>&gt; 6</code>. Would the result change? If so,
+how? Explain your reasoning.</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p>&#160;<br>
@@ -195,7 +207,7 @@
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-23 10:29:15 -0400
+Last updated 2026-10-23 11:08:06 -0400
 </div>
 </div>
 <script type="text/x-mathjax-config">
