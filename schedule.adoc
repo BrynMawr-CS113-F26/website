@@ -131,7 +131,7 @@
 
 * Assignment 04: link:assts/homework04.html[Word Play & Blackjack], due Oct 26 at midnight
 * Lab Oct 20: link:assts/lab06.html[2D Arrays: Tic Tac Toe!]
-* link:assts/practicequiz02.html[Practice Quiz 02]
+* link:assts/practicequiz02.html[Practice Quiz 02], link:assts/practicequiz2solutions.pdf[Solutions]
 
 | 
 // link:lectures/Lecture-Week09-March17-OS-Processes.pdf[Lectures - March 17 and 19]
