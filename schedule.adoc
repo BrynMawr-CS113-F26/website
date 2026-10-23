@@ -137,6 +137,13 @@
 // link:lectures/Lecture-Week09-March17-OS-Processes.pdf[Lectures - March 17 and 19]
 * Chapter 9: Immutable Objects
 * Chapter 10: Mutable Objects
+* link:lectures/week8lectures.pdf[Week 8 Lectures]
+* link:lectures/113week8lecture1notes.pdf[Week 8 Lecture 1 Notes]
+* link:lectures/113week8lecture2notes.pdf[Week 8 Lecture 2 Notes]
+* link:lecture_examples/TwoDimArray.java[TwoDimArray.java]
+* link:lecture_examples/OrderFood.java[OrderFood.java]
+* link:lecture_examples/MovieTickets.java[MovieTickets.java]
+* link:lecture_examples/Week8.java[Week8.java]
 
 //-----------------------------
 |9
