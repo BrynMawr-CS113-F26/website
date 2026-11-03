@@ -58,28 +58,73 @@ Lets begin by making sure you are familiar with tic tac toe. If you aren&#8217;t
 at wikipedia.</p>
 </div>
 <hr>
-<h2 id="_2_top_down_approach" class="discrete">2. Top Down Approach</h2>
+<h2 id="_2_create_the_class" class="discrete">2. Create the class</h2>
 <div class="paragraph">
-<p>When designing a program, its a good idea to take a top-down approach. In a top down approach, we use the following steps:</p>
+<p>Let&#8217;s get our starter code ready and formatted nicely.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Identify features of the program</p>
+<p>Create a new file called <code>BankAccount.java</code>.</p>
 </li>
 <li>
-<p>Identify the verbs and nouns in the feature list</p>
+<p>Copy and paste the code below into your file.</p>
 </li>
 <li>
-<p>Sketch out major steps</p>
+<p>Hit <code>esc</code> and then <code>:wq</code> to save and quit out of your file.</p>
 </li>
 <li>
-<p>Write the program skeleton</p>
+<p>Run the following command to format your code: <code>astyle --style=java BankAccount.java</code>.</p>
 </li>
 <li>
-<p>Implement and test functions one at a time</p>
+<p>Open your <code>BankAccount.java</code> file and follow the <code>TODOs</code> in the code.</p>
 </li>
 </ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>public class BankAccount {
+
+    private String owner;
+
+    private double balance;
+
+
+
+    // TODO 1: Write a constructor with parameters:
+
+    // String owner, double startingBalance
+
+    // Set this.owner and this.balance.
+
+    // If startingBalance is negative, start the balance at 0.0.
+
+
+
+    // TODO 2: Write public String getOwner()
+
+
+
+    // TODO 3: Write public double getBalance()
+
+
+
+    // TODO 4: Write public boolean deposit(double amount)
+
+    // If amount <= 0, return false and do not change balance.
+
+    // Otherwise add amount to balance and return true.
+
+
+
+    // TODO 5: Write public boolean withdraw(double amount)
+
+    // Return false if amount <= 0 or amount > balance.
+
+    // Otherwise subtract amount and return true.
+
+}</code></pre>
+</div>
 </div>
 <hr>
 <h3 id="_2_1_identify_features_of_the_program" class="discrete">2.1 Identify Features of the Program</h3>
@@ -300,7 +345,7 @@ how it does.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-11-02 20:14:44 -0500
+Last updated 2026-11-02 20:21:49 -0500
 </div>
 </div>
 <script type="text/x-mathjax-config">

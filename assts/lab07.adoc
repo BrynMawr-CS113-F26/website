@@ -43,15 +43,61 @@ at wikipedia.
 
 ---
 [discrete]
-= 2. Top Down Approach
+= 2. Create the class
 
-When designing a program, its a good idea to take a top-down approach. In a top down approach, we use the following steps:
+Let's get our starter code ready and formatted nicely.
 
-1. Identify features of the program
-2. Identify the verbs and nouns in the feature list
-3. Sketch out major steps
-4. Write the program skeleton
-5. Implement and test functions one at a time
+1. Create a new file called `BankAccount.java`. 
+2. Copy and paste the code below into your file.
+3. Hit `esc` and then `:wq` to save and quit out of your file.
+4. Run the following command to format your code: `astyle --style=java BankAccount.java`.
+5. Open your `BankAccount.java` file and follow the `TODOs` in the code.
+
+
+[source, subs="quotes"]
+----
+public class BankAccount {
+
+    private String owner;
+
+    private double balance;
+
+  
+
+    // TODO 1: Write a constructor with parameters:
+
+    // String owner, double startingBalance
+
+    // Set this.owner and this.balance.
+
+    // If startingBalance is negative, start the balance at 0.0.
+
+  
+
+    // TODO 2: Write public String getOwner()
+
+  
+
+    // TODO 3: Write public double getBalance()
+
+  
+
+    // TODO 4: Write public boolean deposit(double amount)
+
+    // If amount <= 0, return false and do not change balance.
+
+    // Otherwise add amount to balance and return true.
+
+  
+
+    // TODO 5: Write public boolean withdraw(double amount)
+
+    // Return false if amount <= 0 or amount > balance.
+
+    // Otherwise subtract amount and return true.
+
+}
+----
 
 ---
 [discrete]
