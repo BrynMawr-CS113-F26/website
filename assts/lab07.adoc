@@ -51,7 +51,19 @@ Let's get our starter code ready and formatted nicely.
 2. Copy and paste the code below into your file.
 3. Hit `esc` and then `:wq` to save and quit out of your file.
 4. Run the following command to format your code: `astyle --style=java BankAccount.java`.
-5. Open your `BankAccount.java` file and follow the `TODOs` in the code.
+5. Open your `BankAccount.java` file 
+6. Answer the following questions before starting to program in a file called `answers.txt`.
+7. Follow the programming `TODOs` in the starter code.
+
+Questions before coding:
+
+● Which variables are fields (belong to each bank account)?
+
+● Why are those fields private?
+
+● Which methods read state? Which methods change state?
+
+● Why does the constructor use this.owner = owner; instead of owner = owner;?
 
 
 [source, subs="quotes"]
@@ -99,158 +111,82 @@ public class BankAccount {
 }
 ----
 
----
-[discrete]
-== 2.1 Identify Features of the Program
-
-What features are necessary for our tic tac toe program?
-
-Some ideas to consider:
-
-1. What do we need to keep track of and how will we do it? (think: the game grid, the current state of the game, whose turn it is, etc)
-2. What does each player need to do? (think: make a move based on the current state of the board)
-3. What is the flow of the program? (think: player 1 goes, game grid updates, player 2 goes, game grid updates...)
-4. What do we need to check on each turn? (think: is this move legal? does this move cause the game to end?)
-5. How will the players see the game grid?
-6. When should the players see the game grid?
-
-**TODO:** Write your answers in the space below.
-
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
+**TODO**: Show Prof. Shiptoski your work before continuing.
 
 ---
 [discrete]
-== 2.2 Categorize Our Features
+= 3. Testing Your Code
 
-After listing our features, we need to figure out which of our features should be variables and which of the features should be methods.
+Create a second file called `BankAccountTest.java`. Copy the following code into the file.
+Follow the same instructions from part 2 to format your code before you begin programming.
 
-1. What variables do we need?
-2. What methods do we need?
+[source, subs="quotes"]
+----
+public class BankAccountTest {
 
-**TODO:** Write your answers in the space below.
+    public static void main(String[] args) {
 
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
+        BankAccount milo = new BankAccount("Milo", 100.0);
 
+        BankAccount alex = new BankAccount("Alex", 50.0);
 
----
-[discrete]
-== 2.3 Algorithm Time
+  
 
-Now that we outlined what our methods and variables should be, we can go ahead and sketch out the major steps of the program. In esence, we are outlining how the features should fit together.
+        System.out.println(milo.getOwner());   // Milo
 
-List out the steps for your program. The first three steps are provided for you:
+        System.out.println(milo.getBalance()); // 100.0
 
-1. Ask the players for their names.
-2. Create an empty board.
-3. Display an empty board.
-4. Ask player 1 to make their move.
-5. Get their input, and update the board accordingly.
-6. Display the board to the players.
-7. ...
-8. ...
-9. ...
+  
 
-**Note:** You will probably have more than 9 steps.
+        System.out.println(milo.deposit(25.0)); // true
 
-**TODO:** Write your algorithm in the space below.
+        System.out.println(milo.getBalance()); // 125.0
 
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
+  
 
-When you have the first draft of your algorithm, pause and play
-a game of Tic-tac-toe with yourself, and follow every step of
-of your algorithm. This will help you find errors, mistakes, and 
-missing steps in your algorithm.
+        System.out.println(milo.withdraw(30.0)); // true
 
-**TODO**: How did your algorithm change when you played through the Tic-tac-toe
-game on your own?
+        System.out.println(milo.getBalance());  // 95.0
 
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
+  
 
-**TODO:** Show Prof. Shiptoski your work before continuing.
+        System.out.println(milo.withdraw(200.0)); // false
 
----
-[discrete]
-== 2.4 Designing Your Variables
+        System.out.println(milo.getBalance());   // still 95.0
 
-Before we write out our methods in our code, its important think about what type of variables should we use. The most complicated variable we will need to keep track of is the board.
+  
 
-**TODO:** What type of variable should we use to represent our board?
+        System.out.println(alex.getBalance()); // still 50.0
 
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
+    }
 
----
-[discrete]
-== 2.5 Skeleton Time
+}
+----
 
-Now that we have convinced ourselves that we have a sufficient algorithm for implementing tic-tac-toe, its time to start programming! But, we dont want to program everything at once, instead we will implement one method at a time.
+Compile and run: 
 
-Lets begin by writing out the skeleton of the program. A skeleton of a program is a list of method stubs (these are placeholders for our functions).
+[source, subs="quotes"]
+----
+javac BankAccount.java BankAccountTest.java
 
-**TODO:** Write out the skeleton of your program in `TicTacToe.java`. Make sure to
-have a method stub for each of the methods you identified in 2.2.
+java BankAccountTest
+----
 
-**TODO:** Show Prof. Shiptoski your work before continuing.
+Your code should correctly handle all of these (the above code tests these exact conditions):
 
----
-[discrete]
-== 2.6 Implementation
+● Create an account with a starting balance of 100.0.
 
-Now that we’ve written out our skeleton, we can implement each method.
+● Deposit 25.0: the balance becomes 125.0.
 
-**TODO:** In your java program, now implement each method.
-Be sure to test each method in the main function before implementing
-the next one.
+● Withdraw 30.0: the balance becomes 95.0.
 
----
-[discrete]
-== 2.7 Gametime
+● Attempt to withdraw 200.0: return false; balance stays 95.0.
 
-Congrats! You have implemented TicTacToe! Try out your program and see
-how it does.
+● Attempt to deposit 0.0 or a negative amount: return false; balance stays unchanged.
 
+● Construct an account with a negative starting balance: initialize it to 0.0.
+
+● Update one account: a different account’s balance does not change.
 
 {nbsp} +
 {nbsp} +
@@ -260,4 +196,4 @@ how it does.
 
 
 
-**TODO**: Show Prof. Shiptoski your work and then you are all done with lab 6.
+**TODO**: Show Prof. Shiptoski your work and then you are all done with lab 7.

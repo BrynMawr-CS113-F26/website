@@ -77,9 +77,30 @@ at wikipedia.</p>
 <p>Run the following command to format your code: <code>astyle --style=java BankAccount.java</code>.</p>
 </li>
 <li>
-<p>Open your <code>BankAccount.java</code> file and follow the <code>TODOs</code> in the code.</p>
+<p>Open your <code>BankAccount.java</code> file</p>
+</li>
+<li>
+<p>Answer the following questions before starting to program in a file called <code>answers.txt</code>.</p>
+</li>
+<li>
+<p>Follow the programming <code>TODOs</code> in the starter code.</p>
 </li>
 </ol>
+</div>
+<div class="paragraph">
+<p>Questions before coding:</p>
+</div>
+<div class="paragraph">
+<p>● Which variables are fields (belong to each bank account)?</p>
+</div>
+<div class="paragraph">
+<p>● Why are those fields private?</p>
+</div>
+<div class="paragraph">
+<p>● Which methods read state? Which methods change state?</p>
+</div>
+<div class="paragraph">
+<p>● Why does the constructor use this.owner = owner; instead of owner = owner;?</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -126,211 +147,91 @@ at wikipedia.</p>
 }</code></pre>
 </div>
 </div>
-<hr>
-<h3 id="_2_1_identify_features_of_the_program" class="discrete">2.1 Identify Features of the Program</h3>
 <div class="paragraph">
-<p>What features are necessary for our tic tac toe program?</p>
-</div>
-<div class="paragraph">
-<p>Some ideas to consider:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>What do we need to keep track of and how will we do it? (think: the game grid, the current state of the game, whose turn it is, etc)</p>
-</li>
-<li>
-<p>What does each player need to do? (think: make a move based on the current state of the board)</p>
-</li>
-<li>
-<p>What is the flow of the program? (think: player 1 goes, game grid updates, player 2 goes, game grid updates&#8230;&#8203;)</p>
-</li>
-<li>
-<p>What do we need to check on each turn? (think: is this move legal? does this move cause the game to end?)</p>
-</li>
-<li>
-<p>How will the players see the game grid?</p>
-</li>
-<li>
-<p>When should the players see the game grid?</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><strong>TODO:</strong> Write your answers in the space below.</p>
-</div>
-<div class="paragraph">
-<p>&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br></p>
+<p><strong>TODO</strong>: Show Prof. Shiptoski your work before continuing.</p>
 </div>
 <hr>
-<h3 id="_2_2_categorize_our_features" class="discrete">2.2 Categorize Our Features</h3>
+<h2 id="_3_testing_your_code" class="discrete">3. Testing Your Code</h2>
 <div class="paragraph">
-<p>After listing our features, we need to figure out which of our features should be variables and which of the features should be methods.</p>
+<p>Create a second file called <code>BankAccountTest.java</code>. Copy the following code into the file.
+Follow the same instructions from part 2 to format your code before you begin programming.</p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>What variables do we need?</p>
-</li>
-<li>
-<p>What methods do we need?</p>
-</li>
-</ol>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>public class BankAccountTest {
+
+    public static void main(String[] args) {
+
+        BankAccount milo = new BankAccount("Milo", 100.0);
+
+        BankAccount alex = new BankAccount("Alex", 50.0);
+
+
+
+        System.out.println(milo.getOwner());   // Milo
+
+        System.out.println(milo.getBalance()); // 100.0
+
+
+
+        System.out.println(milo.deposit(25.0)); // true
+
+        System.out.println(milo.getBalance()); // 125.0
+
+
+
+        System.out.println(milo.withdraw(30.0)); // true
+
+        System.out.println(milo.getBalance());  // 95.0
+
+
+
+        System.out.println(milo.withdraw(200.0)); // false
+
+        System.out.println(milo.getBalance());   // still 95.0
+
+
+
+        System.out.println(alex.getBalance()); // still 50.0
+
+    }
+
+}</code></pre>
 </div>
-<div class="paragraph">
-<p><strong>TODO:</strong> Write your answers in the space below.</p>
-</div>
-<div class="paragraph">
-<p>&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br></p>
-</div>
-<hr>
-<h3 id="_2_3_algorithm_time" class="discrete">2.3 Algorithm Time</h3>
-<div class="paragraph">
-<p>Now that we outlined what our methods and variables should be, we can go ahead and sketch out the major steps of the program. In esence, we are outlining how the features should fit together.</p>
-</div>
-<div class="paragraph">
-<p>List out the steps for your program. The first three steps are provided for you:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Ask the players for their names.</p>
-</li>
-<li>
-<p>Create an empty board.</p>
-</li>
-<li>
-<p>Display an empty board.</p>
-</li>
-<li>
-<p>Ask player 1 to make their move.</p>
-</li>
-<li>
-<p>Get their input, and update the board accordingly.</p>
-</li>
-<li>
-<p>Display the board to the players.</p>
-</li>
-<li>
-<p>&#8230;&#8203;</p>
-</li>
-<li>
-<p>&#8230;&#8203;</p>
-</li>
-<li>
-<p>&#8230;&#8203;</p>
-</li>
-</ol>
 </div>
 <div class="paragraph">
-<p><strong>Note:</strong> You will probably have more than 9 steps.</p>
+<p>Compile and run:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>javac BankAccount.java BankAccountTest.java
+
+java BankAccountTest</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p><strong>TODO:</strong> Write your algorithm in the space below.</p>
+<p>Your code should correctly handle all of these (the above code tests these exact conditions):</p>
 </div>
 <div class="paragraph">
-<p>&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br></p>
+<p>● Create an account with a starting balance of 100.0.</p>
 </div>
 <div class="paragraph">
-<p>When you have the first draft of your algorithm, pause and play
-a game of Tic-tac-toe with yourself, and follow every step of
-of your algorithm. This will help you find errors, mistakes, and
-missing steps in your algorithm.</p>
+<p>● Deposit 25.0: the balance becomes 125.0.</p>
 </div>
 <div class="paragraph">
-<p><strong>TODO</strong>: How did your algorithm change when you played through the Tic-tac-toe
-game on your own?</p>
+<p>● Withdraw 30.0: the balance becomes 95.0.</p>
 </div>
 <div class="paragraph">
-<p>&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br></p>
+<p>● Attempt to withdraw 200.0: return false; balance stays 95.0.</p>
 </div>
 <div class="paragraph">
-<p><strong>TODO:</strong> Show Prof. Shiptoski your work before continuing.</p>
-</div>
-<hr>
-<h3 id="_2_4_designing_your_variables" class="discrete">2.4 Designing Your Variables</h3>
-<div class="paragraph">
-<p>Before we write out our methods in our code, its important think about what type of variables should we use. The most complicated variable we will need to keep track of is the board.</p>
+<p>● Attempt to deposit 0.0 or a negative amount: return false; balance stays unchanged.</p>
 </div>
 <div class="paragraph">
-<p><strong>TODO:</strong> What type of variable should we use to represent our board?</p>
+<p>● Construct an account with a negative starting balance: initialize it to 0.0.</p>
 </div>
 <div class="paragraph">
-<p>&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br></p>
-</div>
-<hr>
-<h3 id="_2_5_skeleton_time" class="discrete">2.5 Skeleton Time</h3>
-<div class="paragraph">
-<p>Now that we have convinced ourselves that we have a sufficient algorithm for implementing tic-tac-toe, its time to start programming! But, we dont want to program everything at once, instead we will implement one method at a time.</p>
-</div>
-<div class="paragraph">
-<p>Lets begin by writing out the skeleton of the program. A skeleton of a program is a list of method stubs (these are placeholders for our functions).</p>
-</div>
-<div class="paragraph">
-<p><strong>TODO:</strong> Write out the skeleton of your program in <code>TicTacToe.java</code>. Make sure to
-have a method stub for each of the methods you identified in 2.2.</p>
-</div>
-<div class="paragraph">
-<p><strong>TODO:</strong> Show Prof. Shiptoski your work before continuing.</p>
-</div>
-<hr>
-<h3 id="_2_6_implementation" class="discrete">2.6 Implementation</h3>
-<div class="paragraph">
-<p>Now that we’ve written out our skeleton, we can implement each method.</p>
-</div>
-<div class="paragraph">
-<p><strong>TODO:</strong> In your java program, now implement each method.
-Be sure to test each method in the main function before implementing
-the next one.</p>
-</div>
-<hr>
-<h3 id="_2_7_gametime" class="discrete">2.7 Gametime</h3>
-<div class="paragraph">
-<p>Congrats! You have implemented TicTacToe! Try out your program and see
-how it does.</p>
+<p>● Update one account: a different account’s balance does not change.</p>
 </div>
 <div class="paragraph">
 <p>&#160;<br>
@@ -340,12 +241,12 @@ how it does.</p>
 &#160;<br></p>
 </div>
 <div class="paragraph">
-<p><strong>TODO</strong>: Show Prof. Shiptoski your work and then you are all done with lab 6.</p>
+<p><strong>TODO</strong>: Show Prof. Shiptoski your work and then you are all done with lab 7.</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-11-02 20:21:49 -0500
+Last updated 2026-11-02 20:34:27 -0500
 </div>
 </div>
 <script type="text/x-mathjax-config">
