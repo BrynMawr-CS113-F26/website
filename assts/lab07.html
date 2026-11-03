@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.26">
+<title>Lab 7: Objects and Classes</title>
+<link rel="stylesheet" href="../style/cs21.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<h2 id="_lab_7_objects_and_classes" class="discrete">Lab 7: Objects and Classes</h2>
+<h2 id="_objectives" class="discrete">Objectives</h2>
+<div class="paragraph">
+<p>The main goals for this lab are:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create a Java class with private instance variables.</p>
+</li>
+<li>
+<p>Write a constructor that initializes those variables.</p>
+</li>
+<li>
+<p>Write public methods that access or change object state.</p>
+</li>
+<li>
+<p>Create two distinct objects and test them from main.</p>
+</li>
+<li>
+<p>Explain how two reference variables can refer to the same object.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Start by creating a <code>/lab7</code> folder for yourself. You will write your code
+in a file you create called <code>BankAccount.java</code>.</p>
+</div>
+<div class="paragraph">
+<p>Complete all tasks that are labeled as <strong>TODO</strong>.</p>
+</div>
+<hr>
+<h2 id="_1_bank_account" class="discrete">1. Bank Account</h2>
+<div class="paragraph">
+<p>We want to represent a simple bank account in Java. Each BankAccount has an owner and a balance.
+Other code should not be able to arbitrarily overwrite the balance. Instead, the account provides methods
+for depositing and withdrawing money.</p>
+</div>
+<div class="paragraph">
+<p>For this introductory exercise, we’ll use double for balances to practice numeric instance fields.
+Real financial software generally uses integer cents or a decimal money type, not double.
+Lets begin by making sure you are familiar with tic tac toe. If you aren&#8217;t, briefly look
+at wikipedia.</p>
+</div>
+<hr>
+<h2 id="_2_top_down_approach" class="discrete">2. Top Down Approach</h2>
+<div class="paragraph">
+<p>When designing a program, its a good idea to take a top-down approach. In a top down approach, we use the following steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Identify features of the program</p>
+</li>
+<li>
+<p>Identify the verbs and nouns in the feature list</p>
+</li>
+<li>
+<p>Sketch out major steps</p>
+</li>
+<li>
+<p>Write the program skeleton</p>
+</li>
+<li>
+<p>Implement and test functions one at a time</p>
+</li>
+</ol>
+</div>
+<hr>
+<h3 id="_2_1_identify_features_of_the_program" class="discrete">2.1 Identify Features of the Program</h3>
+<div class="paragraph">
+<p>What features are necessary for our tic tac toe program?</p>
+</div>
+<div class="paragraph">
+<p>Some ideas to consider:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>What do we need to keep track of and how will we do it? (think: the game grid, the current state of the game, whose turn it is, etc)</p>
+</li>
+<li>
+<p>What does each player need to do? (think: make a move based on the current state of the board)</p>
+</li>
+<li>
+<p>What is the flow of the program? (think: player 1 goes, game grid updates, player 2 goes, game grid updates&#8230;&#8203;)</p>
+</li>
+<li>
+<p>What do we need to check on each turn? (think: is this move legal? does this move cause the game to end?)</p>
+</li>
+<li>
+<p>How will the players see the game grid?</p>
+</li>
+<li>
+<p>When should the players see the game grid?</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>TODO:</strong> Write your answers in the space below.</p>
+</div>
+<div class="paragraph">
+<p>&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br></p>
+</div>
+<hr>
+<h3 id="_2_2_categorize_our_features" class="discrete">2.2 Categorize Our Features</h3>
+<div class="paragraph">
+<p>After listing our features, we need to figure out which of our features should be variables and which of the features should be methods.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>What variables do we need?</p>
+</li>
+<li>
+<p>What methods do we need?</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>TODO:</strong> Write your answers in the space below.</p>
+</div>
+<div class="paragraph">
+<p>&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br></p>
+</div>
+<hr>
+<h3 id="_2_3_algorithm_time" class="discrete">2.3 Algorithm Time</h3>
+<div class="paragraph">
+<p>Now that we outlined what our methods and variables should be, we can go ahead and sketch out the major steps of the program. In esence, we are outlining how the features should fit together.</p>
+</div>
+<div class="paragraph">
+<p>List out the steps for your program. The first three steps are provided for you:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Ask the players for their names.</p>
+</li>
+<li>
+<p>Create an empty board.</p>
+</li>
+<li>
+<p>Display an empty board.</p>
+</li>
+<li>
+<p>Ask player 1 to make their move.</p>
+</li>
+<li>
+<p>Get their input, and update the board accordingly.</p>
+</li>
+<li>
+<p>Display the board to the players.</p>
+</li>
+<li>
+<p>&#8230;&#8203;</p>
+</li>
+<li>
+<p>&#8230;&#8203;</p>
+</li>
+<li>
+<p>&#8230;&#8203;</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Note:</strong> You will probably have more than 9 steps.</p>
+</div>
+<div class="paragraph">
+<p><strong>TODO:</strong> Write your algorithm in the space below.</p>
+</div>
+<div class="paragraph">
+<p>&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br></p>
+</div>
+<div class="paragraph">
+<p>When you have the first draft of your algorithm, pause and play
+a game of Tic-tac-toe with yourself, and follow every step of
+of your algorithm. This will help you find errors, mistakes, and
+missing steps in your algorithm.</p>
+</div>
+<div class="paragraph">
+<p><strong>TODO</strong>: How did your algorithm change when you played through the Tic-tac-toe
+game on your own?</p>
+</div>
+<div class="paragraph">
+<p>&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br></p>
+</div>
+<div class="paragraph">
+<p><strong>TODO:</strong> Show Prof. Shiptoski your work before continuing.</p>
+</div>
+<hr>
+<h3 id="_2_4_designing_your_variables" class="discrete">2.4 Designing Your Variables</h3>
+<div class="paragraph">
+<p>Before we write out our methods in our code, its important think about what type of variables should we use. The most complicated variable we will need to keep track of is the board.</p>
+</div>
+<div class="paragraph">
+<p><strong>TODO:</strong> What type of variable should we use to represent our board?</p>
+</div>
+<div class="paragraph">
+<p>&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br></p>
+</div>
+<hr>
+<h3 id="_2_5_skeleton_time" class="discrete">2.5 Skeleton Time</h3>
+<div class="paragraph">
+<p>Now that we have convinced ourselves that we have a sufficient algorithm for implementing tic-tac-toe, its time to start programming! But, we dont want to program everything at once, instead we will implement one method at a time.</p>
+</div>
+<div class="paragraph">
+<p>Lets begin by writing out the skeleton of the program. A skeleton of a program is a list of method stubs (these are placeholders for our functions).</p>
+</div>
+<div class="paragraph">
+<p><strong>TODO:</strong> Write out the skeleton of your program in <code>TicTacToe.java</code>. Make sure to
+have a method stub for each of the methods you identified in 2.2.</p>
+</div>
+<div class="paragraph">
+<p><strong>TODO:</strong> Show Prof. Shiptoski your work before continuing.</p>
+</div>
+<hr>
+<h3 id="_2_6_implementation" class="discrete">2.6 Implementation</h3>
+<div class="paragraph">
+<p>Now that we’ve written out our skeleton, we can implement each method.</p>
+</div>
+<div class="paragraph">
+<p><strong>TODO:</strong> In your java program, now implement each method.
+Be sure to test each method in the main function before implementing
+the next one.</p>
+</div>
+<hr>
+<h3 id="_2_7_gametime" class="discrete">2.7 Gametime</h3>
+<div class="paragraph">
+<p>Congrats! You have implemented TicTacToe! Try out your program and see
+how it does.</p>
+</div>
+<div class="paragraph">
+<p>&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br></p>
+</div>
+<div class="paragraph">
+<p><strong>TODO</strong>: Show Prof. Shiptoski your work and then you are all done with lab 6.</p>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2026-11-02 20:14:44 -0500
+</div>
+</div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+})
+MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
+  MathJax.InputJax.AsciiMath.postfilterHooks.Add(function (data, node) {
+    if ((node = data.script.parentNode) && (node = node.parentNode) && node.classList.contains("stemblock")) {
+      data.math.root.display = "block"
+    }
+    return data
+  })
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+include::header.adoc[]
+
+:title: Lab 7: Objects and Classes
+:Author Initials: KRS
+:Date:    2026-11-02
+:Revision: 0.1
+
+[discrete]
+= {title}
+
+[discrete]
+= Objectives
+
+The main goals for this lab are:
+
+1. Create a Java class with private instance variables.
+
+2. Write a constructor that initializes those variables.
+
+3. Write public methods that access or change object state.
+
+4. Create two distinct objects and test them from main.
+
+5. Explain how two reference variables can refer to the same object.
+
+Start by creating a `/lab7` folder for yourself. You will write your code
+in a file you create called `BankAccount.java`.
+
+Complete all tasks that are labeled as **TODO**.
+
+---
+[discrete]
+= 1. Bank Account
+
+We want to represent a simple bank account in Java. Each BankAccount has an owner and a balance. 
+Other code should not be able to arbitrarily overwrite the balance. Instead, the account provides methods
+for depositing and withdrawing money.
+
+For this introductory exercise, we’ll use double for balances to practice numeric instance fields. 
+Real financial software generally uses integer cents or a decimal money type, not double.
+Lets begin by making sure you are familiar with tic tac toe. If you aren't, briefly look
+at wikipedia.
+
+---
+[discrete]
+= 2. Top Down Approach
+
+When designing a program, its a good idea to take a top-down approach. In a top down approach, we use the following steps:
+
+1. Identify features of the program
+2. Identify the verbs and nouns in the feature list
+3. Sketch out major steps
+4. Write the program skeleton
+5. Implement and test functions one at a time
+
+---
+[discrete]
+== 2.1 Identify Features of the Program
+
+What features are necessary for our tic tac toe program?
+
+Some ideas to consider:
+
+1. What do we need to keep track of and how will we do it? (think: the game grid, the current state of the game, whose turn it is, etc)
+2. What does each player need to do? (think: make a move based on the current state of the board)
+3. What is the flow of the program? (think: player 1 goes, game grid updates, player 2 goes, game grid updates...)
+4. What do we need to check on each turn? (think: is this move legal? does this move cause the game to end?)
+5. How will the players see the game grid?
+6. When should the players see the game grid?
+
+**TODO:** Write your answers in the space below.
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+
+---
+[discrete]
+== 2.2 Categorize Our Features
+
+After listing our features, we need to figure out which of our features should be variables and which of the features should be methods.
+
+1. What variables do we need?
+2. What methods do we need?
+
+**TODO:** Write your answers in the space below.
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+
+
+---
+[discrete]
+== 2.3 Algorithm Time
+
+Now that we outlined what our methods and variables should be, we can go ahead and sketch out the major steps of the program. In esence, we are outlining how the features should fit together.
+
+List out the steps for your program. The first three steps are provided for you:
+
+1. Ask the players for their names.
+2. Create an empty board.
+3. Display an empty board.
+4. Ask player 1 to make their move.
+5. Get their input, and update the board accordingly.
+6. Display the board to the players.
+7. ...
+8. ...
+9. ...
+
+**Note:** You will probably have more than 9 steps.
+
+**TODO:** Write your algorithm in the space below.
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+
+When you have the first draft of your algorithm, pause and play
+a game of Tic-tac-toe with yourself, and follow every step of
+of your algorithm. This will help you find errors, mistakes, and 
+missing steps in your algorithm.
+
+**TODO**: How did your algorithm change when you played through the Tic-tac-toe
+game on your own?
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+
+**TODO:** Show Prof. Shiptoski your work before continuing.
+
+---
+[discrete]
+== 2.4 Designing Your Variables
+
+Before we write out our methods in our code, its important think about what type of variables should we use. The most complicated variable we will need to keep track of is the board.
+
+**TODO:** What type of variable should we use to represent our board?
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+
+---
+[discrete]
+== 2.5 Skeleton Time
+
+Now that we have convinced ourselves that we have a sufficient algorithm for implementing tic-tac-toe, its time to start programming! But, we dont want to program everything at once, instead we will implement one method at a time.
+
+Lets begin by writing out the skeleton of the program. A skeleton of a program is a list of method stubs (these are placeholders for our functions).
+
+**TODO:** Write out the skeleton of your program in `TicTacToe.java`. Make sure to
+have a method stub for each of the methods you identified in 2.2.
+
+**TODO:** Show Prof. Shiptoski your work before continuing.
+
+---
+[discrete]
+== 2.6 Implementation
+
+Now that we’ve written out our skeleton, we can implement each method.
+
+**TODO:** In your java program, now implement each method.
+Be sure to test each method in the main function before implementing
+the next one.
+
+---
+[discrete]
+== 2.7 Gametime
+
+Congrats! You have implemented TicTacToe! Try out your program and see
+how it does.
+
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+
+
+
+**TODO**: Show Prof. Shiptoski your work and then you are all done with lab 6.
