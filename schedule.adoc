@@ -97,7 +97,6 @@
 |Oct 6, 8 anchor:week06[]
 |*Loops II, Arrays, ArrayLists*
 
-// * Assignment 06: Recursion & Arrays, Due Oct 9
 * Lab Oct 6: Finish last week's lab
 * link:assts/practicequiz01.html[Practice Quiz with Solutions]
 * Quiz 01 Oct 8: Java basics, conditionals, loops, recursion
@@ -172,7 +171,7 @@
 |Nov 10, 12 anchor:week11[]
 |*Inheritance* 
 
-* Assignment 05: TBD
+* Assignment 05: Classes & Objects (due TBD)
 * Lab Nov 10: Class Design / Practice Quiz 03
 
 |
@@ -185,7 +184,7 @@
 |*Interfaces, Linear Search* 
 
 * Lab Nov 17: TBD
-* Quiz 03 Nov 19
+* Quiz 03 Nov 19: Objects, classes, inheritance
 |
 * Chapter 17.7: Interfaces 
 * Chapter 12.7: Sequential Search
@@ -195,6 +194,7 @@
 |Nov 24 anchor:week13[]
 |*Binary Search*
 
+* Lab Nov 24: Inheritance, Sorting / Practice Quiz 04
 
 |
 * Chapter 12.8: Binary Search
@@ -206,8 +206,8 @@
 
 
 // * Assignment 11: Sorting, Due Dec 4
-* Assignment 07: TBD
-* Quiz 03 Dec 3
+* Assignment 06: Inheritance, Sorting
+* Quiz 04 Dec 3: Inheritance / interfaces, linear search, binary search
 * Lab Dec 1: Sorting
 
 |
