@@ -1,0 +1,174 @@
+include::header.adoc[]
+
+:title: Lab 8: Library Items & Inheritance
+:Author Initials: KRS
+:Date:    2026-11-09
+:Revision: 0.1
+
+[discrete]
+= {title}
+
+[discrete]
+= Objectives
+Practice designing a class, using a constructor, adding methods, and making a 
+small subclass.
+
+Start by creating a `/lab8` folder for yourself. 
+
+Complete all tasks that are labeled as **TODO**.
+
+---
+[discrete]
+= 1. Library
+A library stores many kinds of items. A general library item has a title and an identification number. A book is a special kind of library item that also has an author.
+
+Create three files in the your `/lab8` directory: `LibraryItem.java`, `Book.java`,
+and `Main.java`. You can use the `touch` command to do this. For example: `touch Book.java`.
+
+---
+[discrete]
+= 2. Implement the parent class
+
+Let's get our starter code ready and formatted nicely.
+
+1. Create a new file called `LibraryItem.java`. 
+2. Copy and paste the code below into your file.
+3. Hit `esc` and then `:wq` to save and quit out of your file.
+4. Run the following command to format your code: `astyle --style=java BankAccount.java`.
+5. Open your `LibraryItem.java` file 
+6. Answer the following questions before starting to program in a file called `answers.txt`.
+7. Follow the programming `TODOs` in the starter code.
+
+Questions before coding:
+
+● Why are `title` and `id` marked `private`?
+
+● What is the difference between a constructor and a regular method?
+
+
+[source, subs="quotes"]
+----
+public class LibraryItem {
+    private String title;
+    private int id;
+
+    // TODO 1: Write a constructor that takes a title and an id.
+
+
+
+    // TODO 2: Write getTitle() and getId() methods.
+
+
+
+
+    // TODO 3: Write describe() to return:
+    // "Item #12: The Hobbit"
+    // (using this object's actual id and title)
+
+
+
+}
+----
+
+**TODO**: Show Prof. Shiptoski your work before continuing.
+
+---
+[discrete]
+= 3. Build the subclass
+
+Copy the following code into the `Book.java` file.
+Follow the same instructions from part 2 to format your code before you begin programming.
+
+Questions before coding:
+
+● Does a `Book` need its own `title` field? Why or why not?
+
+[source, subs="quotes"]
+----
+public class Book extends LibraryItem {
+    private String author;
+
+    // TODO 4: Write a constructor that accepts title, id, and author.
+    // Call the parent constructor using super(...).
+    // Store the author in the Book object.
+
+
+
+    // TODO 5: Write getAuthor().
+
+
+
+    // TODO 6: Override describe() to return:
+    // "Book #12: The Hobbit by J.R.R. Tolkien"
+    // Use @Override and inherited getters as needed.
+
+
+}
+----
+
+**TODO**: Show Prof. Shiptoski your work before continuing.
+
+---
+[discrete]
+= 4. Test your classes
+
+
+Copy the following code into the `Main.java` file.
+Follow the same instructions from part 2 to format your code before you begin programming.
+
+[source, subs="quotes"]
+----
+public class Main {
+    public static void main(String[] args) {
+        LibraryItem item = new LibraryItem("Map", 5);
+        Book book = new Book("The Hobbit", 12, "J.R.R. Tolkien");
+
+        System.out.println(item.describe());
+        System.out.println(book.describe());
+
+        // TODO 7: Make a second Book of your choice.
+        // Print its title, author, and description.
+
+        // TODO 8: Predict the output of the next two lines.
+        LibraryItem anotherItem = book;
+        System.out.println(anotherItem.describe());
+    }
+}
+----
+
+Compile/run from the directory containing all three files:
+
+[source, subs="quotes"]
+----
+javac LibraryItem.java Book.java Main.java
+java Main
+----
+
+Expected output for the supplied objects:
+
+[source, subs="quotes"]
+----
+Item #5: Map
+Book #12: The Hobbit by J.R.R. Tolkien
+----
+
+The later output depends on your own second book; the final `anotherItem.describe()` 
+should use the `Book` version.
+
+Answer the following questions:
+
+1. Which class is the superclass? Which is the subclass?
+2. Explain why `super(title, id)` belongs in the `Book` constructor.
+3. Is `Book` an example of an **is-a** or **has-a** relationship with `LibraryItem`?
+4. Why does `anotherItem.describe()` call the `Book` version even though `anotherItem` is declared as `LibraryItem`?
+
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+
+
+
+**TODO**: Show Prof. Shiptoski your work and then you are all done with lab 7.

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.26">
+<title>Lab 8: Library Items &amp; Inheritance</title>
+<link rel="stylesheet" href="../style/cs21.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<h2 id="_lab_8_library_items_inheritance" class="discrete">Lab 8: Library Items &amp; Inheritance</h2>
+<h2 id="_objectives" class="discrete">Objectives</h2>
+<div class="paragraph">
+<p>Practice designing a class, using a constructor, adding methods, and making a
+small subclass.</p>
+</div>
+<div class="paragraph">
+<p>Start by creating a <code>/lab8</code> folder for yourself.</p>
+</div>
+<div class="paragraph">
+<p>Complete all tasks that are labeled as <strong>TODO</strong>.</p>
+</div>
+<hr>
+<h2 id="_1_library" class="discrete">1. Library</h2>
+<div class="paragraph">
+<p>A library stores many kinds of items. A general library item has a title and an identification number. A book is a special kind of library item that also has an author.</p>
+</div>
+<div class="paragraph">
+<p>Create three files in the your <code>/lab8</code> directory: <code>LibraryItem.java</code>, <code>Book.java</code>,
+and <code>Main.java</code>. You can use the <code>touch</code> command to do this. For example: <code>touch Book.java</code>.</p>
+</div>
+<hr>
+<h2 id="_2_implement_the_parent_class" class="discrete">2. Implement the parent class</h2>
+<div class="paragraph">
+<p>Let&#8217;s get our starter code ready and formatted nicely.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create a new file called <code>LibraryItem.java</code>.</p>
+</li>
+<li>
+<p>Copy and paste the code below into your file.</p>
+</li>
+<li>
+<p>Hit <code>esc</code> and then <code>:wq</code> to save and quit out of your file.</p>
+</li>
+<li>
+<p>Run the following command to format your code: <code>astyle --style=java BankAccount.java</code>.</p>
+</li>
+<li>
+<p>Open your <code>LibraryItem.java</code> file</p>
+</li>
+<li>
+<p>Answer the following questions before starting to program in a file called <code>answers.txt</code>.</p>
+</li>
+<li>
+<p>Follow the programming <code>TODOs</code> in the starter code.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Questions before coding:</p>
+</div>
+<div class="paragraph">
+<p>● Why are <code>title</code> and <code>id</code> marked <code>private</code>?</p>
+</div>
+<div class="paragraph">
+<p>● What is the difference between a constructor and a regular method?</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>public class LibraryItem {
+    private String title;
+    private int id;
+
+    // TODO 1: Write a constructor that takes a title and an id.
+
+
+
+    // TODO 2: Write getTitle() and getId() methods.
+
+
+
+
+    // TODO 3: Write describe() to return:
+    // "Item #12: The Hobbit"
+    // (using this object's actual id and title)
+
+
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>TODO</strong>: Show Prof. Shiptoski your work before continuing.</p>
+</div>
+<hr>
+<h2 id="_3_build_the_subclass" class="discrete">3. Build the subclass</h2>
+<div class="paragraph">
+<p>Copy the following code into the <code>Book.java</code> file.
+Follow the same instructions from part 2 to format your code before you begin programming.</p>
+</div>
+<div class="paragraph">
+<p>Questions before coding:</p>
+</div>
+<div class="paragraph">
+<p>● Does a <code>Book</code> need its own <code>title</code> field? Why or why not?</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>public class Book extends LibraryItem {
+    private String author;
+
+    // TODO 4: Write a constructor that accepts title, id, and author.
+    // Call the parent constructor using super(...).
+    // Store the author in the Book object.
+
+
+
+    // TODO 5: Write getAuthor().
+
+
+
+    // TODO 6: Override describe() to return:
+    // "Book #12: The Hobbit by J.R.R. Tolkien"
+    // Use @Override and inherited getters as needed.
+
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>TODO</strong>: Show Prof. Shiptoski your work before continuing.</p>
+</div>
+<hr>
+<h2 id="_4_test_your_classes" class="discrete">4. Test your classes</h2>
+<div class="paragraph">
+<p>Copy the following code into the <code>Main.java</code> file.
+Follow the same instructions from part 2 to format your code before you begin programming.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>public class Main {
+    public static void main(String[] args) {
+        LibraryItem item = new LibraryItem("Map", 5);
+        Book book = new Book("The Hobbit", 12, "J.R.R. Tolkien");
+
+        System.out.println(item.describe());
+        System.out.println(book.describe());
+
+        // TODO 7: Make a second Book of your choice.
+        // Print its title, author, and description.
+
+        // TODO 8: Predict the output of the next two lines.
+        LibraryItem anotherItem = book;
+        System.out.println(anotherItem.describe());
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Compile/run from the directory containing all three files:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>javac LibraryItem.java Book.java Main.java
+java Main</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Expected output for the supplied objects:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>Item #5: Map
+Book #12: The Hobbit by J.R.R. Tolkien</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The later output depends on your own second book; the final <code>anotherItem.describe()</code>
+should use the <code>Book</code> version.</p>
+</div>
+<div class="paragraph">
+<p>Answer the following questions:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Which class is the superclass? Which is the subclass?</p>
+</li>
+<li>
+<p>Explain why <code>super(title, id)</code> belongs in the <code>Book</code> constructor.</p>
+</li>
+<li>
+<p>Is <code>Book</code> an example of an <strong>is-a</strong> or <strong>has-a</strong> relationship with <code>LibraryItem</code>?</p>
+</li>
+<li>
+<p>Why does <code>anotherItem.describe()</code> call the <code>Book</code> version even though <code>anotherItem</code> is declared as <code>LibraryItem</code>?</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br>
+&#160;<br></p>
+</div>
+<div class="paragraph">
+<p><strong>TODO</strong>: Show Prof. Shiptoski your work and then you are all done with lab 7.</p>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2026-11-09 21:28:46 -0500
+</div>
+</div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+})
+MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
+  MathJax.InputJax.AsciiMath.postfilterHooks.Add(function (data, node) {
+    if ((node = data.script.parentNode) && (node = node.parentNode) && node.classList.contains("stemblock")) {
+      data.math.root.display = "block"
+    }
+    return data
+  })
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>

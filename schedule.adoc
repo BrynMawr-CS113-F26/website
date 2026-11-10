@@ -172,7 +172,8 @@
 |*Inheritance* 
 
 * Assignment 05: Classes & Objects (due TBD)
-* Lab Nov 10: Class Design / Practice Quiz 03
+* Lab Nov 10: link:assts/lab08.html[Class Design]
+* Practice Quiz 03
 
 |
 * Chapter 15: Extending Classes
