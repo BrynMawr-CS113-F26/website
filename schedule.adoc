@@ -169,11 +169,11 @@
 //-----------------------------
 |11
 |Nov 10, 12 anchor:week11[]
-|*Inheritance* 
+|*Inheritance, Abstract Classes* 
 
-* Assignment 05: Classes & Objects (due TBD)
 * Lab Nov 10: link:assts/lab08.html[Class Design]
-* Practice Quiz 03
+* link:assts/practicequiz03.html[Practice Quiz 03]
+// link:assts/practicequiz3solutions.pdf[Solutions]
 
 |
 * Chapter 15: Extending Classes
@@ -185,7 +185,9 @@
 |*Interfaces, Linear Search* 
 
 * Lab Nov 17: TBD
-* Quiz 03 Nov 19: Objects, classes, inheritance
+* Assignment 05: Classes & Objects (due TBD)
+* Quiz 03 Nov 17: Objects, classes, inheritance
+* No class Nov 19
 |
 * Chapter 17.7: Interfaces 
 * Chapter 12.7: Sequential Search
