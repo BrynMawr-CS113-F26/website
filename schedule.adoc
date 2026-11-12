@@ -173,7 +173,7 @@
 
 * Lab Nov 10: link:assts/lab08.html[Class Design]
 * link:assts/practicequiz03.html[Practice Quiz 03]
-// link:assts/practicequiz3solutions.pdf[Solutions]
+* link:assts/Practicequiz3solutions.pdf[Solutions]
 
 |
 * Chapter 15: Extending Classes
