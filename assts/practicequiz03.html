@@ -55,6 +55,7 @@
 &#160;<br></p>
 </div>
 <div class="pagebreak"> </div>
+<hr>
 <h2 id="_question_2_code_tracing" class="discrete">Question 2: Code Tracing</h2>
 <div class="paragraph">
 <p>Consider the following program.</p>
@@ -110,6 +111,7 @@ System.out.println(a.getCount());</code></pre>
 &#160;<br></p>
 </div>
 <div class="pagebreak"> </div>
+<hr>
 <h2 id="_question_3_constructors_and_this" class="discrete">Question 3: Constructors and <code>this</code></h2>
 <div class="paragraph">
 <p>Consider the following program.</p>
@@ -141,6 +143,7 @@ System.out.println(a.getCount());</code></pre>
 </div>
 </div>
 <div class="pagebreak"> </div>
+<hr>
 <h2 id="_question_4_inheritance_overriding" class="discrete">Question 4: Inheritance &amp; Overriding</h2>
 <div class="paragraph">
 <p>Consider the following program.</p>
@@ -179,10 +182,54 @@ class Bike extends Vehicle {
 }</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Answer the following questions.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>What is printed?</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>Vehicle v = new Vehicle(10);
+
+Bike b = new Bike(15);
+
+
+v.move();
+
+b.move();</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Explain what <code>super(speed)</code> does in the <code>Bike</code> constructor.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>&#160;<br>
+&#160;<br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If we remove the overridden <code>move()</code> method from <code>Bike</code>, what will <code>b.move()</code> print?</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>&#160;<br>
+&#160;<br></p>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-11-11 19:38:40 -0500
+Last updated 2026-11-11 19:45:24 -0500
 </div>
 </div>
 <script type="text/x-mathjax-config">

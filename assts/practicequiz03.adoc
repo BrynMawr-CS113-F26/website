@@ -43,6 +43,7 @@ Mark each statement True or False. If false, briefly explain why.
 <div class="pagebreak"> </div>
 ++++
 
+---
 [discrete]
 = Question 2: Code Tracing
 
@@ -100,6 +101,7 @@ System.out.println(a.getCount());
 <div class="pagebreak"> </div>
 ++++
 
+---
 [discrete]
 = Question 3: Constructors and `this`
 
@@ -129,6 +131,7 @@ class Student {
 <div class="pagebreak"> </div>
 ++++
 
+---
 [discrete]
 = Question 4: Inheritance & Overriding
 
@@ -168,3 +171,28 @@ class Bike extends Vehicle {
 }
 ----
 
+Answer the following questions.
+
+* What is printed?
+
+[source]
+----
+Vehicle v = new Vehicle(10);
+
+Bike b = new Bike(15);
+
+
+v.move();
+
+b.move();
+----
+
+* Explain what `super(speed)` does in the `Bike` constructor.
+
+{nbsp} +
+{nbsp} +
+
+* If we remove the overridden `move()` method from `Bike`, what will `b.move()` print?
+
+{nbsp} +
+{nbsp} +
