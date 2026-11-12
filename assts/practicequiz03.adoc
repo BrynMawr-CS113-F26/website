@@ -196,3 +196,38 @@ b.move();
 
 {nbsp} +
 {nbsp} +
+
+---
+[discrete]
+= Question 5: Write Code
+
+Consider the following code.
+
+[source]
+----
+class Employee {
+    private String name;
+
+    public Employee(String name) {
+      this.name = name;
+    }
+
+    public String getName() {
+      return name;
+    }
+
+    public void describe() {
+      System.out.println("Employee: " + name);
+    }
+}
+----
+
+
+Write a subclass `Manager` that extends `Employee`, has a private department field, initializes both fields
+through its constructor, and overrides `describe()` to print the manager’s name and department.
+
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
