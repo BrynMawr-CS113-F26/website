@@ -110,108 +110,79 @@ System.out.println(a.getCount());</code></pre>
 &#160;<br></p>
 </div>
 <div class="pagebreak"> </div>
-<h2 id="_question_3_w" class="discrete">Question 3: W</h2>
+<h2 id="_question_3_constructors_and_this" class="discrete">Question 3: Constructors and <code>this</code></h2>
+<div class="paragraph">
+<p>Consider the following program.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The program contains two errors. Identify and correct them.</p>
+</li>
+<li>
+<p>Explain why <code>this.name = name</code> behaves differently from <code>name = name</code>.</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>class Student {
+
+  private String name;
+  private int year;
+
+  public void Student(String name, int year) {
+    name = name;
+    year = year;
+
+  }
+
+}</code></pre>
+</div>
+</div>
+<div class="pagebreak"> </div>
+<h2 id="_question_4_inheritance_overriding" class="discrete">Question 4: Inheritance &amp; Overriding</h2>
 <div class="paragraph">
 <p>Consider the following program.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>class ReferencePractice {
-    public static void mystery(int[] data, int number) {
-        data[0] = number;
-        number = 20;
+<pre class="highlight"><code>class Vehicle {
 
-        data = new int[]{7, 8, 9};
-        data[1] = 100;
+    private int speed;
+
+    public Vehicle(int speed) {
+      this.speed = speed;
     }
 
-    public static void main(String[] args) {
-        int x = 5;
-        int y = x;
-
-        int[] a = {1, 2, 3};
-        int[] b = a;
-
-        y = 10;
-        b[2] = 15;
-
-        mystery(a, x);
-
-        System.out.println(x);
-        System.out.println(y);
-        System.out.println(a[0]);
-        System.out.println(a[1]);
-        System.out.println(b[2]);
+    public int getSpeed() {
+      return speed;
     }
+
+    public void move() {
+      System.out.println("Moving at " + speed);
+    }
+}
+
+
+class Bike extends Vehicle {
+
+    public Bike(int speed) {
+      super(speed);
+    }
+
+    @Override
+
+    public void move() {
+      System.out.println("Pedaling at " + getSpeed());
+  }
 }</code></pre>
 </div>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Write the exact output of the program, one value per line.</p>
-</li>
-<li>
-<p>Draw a memory diagram showing <code>a</code> and <code>b</code> and the array they refer to at the end of <code>main()</code>.</p>
-</li>
-<li>
-<p>Explain why changing <code>y</code> does not change <code>x</code>, but changing <code>b[2]</code> changes the array accessed through <code>a</code>.</p>
-</li>
-<li>
-<p>Does the statement <code>data = new int[]{7, 8, 9}</code> (in the <code>mystery()</code> function) affect the array <code>a</code> in <code>main()</code>
-refers to? Why or why not?</p>
-</li>
-</ol>
-</div>
-<div class="pagebreak"> </div>
-<h2 id="_question_4_write_a_method" class="discrete">Question 4: Write a Method</h2>
-<div class="paragraph">
-<p>We are writing a program that processes a two-dimensional array representing seats in a theater.
-Each seat contains a character:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>X</code> represents an occupied seat.</p>
-</li>
-<li>
-<p><code>O</code> represents an available seat.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>For example:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>char[] seats = {
-                  {`X`, `O`, `X`, `O`},
-                  {`X`, `X`, `O`, `O`},
-                  {`O`, `O`, `O`, `X`}
-               };</code></pre>
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Write a method called <code>countAvailable()</code> that takes a 2D character array and returns the total number
-of available seats.</p>
-</li>
-<li>
-<p>Write a method called <code>hasAvailableSeat()</code> that takes a single row of seats and returns true if at
-least one seat is available, and false otherwise.</p>
-</li>
-<li>
-<p>Use <code>hasAvailableSeat()</code> to write another method that determines whether any
-row in the theater contains an available seat. It should take in a 2D character array and returns
-true if any row contains an available seat, and false otherwise.</p>
-</li>
-</ol>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-11-11 18:44:39 -0500
+Last updated 2026-11-11 19:38:40 -0500
 </div>
 </div>
 <script type="text/x-mathjax-config">

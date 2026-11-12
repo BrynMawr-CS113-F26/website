@@ -101,81 +101,70 @@ System.out.println(a.getCount());
 ++++
 
 [discrete]
-= Question 3: W
+= Question 3: Constructors and `this`
 
 Consider the following program.
 
+1. The program contains two errors. Identify and correct them.
+
+2. Explain why `this.name = name` behaves differently from `name = name`.
+
 [source]
 ----
-class ReferencePractice {
-    public static void mystery(int[] data, int number) {
-        data[0] = number;
-        number = 20;
+class Student {
 
-        data = new int[]{7, 8, 9};
-        data[1] = 100;
-    }
+  private String name;
+  private int year;
 
-    public static void main(String[] args) {
-        int x = 5;
-        int y = x;
+  public void Student(String name, int year) {
+    name = name;
+    year = year;
 
-        int[] a = {1, 2, 3};
-        int[] b = a;
+  }
 
-        y = 10;
-        b[2] = 15;
-
-        mystery(a, x);
-
-        System.out.println(x);
-        System.out.println(y);
-        System.out.println(a[0]);
-        System.out.println(a[1]);
-        System.out.println(b[2]);
-    }
 }
 ----
-
-1. Write the exact output of the program, one value per line.
-
-2. Draw a memory diagram showing `a` and `b` and the array they refer to at the end of `main()`.
-
-3. Explain why changing `y` does not change `x`, but changing `b[2]` changes the array accessed through `a`.
-
-4. Does the statement `data = new int[]{7, 8, 9}` (in the `mystery()` function) affect the array `a` in `main()`
-refers to? Why or why not?
 
 ++++
 <div class="pagebreak"> </div>
 ++++
 
 [discrete]
-= Question 4: Write a Method
+= Question 4: Inheritance & Overriding
 
-We are writing a program that processes a two-dimensional array representing seats in a theater. 
-Each seat contains a character:
-
-* `X` represents an occupied seat.
-* `O` represents an available seat.
-
-For example:
+Consider the following program.
 
 [source]
 ----
-char[] seats = {
-                  {`X`, `O`, `X`, `O`},
-                  {`X`, `X`, `O`, `O`},
-                  {`O`, `O`, `O`, `X`}
-               };
+class Vehicle {
+
+    private int speed;
+
+    public Vehicle(int speed) {
+      this.speed = speed;
+    }
+
+    public int getSpeed() {
+      return speed;
+    }
+
+    public void move() {
+      System.out.println("Moving at " + speed);
+    }
+}
+
+
+class Bike extends Vehicle {
+
+    public Bike(int speed) {
+      super(speed);
+    }
+
+    @Override
+
+    public void move() {
+      System.out.println("Pedaling at " + getSpeed());
+  }
+}
 ----
 
-1. Write a method called `countAvailable()` that takes a 2D character array and returns the total number
-of available seats.
-
-2. Write a method called `hasAvailableSeat()` that takes a single row of seats and returns true if at
-least one seat is available, and false otherwise.
-
-3. Use `hasAvailableSeat()` to write another method that determines whether any
-row in the theater contains an available seat. It should take in a 2D character array and returns
-true if any row contains an available seat, and false otherwise.
