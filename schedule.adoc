@@ -177,6 +177,21 @@
 
 |
 * Chapter 15: Extending Classes
+* link:lectures/week11lecture1.pdf[Week 11 Slides]
+* link:lectures/cs113week11lecture1.pdf[Week 11 Lecture 1 Notes]
+* link:lecture_examples/w11l1/Main.java[Main.java]
+* link:lecture_examples/w11l1/BankAccount.java[BankAccount.java]
+* link:lecture_examples/w11l1/SavingsAccount.java[SavingsAccount.java]
+
+* link:lectures/cs113week11lecture2.pdf[Week 11 Lecture 2 Notes]
+* link:lecture_examples/w11l2/Main.java[Main.java]
+* link:lecture_examples/w11l2/BankAccount.java[BankAccount.java]
+* link:lecture_examples/w11l2/SavingsAccount.java[SavingsAccount.java]
+* link:lecture_examples/w11l2/CheckingAccount.java[CheckingAccount.java]
+* link:lecture_examples/w11l2/Employee.java[Employee.java]
+* link:lecture_examples/w11l2/Manager.java[Manager.java]
+
+
 
 
 //-----------------------------
