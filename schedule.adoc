@@ -155,6 +155,12 @@
 
 | 
 * Chapter 11: Designing Classes
+* link:lectures/113week9lecturenotes.pdf[Week 9 Lecture Notes]
+* link:lecture_examples/w9/guests.txt[guests.txt]
+* link:lecture_examples/w9/Cat.java[Cat.java]
+* link:lecture_examples/w9/CatParty.java[CatParty.java]
+* link:lecture_examples/w9/GuestList.java[GuestList.java]
+* link:lecture_examples/w9/WeekNine.java[WeekNine.java]
 
 
 //-----------------------------
