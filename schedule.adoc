@@ -165,6 +165,9 @@
 * Lab Nov 3: link:assts/lab07.html[Objects and Classes: Bank Account]
 |
 * Chapter 12: Arrays of Objects
+* link:lectures/week10lecture1slides.pdf[Week 10 Lecture Slides]
+* link:lectures/cs113week10lecture1.pdf[Week 10 Lecture 1 Notes]
+* link:lectures/cs113week10lecture2.pdf[Week 10 Lecture 2 Notes]
 
 //-----------------------------
 |11
