@@ -205,16 +205,12 @@
 * link:lecture_examples/w11l2/Employee.java[Employee.java]
 * link:lecture_examples/w11l2/Manager.java[Manager.java]
 
-
-
-
 //-----------------------------
 |12
 |Nov 17, 19 anchor:week12[]
-|*Interfaces, Linear Search* 
+|*Interfaces* 
 
 * Lab Nov 17: TBD
-* Assignment 05: Classes & Objects (due TBD)
 * Quiz 03 Nov 17: Objects, classes, inheritance
 * No class Nov 19
 |
@@ -224,12 +220,21 @@
 //-----------------------------
 |13
 |Nov 24 anchor:week13[]
-|*Binary Search*
+|*Linear Search, Binary Search*
 
 * Lab Nov 24: Inheritance, Sorting / Practice Quiz 04
 
 |
 * Chapter 12.8: Binary Search
+* link:lectures/cs113week12lecture1.pdf[Week 12 Lecture 1]
+* link:lecture_examples/Airplane.java[Airplane.java]
+* link:lecture_examples/Animal.java[Animal.java]
+* link:lecture_examples/Bird.java[Bird.java]
+* link:lecture_examples/Dog.java[Dog.java]
+* link:lecture_examples/Duck.java[Duck.java]
+* link:lecture_examples/Flyable.java[Flyable.java]
+* link:lecture_examples/Main.java[Main.java]
+* link:lecture_examples/Swimmable.java[Swimmable.java]
 
 //-----------------------------
 |14
@@ -238,7 +243,7 @@
 
 
 // * Assignment 11: Sorting, Due Dec 4
-* Assignment 06: Inheritance, Sorting
+* Assignment 05: Classes & Objects (due TBD)
 * Quiz 04 Dec 3: Inheritance / interfaces, linear search, binary search
 * Lab Dec 1: Sorting
 
@@ -255,6 +260,7 @@
 
 // * link:studyguide-final.html[Final Study Guide]
 // * Class April 28: Review Quizzo and party
+* Assignment 06: Inheritance, Sorting
 * Lab Dec 8: Runtime Analysis
 
 |
