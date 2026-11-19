@@ -136,6 +136,7 @@
 // link:lectures/Lecture-Week09-March17-OS-Processes.pdf[Lectures - March 17 and 19]
 * Chapter 9: Immutable Objects
 * Chapter 10: Mutable Objects
+* Chapter 15.3: Two-Dimensional Arrays
 * link:lectures/week8lectures.pdf[Week 8 Lectures]
 * link:lectures/113week8lecture1notes.pdf[Week 8 Lecture 1 Notes]
 * link:lectures/113week8lecture2notes.pdf[Week 8 Lecture 2 Notes]
@@ -210,22 +211,10 @@
 |Nov 17, 19 anchor:week12[]
 |*Interfaces* 
 
-* Lab Nov 17: TBD
 * Quiz 03 Nov 17: Objects, classes, inheritance
 * No class Nov 19
 |
 * Chapter 17.7: Interfaces 
-* Chapter 12.7: Sequential Search
-
-//-----------------------------
-|13
-|Nov 24 anchor:week13[]
-|*Linear Search, Binary Search*
-
-* Lab Nov 24: Inheritance, Sorting / Practice Quiz 04
-
-|
-* Chapter 12.8: Binary Search
 * link:lectures/cs113week12lecture1.pdf[Week 12 Lecture 1]
 * link:lecture_examples/Airplane.java[Airplane.java]
 * link:lecture_examples/Animal.java[Animal.java]
@@ -237,33 +226,40 @@
 * link:lecture_examples/Swimmable.java[Swimmable.java]
 
 //-----------------------------
+|13
+|Nov 24 anchor:week13[]
+|*Recap OOP in Java (Abstract Classes, Interfaces, Files, Exceptions), Intro to Maps*
+
+* Assignment 05: Abstract Classes & Interfaces (due December 7)
+* Lab Nov 24: Object-Oriented File Processing
+
+|
+
+//-----------------------------
 |14
 |Dec 1, 3 anchor:week14[]
-|*Sorting* 
+|*Maps Continued, Linear Search, Binary Search* 
 
 
 // * Assignment 11: Sorting, Due Dec 4
-* Assignment 05: Classes & Objects (due TBD)
-* Quiz 04 Dec 3: Inheritance / interfaces, linear search, binary search
-* Lab Dec 1: Sorting
+* Lab Dec 1: Searching & Runtime Analysis
 
 |
-* Chapter 13: Objects of Arrays
-// * link:lectures/Lecture-Week14-April21-C++.pdf[Lecture April 21, 23]
-// * link:lectures/mystring.cpp[mystring.cpp]
+* Chapter 12.7: Sequential Search
+* Chapter 12.8: Binary Search
 
 
 //-----------------------------
 |15
 |Dec 8, 10 anchor:week15[]
-|*Runtime Analysis, Final Review* 
+|*Sorting Algorithms, Runtime Analysis, Final Review* 
 
 // * link:studyguide-final.html[Final Study Guide]
 // * Class April 28: Review Quizzo and party
-* Assignment 06: Inheritance, Sorting
-* Lab Dec 8: Runtime Analysis
+* Lab Dec 8: Quiz 04 (Abstract classes, interfaces, maps)
 
 |
+* Chapter 13: Objects of Arrays
 
 |===
 
