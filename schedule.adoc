@@ -231,7 +231,7 @@
 |*Recap OOP in Java (Abstract Classes, Interfaces, Files, Exceptions), Intro to Maps*
 
 * Assignment 05: Abstract Classes & Interfaces (due December 7)
-* Lab Nov 24: Object-Oriented File Processing
+* Lab Nov 24: link:assts/lab09.html[Object-Oriented File Processing]
 
 |
 
