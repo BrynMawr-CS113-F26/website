@@ -233,10 +233,10 @@ You may temporarily modify `reading.txt` to test different cases. Restore the ex
 [discrete]
 = Grading Rubric
 
-This assignment will be out of 28 points:
+This assignment will be out of 31 points:
 
-* Interface, abstract class, and subclasses: 5 points
-* File input and object construction: 5 points
+* Interface, abstract class, and subclasses: 7 points
+* File input and object construction: 6 points
 * Three analysis methods: 9 points
 * Main program, output, and missing file handling: 9 points
 
