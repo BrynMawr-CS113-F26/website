@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.26">
-<title>Lab 9: Library Items &amp; Inheritance</title>
+<title>Lab 9: Object-Oriented Programming and Files</title>
 <link rel="stylesheet" href="../style/cs21.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -13,7 +13,7 @@
 <div id="header">
 </div>
 <div id="content">
-<h2 id="_lab_9_library_items_inheritance" class="discrete">Lab 9: Library Items &amp; Inheritance</h2>
+<h2 id="_lab_9_object_oriented_programming_and_files" class="discrete">Lab 9: Object-Oriented Programming and Files</h2>
 <h2 id="_objectives" class="discrete">Objectives</h2>
 <div class="paragraph">
 <p>By the end of this lab, you should be able to:</p>
@@ -38,7 +38,7 @@
 <p>Start by creating a <code>/lab9</code> folder for yourself.</p>
 </div>
 <div class="paragraph">
-<p>Complete all tasks that are labeled as <strong>TODO</strong>.</p>
+<p><strong>Run the following command to format your code as you work through this lab: <code>astyle --style=java YourJavaFileName.java</code>.</strong></p>
 </div>
 <h2 id="_overview" class="discrete">Overview</h2>
 <div class="paragraph">
@@ -48,120 +48,137 @@
 <p>Work through the sections in order. Compile and test your program after each section rather than waiting until the end.</p>
 </div>
 <hr>
-<h2 id="_1_library" class="discrete">1. Library</h2>
+<h2 id="_1_the_interface_and_abstract_class" class="discrete">1. The Interface and Abstract Class</h2>
 <div class="paragraph">
-<p>A library stores many kinds of items. A general library item has a title and an identification number. A book is a special kind of library item that also has an author.</p>
+<p>Create a java file called <code>Timed.java</code> and paste this code into it.
+Be sure to format the code using the <code>astyle</code> command.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>public interface Timed {
+    int getDuration();
+}</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p>Create three files in the your <code>/lab8</code> directory: <code>LibraryItem.java</code>, <code>Book.java</code>,
-and <code>Main.java</code>. You can use the <code>touch</code> command to do this. For example: <code>touch Book.java</code>.</p>
+<p>Create a java file called <code>CampusEvent.java</code> with the following starter code:</p>
 </div>
-<hr>
-<h2 id="_2_implement_the_parent_class" class="discrete">2. Implement the parent class</h2>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>public abstract class CampusEvent implements Timed {
+    private String name;
+
+    public CampusEvent(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+}</code></pre>
+</div>
+</div>
 <div class="paragraph">
-<p>Let&#8217;s get our starter code ready and formatted nicely.</p>
+<p>Answer these questions in <code>answers.txt</code>:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Create a new file called <code>LibraryItem.java</code>.</p>
+<p>Why can we not create an object using <code>new CampusEvent("Concert")</code>?</p>
 </li>
 <li>
-<p>Copy and paste the code below into your file.</p>
+<p>Why can <code>CampusEvent</code> omit the implementation of <code>getDuration()</code>?</p>
 </li>
 <li>
-<p>Hit <code>esc</code> and then <code>:wq</code> to save and quit out of your file.</p>
-</li>
-<li>
-<p>Run the following command to format your code: <code>astyle --style=java LibraryItem.java</code>.</p>
-</li>
-<li>
-<p>Open your <code>LibraryItem.java</code> file</p>
-</li>
-<li>
-<p>Answer the following questions before starting to program in a file called <code>answers.txt</code>.</p>
-</li>
-<li>
-<p>Follow the programming <code>TODOs</code> in the starter code.</p>
+<p>What must a concrete subclass do to satisfy the <code>Timed</code> interface?</p>
 </li>
 </ol>
 </div>
+<hr>
+<h2 id="_2_implement_two_subclasses" class="discrete">2. Implement Two Subclasses</h2>
 <div class="paragraph">
-<p>Questions before coding:</p>
+<p>Create two more java files: <code>Workshop.java</code> and <code>Film.java</code>.</p>
 </div>
 <div class="paragraph">
-<p>● Why are <code>title</code> and <code>id</code> marked <code>private</code>?</p>
+<p>For <code>Workshop.java</code>, implement the following subclass:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Extends <code>CampusEvent</code>.</p>
+</li>
+<li>
+<p>Has a private integer field representing the number of sessions.</p>
+</li>
+<li>
+<p>Each session lasts 30 minutes.</p>
+</li>
+<li>
+<p>Constructor: <code>Workshop(String name, int sessions)</code>.</p>
+</li>
+<li>
+<p>Implements <code>getDuration()</code> by returning the total duration of all sessions.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>● What is the difference between a constructor and a regular method?</p>
+<p>For <code>Film.java</code>, implement the following subclass:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Extends <code>CampusEvent</code>.</p>
+</li>
+<li>
+<p>Has a private integer field representing its duration in minutes.</p>
+</li>
+<li>
+<p>Constructor: <code>Film(String name, int minutes)</code>.</p>
+</li>
+<li>
+<p>Implements <code>getDuration()</code> by returning its duration.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Remember to use <code>super(name)</code> and <code>@Override</code> where appropriate.</p>
+</div>
+<hr>
+<h2 id="_3_test_polymorphism" class="discrete">3. Test Polymorphism</h2>
+<div class="paragraph">
+<p>Create <code>EventLab.java</code> with the following code:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>public class LibraryItem {
-    private String title;
-    private int id;
+<pre class="highlight"><code>public class EventLab {
+    public static void main(String[] args) {
+        CampusEvent[] events = new CampusEvent[2];
+        events[0] = new Workshop("Painting", 3);
+        events[1] = new Film("Documentary", 80);
 
-    // TODO 1: Write a constructor that takes a title and an id.
-
-
-
-    // TODO 2: Write getTitle() and getId() methods.
-
-
-
-
-    // TODO 3: Write describe() to return:
-    // "Item #12: The Hobbit"
-    // (using this object's actual id and title)
-
-
-
+        for (int i = 0; i < events.length; i++) {
+            System.out.println(events[i].getName() + ": "
+                    + events[i].getDuration() + " minutes");
+        }
+    }
 }</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p><strong>TODO</strong>: Show Prof. Shiptoski your work before continuing.</p>
-</div>
-<hr>
-<h2 id="_3_build_the_subclass" class="discrete">3. Build the subclass</h2>
-<div class="paragraph">
-<p>Copy the following code into the <code>Book.java</code> file.
-Follow the same instructions from part 2 to format your code before you begin programming.</p>
-</div>
-<div class="paragraph">
-<p>Questions before coding:</p>
-</div>
-<div class="paragraph">
-<p>● Does a <code>Book</code> need its own <code>title</code> field? Why or why not?</p>
+<p>Compile all your java files and run <code>java EventLab</code>. You should see this output:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>public class Book extends LibraryItem {
-    private String author;
-
-    // TODO 4: Write a constructor that accepts title, id, and author.
-    // Call the parent constructor using super(...).
-    // Store the author in the Book object.
-
-
-
-    // TODO 5: Write getAuthor().
-
-
-
-    // TODO 6: Override describe() to return:
-    // "Book #12: The Hobbit by J.R.R. Tolkien"
-    // Use @Override and inherited getters as needed.
-
-
-}</code></pre>
+<pre class="highlight"><code>Painting: 90 minutes
+Documentary: 80 minutes</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p><strong>TODO</strong>: Show Prof. Shiptoski your work before continuing.</p>
+<p>In your <code>answers.txt</code> file, explain why the same call to <code>getDuration()</code> behaves
+differently for the two objects.</p>
 </div>
 <hr>
-<h2 id="_4_test_your_classes" class="discrete">4. Test your classes</h2>
+<h2 id="_4_read_events_from_a_file" class="discrete">4. Read Events from a File</h2>
 <div class="paragraph">
 <p>Copy the following code into the <code>Main.java</code> file.
 Follow the same instructions from part 2 to format your code before you begin programming.</p>
@@ -240,7 +257,7 @@ should use the <code>Book</code> version.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-11-22 11:25:08 -0500
+Last updated 2026-11-22 11:35:09 -0500
 </div>
 </div>
 <script type="text/x-mathjax-config">

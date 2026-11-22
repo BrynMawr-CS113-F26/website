@@ -1,6 +1,6 @@
 include::header.adoc[]
 
-:title: Lab 9: Library Items & Inheritance
+:title: Lab 9: Object-Oriented Programming and Files
 :Author Initials: KRS
 :Date:    2026-11-22
 :Revision: 0.1
@@ -20,7 +20,8 @@ By the end of this lab, you should be able to:
 
 Start by creating a `/lab9` folder for yourself. 
 
-Complete all tasks that are labeled as **TODO**.
+**Run the following command to format your code as you work through this lab: `astyle --style=java YourJavaFileName.java`.**
+
 
 [discrete]
 = Overview
@@ -31,98 +32,100 @@ Work through the sections in order. Compile and test your program after each sec
 
 ---
 [discrete]
-= 1. Library
-A library stores many kinds of items. A general library item has a title and an identification number. A book is a special kind of library item that also has an author.
+= 1. The Interface and Abstract Class
 
-Create three files in the your `/lab8` directory: `LibraryItem.java`, `Book.java`,
-and `Main.java`. You can use the `touch` command to do this. For example: `touch Book.java`.
+Create a java file called `Timed.java` and paste this code into it.
+Be sure to format the code using the `astyle` command.
 
----
-[discrete]
-= 2. Implement the parent class
-
-Let's get our starter code ready and formatted nicely.
-
-1. Create a new file called `LibraryItem.java`. 
-2. Copy and paste the code below into your file.
-3. Hit `esc` and then `:wq` to save and quit out of your file.
-4. Run the following command to format your code: `astyle --style=java LibraryItem.java`.
-5. Open your `LibraryItem.java` file 
-6. Answer the following questions before starting to program in a file called `answers.txt`.
-7. Follow the programming `TODOs` in the starter code.
-
-Questions before coding:
-
-● Why are `title` and `id` marked `private`?
-
-● What is the difference between a constructor and a regular method?
-
-
-[source, subs="quotes"]
+[source]
 ----
-public class LibraryItem {
-    private String title;
-    private int id;
-
-    // TODO 1: Write a constructor that takes a title and an id.
-
-
-
-    // TODO 2: Write getTitle() and getId() methods.
-
-
-
-
-    // TODO 3: Write describe() to return:
-    // "Item #12: The Hobbit"
-    // (using this object's actual id and title)
-
-
-
+public interface Timed {
+    int getDuration();
 }
 ----
 
-**TODO**: Show Prof. Shiptoski your work before continuing.
+Create a java file called `CampusEvent.java` with the following starter code:
 
----
-[discrete]
-= 3. Build the subclass
-
-Copy the following code into the `Book.java` file.
-Follow the same instructions from part 2 to format your code before you begin programming.
-
-Questions before coding:
-
-● Does a `Book` need its own `title` field? Why or why not?
-
-[source, subs="quotes"]
+[source]
 ----
-public class Book extends LibraryItem {
-    private String author;
+public abstract class CampusEvent implements Timed {
+    private String name;
 
-    // TODO 4: Write a constructor that accepts title, id, and author.
-    // Call the parent constructor using super(...).
-    // Store the author in the Book object.
+    public CampusEvent(String name) {
+        this.name = name;
+    }
 
-
-
-    // TODO 5: Write getAuthor().
-
-
-
-    // TODO 6: Override describe() to return:
-    // "Book #12: The Hobbit by J.R.R. Tolkien"
-    // Use @Override and inherited getters as needed.
-
-
+    public String getName() {
+        return name;
+    }
 }
 ----
 
-**TODO**: Show Prof. Shiptoski your work before continuing.
+Answer these questions in `answers.txt`:
+
+1. Why can we not create an object using `new CampusEvent("Concert")`?
+2. Why can `CampusEvent` omit the implementation of `getDuration()`?
+3. What must a concrete subclass do to satisfy the `Timed` interface?
 
 ---
 [discrete]
-= 4. Test your classes
+= 2. Implement Two Subclasses
+
+Create two more java files: `Workshop.java` and `Film.java`.
+
+For `Workshop.java`, implement the following subclass:
+
+- Extends `CampusEvent`.
+- Has a private integer field representing the number of sessions.
+- Each session lasts 30 minutes.
+- Constructor: `Workshop(String name, int sessions)`.
+- Implements `getDuration()` by returning the total duration of all sessions.
+
+For `Film.java`, implement the following subclass:
+
+- Extends `CampusEvent`.
+- Has a private integer field representing its duration in minutes.
+- Constructor: `Film(String name, int minutes)`.
+- Implements `getDuration()` by returning its duration.
+
+Remember to use `super(name)` and `@Override` where appropriate.
+
+---
+[discrete]
+= 3. Test Polymorphism
+
+Create `EventLab.java` with the following code:
+
+[source, subs="quotes"]
+----
+public class EventLab {
+    public static void main(String[] args) {
+        CampusEvent[] events = new CampusEvent[2];
+        events[0] = new Workshop("Painting", 3);
+        events[1] = new Film("Documentary", 80);
+
+        for (int i = 0; i < events.length; i++) {
+            System.out.println(events[i].getName() + ": "
+                    + events[i].getDuration() + " minutes");
+        }
+    }
+}
+----
+
+Compile all your java files and run `java EventLab`. You should see this output:
+
+[source]
+----
+Painting: 90 minutes
+Documentary: 80 minutes
+----
+
+In your `answers.txt` file, explain why the same call to `getDuration()` behaves
+differently for the two objects.
+
+---
+[discrete]
+= 4. Read Events from a File
 
 
 Copy the following code into the `Main.java` file.
