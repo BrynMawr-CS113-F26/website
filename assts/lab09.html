@@ -14,6 +14,9 @@
 </div>
 <div id="content">
 <h2 id="_lab_9_object_oriented_programming_and_files" class="discrete">Lab 9: Object-Oriented Programming and Files</h2>
+<div class="paragraph">
+<p><strong>due Dec 2 at midnight</strong></p>
+</div>
 <h2 id="_objectives" class="discrete">Objectives</h2>
 <div class="paragraph">
 <p>By the end of this lab, you should be able to:</p>
@@ -38,7 +41,10 @@
 <p>Start by creating a <code>/lab9</code> folder for yourself.</p>
 </div>
 <div class="paragraph">
-<p><strong>Run the following command to format your code as you work through this lab: <code>astyle --style=java YourJavaFileName.java</code>.</strong></p>
+<p>Run the following command to format your code as you work through this lab: <code>astyle --style=java YourJavaFileName.java</code>.</p>
+</div>
+<div class="paragraph">
+<p>Hint: to quickly recompile all your java files, run <code>javac *.java</code>.</p>
 </div>
 <h2 id="_overview" class="discrete">Overview</h2>
 <div class="paragraph">
@@ -180,84 +186,118 @@ differently for the two objects.</p>
 <hr>
 <h2 id="_4_read_events_from_a_file" class="discrete">4. Read Events from a File</h2>
 <div class="paragraph">
-<p>Copy the following code into the <code>Main.java</code> file.
-Follow the same instructions from part 2 to format your code before you begin programming.</p>
+<p>Create a file called <code>events.txt</code> with exactly the following contents:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>public class Main {
-    public static void main(String[] args) {
-        LibraryItem item = new LibraryItem("Map", 5);
-        Book book = new Book("The Hobbit", 12, "J.R.R. Tolkien");
+<pre class="highlight"><code>4
+WORKSHOP Painting 3
+FILM Documentary 80
+WORKSHOP Robotics 2
+FILM Animation 95</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The first integer is the number of events. Each subsequent record contains a type, a one-word name, and an integer. You may assume the input is correctly formatted and all numbers are positive.</p>
+</div>
+<div class="paragraph">
+<p>Add the following method to <code>EventLab</code> (imports belong at the top of the file):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>public static CampusEvent[] readEvents(String filename)
+        throws FileNotFoundException {
+    try (Scanner input = new Scanner(new File(filename))) {
+        int count = input.nextInt();
+        CampusEvent[] events = new CampusEvent[count];
 
-        System.out.println(item.describe());
-        System.out.println(book.describe());
+        for (int i = 0; i < count; i++) {
+            String type = input.next();
+            String name = input.next();
+            int value = input.nextInt();
 
-        // TODO 7: Make a second Book of your choice.
-        // Print its title, author, and description.
+            // TODO: Create the appropriate subclass and store it
+            // in events[i].
+        }
 
-        // TODO 8: Predict the output of the next two lines.
-        LibraryItem anotherItem = book;
-        System.out.println(anotherItem.describe());
+        return events;
     }
 }</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Compile/run from the directory containing all three files:</p>
+<p>Complete the <strong>TODO</strong>. Update <code>main</code> to call <code>readEvents("events.txt")</code> instead of constructing the two objects manually. Add <code>throws FileNotFoundException</code> to the declaration of <code>main</code> or handle the exception with a <code>try</code>/<code>catch</code> block.</p>
+</div>
+<hr>
+<h2 id="_5_process_the_array" class="discrete">5. Process the Array</h2>
+<div class="paragraph">
+<p>In <code>EventLab</code>, implement a method with the following signature:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>javac LibraryItem.java Book.java Main.java
-java Main</code></pre>
+<pre class="highlight"><code>public static int totalDuration(CampusEvent[] events)</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Expected output for the supplied objects:</p>
+<p>Return the sum of the durations of all events. Call this method from <code>main</code> and print the result after printing each event.</p>
+</div>
+<div class="paragraph">
+<p>After saving and compiling all your java files, run <code>java EventLab</code> again. You
+should get the following output:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>Item #5: Map
-Book #12: The Hobbit by J.R.R. Tolkien</code></pre>
+<pre class="highlight"><code>Painting: 90 minutes
+Documentary: 80 minutes
+Robotics: 60 minutes
+Animation: 95 minutes
+Total: 325 minutes</code></pre>
 </div>
 </div>
+<hr>
+<h2 id="_submit_your_work" class="discrete">Submit Your Work</h2>
 <div class="paragraph">
-<p>The later output depends on your own second book; the final <code>anotherItem.describe()</code>
-should use the <code>Book</code> version.</p>
+<p>Upload the following files to Gradescope:</p>
 </div>
-<div class="paragraph">
-<p>Answer the following questions:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
+<div class="ulist">
+<ul>
 <li>
-<p>Which class is the superclass? Which is the subclass?</p>
+<p><code>Timed.java</code></p>
 </li>
 <li>
-<p>Explain why <code>super(title, id)</code> belongs in the <code>Book</code> constructor.</p>
+<p><code>CampusEvent.java</code></p>
 </li>
 <li>
-<p>Is <code>Book</code> an example of an <strong>is-a</strong> or <strong>has-a</strong> relationship with <code>LibraryItem</code>?</p>
+<p><code>Workshop.java</code></p>
 </li>
 <li>
-<p>Why does <code>anotherItem.describe()</code> call the <code>Book</code> version even though <code>anotherItem</code> is declared as <code>LibraryItem</code>?</p>
+<p><code>Film.java</code></p>
 </li>
-</ol>
+<li>
+<p><code>EventLab.java</code></p>
+</li>
+<li>
+<p><code>events.txt</code></p>
+</li>
+<li>
+<p><code>answers.txt</code> (four short conceptual responses)</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br>
-&#160;<br></p>
-</div>
-<div class="paragraph">
-<p><strong>TODO</strong>: Show Prof. Shiptoski your work and then you are all done with lab 7.</p>
+<p>Submit your own work. If you are stuck, submit what you have completed and include a brief description of the issue in <code>answers.txt</code>.</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-11-22 11:35:09 -0500
+Last updated 2026-11-22 11:43:35 -0500
 </div>
 </div>
 <script type="text/x-mathjax-config">

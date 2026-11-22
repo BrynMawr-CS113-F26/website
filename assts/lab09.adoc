@@ -8,6 +8,8 @@ include::header.adoc[]
 [discrete]
 = {title}
 
+**due Dec 2 at midnight**
+
 [discrete]
 = Objectives
 
@@ -20,7 +22,9 @@ By the end of this lab, you should be able to:
 
 Start by creating a `/lab9` folder for yourself. 
 
-**Run the following command to format your code as you work through this lab: `astyle --style=java YourJavaFileName.java`.**
+Run the following command to format your code as you work through this lab: `astyle --style=java YourJavaFileName.java`.
+
+Hint: to quickly recompile all your java files, run `javac *.java`.
 
 
 [discrete]
@@ -127,63 +131,92 @@ differently for the two objects.
 [discrete]
 = 4. Read Events from a File
 
+Create a file called `events.txt` with exactly the following contents:
 
-Copy the following code into the `Main.java` file.
-Follow the same instructions from part 2 to format your code before you begin programming.
+[source]
+----
+4
+WORKSHOP Painting 3
+FILM Documentary 80
+WORKSHOP Robotics 2
+FILM Animation 95
+----
+
+The first integer is the number of events. Each subsequent record contains a type, a one-word name, and an integer. You may assume the input is correctly formatted and all numbers are positive.
+
+Add the following method to `EventLab` (imports belong at the top of the file):
+
 
 [source, subs="quotes"]
 ----
-public class Main {
-    public static void main(String[] args) {
-        LibraryItem item = new LibraryItem("Map", 5);
-        Book book = new Book("The Hobbit", 12, "J.R.R. Tolkien");
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+----
 
-        System.out.println(item.describe());
-        System.out.println(book.describe());
+[source, subs="quotes"]
+----
+public static CampusEvent[] readEvents(String filename)
+        throws FileNotFoundException {
+    try (Scanner input = new Scanner(new File(filename))) {
+        int count = input.nextInt();
+        CampusEvent[] events = new CampusEvent[count];
 
-        // TODO 7: Make a second Book of your choice.
-        // Print its title, author, and description.
+        for (int i = 0; i < count; i++) {
+            String type = input.next();
+            String name = input.next();
+            int value = input.nextInt();
 
-        // TODO 8: Predict the output of the next two lines.
-        LibraryItem anotherItem = book;
-        System.out.println(anotherItem.describe());
+            // TODO: Create the appropriate subclass and store it
+            // in events[i].
+        }
+
+        return events;
     }
 }
 ----
 
-Compile/run from the directory containing all three files:
+Complete the **TODO**. Update `main` to call `readEvents("events.txt")` instead of constructing the two objects manually. Add `throws FileNotFoundException` to the declaration of `main` or handle the exception with a `try`/`catch` block.
 
-[source, subs="quotes"]
-----
-javac LibraryItem.java Book.java Main.java
-java Main
-----
+---
+[discrete]
+= 5. Process the Array
 
-Expected output for the supplied objects:
+In `EventLab`, implement a method with the following signature:
 
-[source, subs="quotes"]
+[source]
 ----
-Item #5: Map
-Book #12: The Hobbit by J.R.R. Tolkien
+public static int totalDuration(CampusEvent[] events)
 ----
 
-The later output depends on your own second book; the final `anotherItem.describe()` 
-should use the `Book` version.
+Return the sum of the durations of all events. Call this method from `main` and print the result after printing each event.
 
-Answer the following questions:
+After saving and compiling all your java files, run `java EventLab` again. You
+should get the following output:
 
-1. Which class is the superclass? Which is the subclass?
-2. Explain why `super(title, id)` belongs in the `Book` constructor.
-3. Is `Book` an example of an **is-a** or **has-a** relationship with `LibraryItem`?
-4. Why does `anotherItem.describe()` call the `Book` version even though `anotherItem` is declared as `LibraryItem`?
+[source]
+----
+Painting: 90 minutes
+Documentary: 80 minutes
+Robotics: 60 minutes
+Animation: 95 minutes
+Total: 325 minutes
+----
+
+---
+[discrete]
+= Submit Your Work
+
+Upload the following files to Gradescope:
+
+- `Timed.java`
+- `CampusEvent.java`
+- `Workshop.java`
+- `Film.java`
+- `EventLab.java`
+- `events.txt`
+- `answers.txt` (four short conceptual responses)
+
+Submit your own work. If you are stuck, submit what you have completed and include a brief description of the issue in `answers.txt`.
 
 
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-
-
-
-**TODO**: Show Prof. Shiptoski your work and then you are all done with lab 7.
