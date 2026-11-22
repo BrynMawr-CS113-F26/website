@@ -1,0 +1,273 @@
+include::header.adoc[]
+
+:title: Homework 5: Reading Tracker
+:Author Initials: KRS
+:Date:    2026-11-24
+:Revision: 0.1
+
+[discrete]
+= {title}
+
+**Due Dec 1 at midnight**
+
+[discrete]
+= Overview
+
+For our final programming homework, you will implement a small reading 
+tracker that stores information about books and articles, reads records 
+from a file, and produces a reading summary.
+
+The goal is to bring together concepts from throughout the semester: 
+classes, constructors, inheritance, interfaces, polymorphism, arrays,
+loops, methods, and file input.
+
+You do not need maps, sorting, a graphical interface, or any additional
+Java libraries beyond those used for file input.
+
+
+[discrete]
+= Set Up
+
+To work on this homework, follow these steps:
+
+1. On Mac, open the Terminal program. On Windows, open the PowerShell program.
+2. Log into goldengate by using the ssh command from your personal laptop: `ssh your-username@goldengate.cs.brynmawr.edu`.
+3. Run these commands:
+
+[source, subs="quotes"]
+----
+$ cd cs113
+$ ls 
+----
+
+If you see a homeworks directory, cd into it. Then, call `mkdir hw5` to create your homework 5 
+directory. Finally, call `cd hw5`.
+
+Remember your vim commands:
+
+* `vim Filename.java`: creates a file named Filename.java
+* `i`:  enter insert mode
+* `esc`: exit insert mode (you must exit insert mode in order to save and quit)
+* `:wq`: save the file and close vim
+
+
+---
+[discrete]
+= 1. Define the Interface
+
+Create a java file: `ReadableItem.java` with the following code.
+
+[source, subs="quotes"]
+----
+public interface ReadableItem {
+    int getReadingMinutes();
+}
+----
+
+The method returns the estimated time required to finish reading an item.
+
+---
+[discrete]
+= 2. Define the Abstract Parent Class
+
+Create an abstract class named `ReadingItem` that implements `ReadableItem`.
+
+Requirements:
+
+- Private fields: `String title` and `int pages`.
+- Constructor: `ReadingItem(String title, int pages)`.
+- Public getters: `String getTitle()` and `int getPages()`.
+- Abstract public method: `String getType()`.
+
+Do not provide an implementation of `getReadingMinutes()` in this class. Each concrete subclass will implement the method differently.
+
+---
+[discrete]
+= 3. Implement Two Subclasses
+
+Create a class named `Book` that extends `ReadingItem`.
+
+Requirements:
+
+- Constructor: `Book(String title, int pages)`.
+- `getType()` returns `"BOOK"`.
+- `getReadingMinutes()` returns three minutes per page.
+
+Create a class named `Article` that extends `ReadingItem`.
+
+- Constructor: `Article(String title, int pages)`.
+- `getType()` returns `"ARTICLE"`.
+- `getReadingMinutes()` returns five minutes per page.
+
+For this assignment, the reading rates are fixed estimates, not realistic predictions of any particular person's reading speed.
+
+Use the parent constructor rather than duplicating inherited fields. Use `@Override` for overridden methods.
+
+---
+[discrete]
+= 4. Read the Input File
+
+Create a class named `ReadingTracker`. Implement the following method:
+
+[source]
+----
+public static ReadingItem[] loadItems(String filename)
+        throws FileNotFoundException
+----
+
+The input file begins with an integer specifying the number of records. Each following record consists of a type, a title (one word, with underscores allowed), and a positive integer page count.
+
+Example `reading.txt`:
+
+[source]
+----
+5
+BOOK The_Hobbit 300
+ARTICLE Operating_Systems 12
+BOOK Kindred 264
+ARTICLE Computer_History 8
+BOOK Coraline 160
+----
+
+Your method should:
+
+1. Open the file using a `Scanner` and `File`.
+2. Read the number of records and allocate an array of the appropriate size.
+3. Read each record and construct either a `Book` or an `Article`.
+4. Store each object in the array.
+5. Close the scanner and return the array.
+
+You may assume all files are correctly formatted, contain only the two supported item types, and have nonnegative record counts. A file containing only `0` represents an empty reading list. Preserve titles exactly as provided.
+
+---
+[discrete]
+= 5. Analyze the Reading List
+
+Implement these public static methods in `ReadingTracker`.
+
+Total Reading Time:
+
+[source]
+----
+public static int totalReadingMinutes(ReadingItem[] items)
+----
+
+Return the sum of the estimated reading times of all items. Return `0` for an empty array.
+
+Count Items By Type:
+
+[source]
+----
+public static int countByType(ReadingItem[] items, String type)
+----
+
+Return the number of items whose type exactly matches `type`. Use `.equals()` for string comparison. Return `0` when no items match.
+
+Find the Longest Read:
+
+[source]
+----
+public static ReadingItem longestRead(ReadingItem[] items)
+----
+
+Return the item with the greatest estimated reading time. If multiple items tie, return the first one. Return `null` for an empty array.
+
+---
+[discrete]
+= 6. Putting It All Together
+
+Implement `main` in `ReadingTracker.java`.
+
+Your program should load `reading.txt`, print the items in input order, and display a summary.
+
+For the example input file, the output should be:
+
+[source]
+----
+BOOK The_Hobbit: 300 pages, 900 minutes
+ARTICLE Operating_Systems: 12 pages, 60 minutes
+BOOK Kindred: 264 pages, 792 minutes
+ARTICLE Computer_History: 8 pages, 40 minutes
+BOOK Coraline: 160 pages, 480 minutes
+Total reading time: 2272 minutes
+Books: 3
+Articles: 2
+Longest read: The_Hobbit
+----
+
+For an empty file, the output should be:
+
+[source]
+----
+Total reading time: 0 minutes
+Books: 0
+Articles: 0
+Longest read: None
+----
+
+Your `main` method must catch a `FileNotFoundException` if the input file cannot be opened, print `Unable to open reading.txt`, and terminate normally.
+
+---
+[discrete]
+= 7. Testing Your Program
+
+Compile and run your program:
+
+[source]
+----
+javac *.java
+java ReadingTracker
+----
+
+Test at least the following cases:
+
+- The example input file.
+- A file containing only one article or book.
+- A file containing items with equal estimated reading times.
+- An empty reading list (a file containing `0`).
+- A missing input file.
+
+You may temporarily modify `reading.txt` to test different cases. Restore the example input before submitting.
+
+---
+[discrete]
+= Grading Rubric
+
+This assignment will be out of 28 points:
+
+* Interface, abstract class, and subclasses: 5 points
+* File input and object construction: 5 points
+* Three analysis methods: 9 points
+* Main program, output, and missing file handling: 9 points
+
+---
+[discrete]
+= Submitting
+
+In a text file (call `vim readme.txt`) answer the following questions:
+
+1. How much time did you spend on the homework?
+2. What did you learn from the homework?
+
+
+Finally, you need to copy your files from the server to your personal computer for submission.
+
+Close your connection to goldengate (type `exit`), and then run the following command:
+
+`$ scp -r <username>@goldengate.cs.brynmawr.edu:/home/<username>/cs113/homeworks/hw5/ .`
+
+Make sure to replace `<username>` with your username. There is a space between `hw5/` and `.`. scp is a command to secure-copy files from one server to another. In this case, from goldengate to your own machine.
+
+Submit the following files to the assignment called `HW05` on Gradescope.
+
+- `ReadableItem.java`
+- `ReadingItem.java`
+- `Book.java`
+- `Article.java`
+- `ReadingTracker.java`
+- `reading.txt`
+- `readme.txt`
+
+Do not upload compiled `.class` files.
+
+

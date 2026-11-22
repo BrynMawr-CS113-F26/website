@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.26">
+<title>Homework 5: Reading Tracker</title>
+<link rel="stylesheet" href="../style/cs21.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<h2 id="_homework_5_reading_tracker" class="discrete">Homework 5: Reading Tracker</h2>
+<div class="paragraph">
+<p><strong>Due Dec 1 at midnight</strong></p>
+</div>
+<h2 id="_overview" class="discrete">Overview</h2>
+<div class="paragraph">
+<p>For our final programming homework, you will implement a small reading
+tracker that stores information about books and articles, reads records
+from a file, and produces a reading summary.</p>
+</div>
+<div class="paragraph">
+<p>The goal is to bring together concepts from throughout the semester:
+classes, constructors, inheritance, interfaces, polymorphism, arrays,
+loops, methods, and file input.</p>
+</div>
+<div class="paragraph">
+<p>You do not need maps, sorting, a graphical interface, or any additional
+Java libraries beyond those used for file input.</p>
+</div>
+<h2 id="_set_up" class="discrete">Set Up</h2>
+<div class="paragraph">
+<p>To work on this homework, follow these steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>On Mac, open the Terminal program. On Windows, open the PowerShell program.</p>
+</li>
+<li>
+<p>Log into goldengate by using the ssh command from your personal laptop: <code>ssh <a href="mailto:your-username@goldengate.cs.brynmawr.edu">your-username@goldengate.cs.brynmawr.edu</a></code>.</p>
+</li>
+<li>
+<p>Run these commands:</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$ cd cs113
+$ ls</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you see a homeworks directory, cd into it. Then, call <code>mkdir hw5</code> to create your homework 5
+directory. Finally, call <code>cd hw5</code>.</p>
+</div>
+<div class="paragraph">
+<p>Remember your vim commands:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>vim Filename.java</code>: creates a file named Filename.java</p>
+</li>
+<li>
+<p><code>i</code>:  enter insert mode</p>
+</li>
+<li>
+<p><code>esc</code>: exit insert mode (you must exit insert mode in order to save and quit)</p>
+</li>
+<li>
+<p><code>:wq</code>: save the file and close vim</p>
+</li>
+</ul>
+</div>
+<hr>
+<h2 id="_1_define_the_interface" class="discrete">1. Define the Interface</h2>
+<div class="paragraph">
+<p>Create a java file: <code>ReadableItem.java</code> with the following code.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>public interface ReadableItem {
+    int getReadingMinutes();
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The method returns the estimated time required to finish reading an item.</p>
+</div>
+<hr>
+<h2 id="_2_define_the_abstract_parent_class" class="discrete">2. Define the Abstract Parent Class</h2>
+<div class="paragraph">
+<p>Create an abstract class named <code>ReadingItem</code> that implements <code>ReadableItem</code>.</p>
+</div>
+<div class="paragraph">
+<p>Requirements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Private fields: <code>String title</code> and <code>int pages</code>.</p>
+</li>
+<li>
+<p>Constructor: <code>ReadingItem(String title, int pages)</code>.</p>
+</li>
+<li>
+<p>Public getters: <code>String getTitle()</code> and <code>int getPages()</code>.</p>
+</li>
+<li>
+<p>Abstract public method: <code>String getType()</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Do not provide an implementation of <code>getReadingMinutes()</code> in this class. Each concrete subclass will implement the method differently.</p>
+</div>
+<hr>
+<h2 id="_3_implement_two_subclasses" class="discrete">3. Implement Two Subclasses</h2>
+<div class="paragraph">
+<p>Create a class named <code>Book</code> that extends <code>ReadingItem</code>.</p>
+</div>
+<div class="paragraph">
+<p>Requirements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Constructor: <code>Book(String title, int pages)</code>.</p>
+</li>
+<li>
+<p><code>getType()</code> returns <code>"BOOK"</code>.</p>
+</li>
+<li>
+<p><code>getReadingMinutes()</code> returns three minutes per page.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Create a class named <code>Article</code> that extends <code>ReadingItem</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Constructor: <code>Article(String title, int pages)</code>.</p>
+</li>
+<li>
+<p><code>getType()</code> returns <code>"ARTICLE"</code>.</p>
+</li>
+<li>
+<p><code>getReadingMinutes()</code> returns five minutes per page.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For this assignment, the reading rates are fixed estimates, not realistic predictions of any particular person&#8217;s reading speed.</p>
+</div>
+<div class="paragraph">
+<p>Use the parent constructor rather than duplicating inherited fields. Use <code>@Override</code> for overridden methods.</p>
+</div>
+<hr>
+<h2 id="_4_read_the_input_file" class="discrete">4. Read the Input File</h2>
+<div class="paragraph">
+<p>Create a class named <code>ReadingTracker</code>. Implement the following method:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>public static ReadingItem[] loadItems(String filename)
+        throws FileNotFoundException</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The input file begins with an integer specifying the number of records. Each following record consists of a type, a title (one word, with underscores allowed), and a positive integer page count.</p>
+</div>
+<div class="paragraph">
+<p>Example <code>reading.txt</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>5
+BOOK The_Hobbit 300
+ARTICLE Operating_Systems 12
+BOOK Kindred 264
+ARTICLE Computer_History 8
+BOOK Coraline 160</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Your method should:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open the file using a <code>Scanner</code> and <code>File</code>.</p>
+</li>
+<li>
+<p>Read the number of records and allocate an array of the appropriate size.</p>
+</li>
+<li>
+<p>Read each record and construct either a <code>Book</code> or an <code>Article</code>.</p>
+</li>
+<li>
+<p>Store each object in the array.</p>
+</li>
+<li>
+<p>Close the scanner and return the array.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>You may assume all files are correctly formatted, contain only the two supported item types, and have nonnegative record counts. A file containing only <code>0</code> represents an empty reading list. Preserve titles exactly as provided.</p>
+</div>
+<hr>
+<h2 id="_5_analyze_the_reading_list" class="discrete">5. Analyze the Reading List</h2>
+<div class="paragraph">
+<p>Implement these public static methods in <code>ReadingTracker</code>.</p>
+</div>
+<div class="paragraph">
+<p>Total Reading Time:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>public static int totalReadingMinutes(ReadingItem[] items)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Return the sum of the estimated reading times of all items. Return <code>0</code> for an empty array.</p>
+</div>
+<div class="paragraph">
+<p>Count Items By Type:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>public static int countByType(ReadingItem[] items, String type)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Return the number of items whose type exactly matches <code>type</code>. Use <code>.equals()</code> for string comparison. Return <code>0</code> when no items match.</p>
+</div>
+<div class="paragraph">
+<p>Find the Longest Read:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>public static ReadingItem longestRead(ReadingItem[] items)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Return the item with the greatest estimated reading time. If multiple items tie, return the first one. Return <code>null</code> for an empty array.</p>
+</div>
+<hr>
+<h2 id="_6_putting_it_all_together" class="discrete">6. Putting It All Together</h2>
+<div class="paragraph">
+<p>Implement <code>main</code> in <code>ReadingTracker.java</code>.</p>
+</div>
+<div class="paragraph">
+<p>Your program should load <code>reading.txt</code>, print the items in input order, and display a summary.</p>
+</div>
+<div class="paragraph">
+<p>For the example input file, the output should be:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>BOOK The_Hobbit: 300 pages, 900 minutes
+ARTICLE Operating_Systems: 12 pages, 60 minutes
+BOOK Kindred: 264 pages, 792 minutes
+ARTICLE Computer_History: 8 pages, 40 minutes
+BOOK Coraline: 160 pages, 480 minutes
+Total reading time: 2272 minutes
+Books: 3
+Articles: 2
+Longest read: The_Hobbit</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For an empty file, the output should be:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>Total reading time: 0 minutes
+Books: 0
+Articles: 0
+Longest read: None</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Your <code>main</code> method must catch a <code>FileNotFoundException</code> if the input file cannot be opened, print <code>Unable to open reading.txt</code>, and terminate normally.</p>
+</div>
+<hr>
+<h2 id="_7_testing_your_program" class="discrete">7. Testing Your Program</h2>
+<div class="paragraph">
+<p>Compile and run your program:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>javac *.java
+java ReadingTracker</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Test at least the following cases:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The example input file.</p>
+</li>
+<li>
+<p>A file containing only one article or book.</p>
+</li>
+<li>
+<p>A file containing items with equal estimated reading times.</p>
+</li>
+<li>
+<p>An empty reading list (a file containing <code>0</code>).</p>
+</li>
+<li>
+<p>A missing input file.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You may temporarily modify <code>reading.txt</code> to test different cases. Restore the example input before submitting.</p>
+</div>
+<hr>
+<h2 id="_grading_rubric" class="discrete">Grading Rubric</h2>
+<div class="paragraph">
+<p>This assignment will be out of 28 points:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Interface, abstract class, and subclasses: 5 points</p>
+</li>
+<li>
+<p>File input and object construction: 5 points</p>
+</li>
+<li>
+<p>Three analysis methods: 9 points</p>
+</li>
+<li>
+<p>Main program, output, and missing file handling: 9 points</p>
+</li>
+</ul>
+</div>
+<hr>
+<h2 id="_submitting" class="discrete">Submitting</h2>
+<div class="paragraph">
+<p>In a text file (call <code>vim readme.txt</code>) answer the following questions:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>How much time did you spend on the homework?</p>
+</li>
+<li>
+<p>What did you learn from the homework?</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Finally, you need to copy your files from the server to your personal computer for submission.</p>
+</div>
+<div class="paragraph">
+<p>Close your connection to goldengate (type <code>exit</code>), and then run the following command:</p>
+</div>
+<div class="paragraph">
+<p><code>$ scp -r &lt;username&gt;@goldengate.cs.brynmawr.edu:/home/&lt;username&gt;/cs113/homeworks/hw5/ .</code></p>
+</div>
+<div class="paragraph">
+<p>Make sure to replace <code>&lt;username&gt;</code> with your username. There is a space between <code>hw5/</code> and <code>.</code>. scp is a command to secure-copy files from one server to another. In this case, from goldengate to your own machine.</p>
+</div>
+<div class="paragraph">
+<p>Submit the following files to the assignment called <code>HW05</code> on Gradescope.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>ReadableItem.java</code></p>
+</li>
+<li>
+<p><code>ReadingItem.java</code></p>
+</li>
+<li>
+<p><code>Book.java</code></p>
+</li>
+<li>
+<p><code>Article.java</code></p>
+</li>
+<li>
+<p><code>ReadingTracker.java</code></p>
+</li>
+<li>
+<p><code>reading.txt</code></p>
+</li>
+<li>
+<p><code>readme.txt</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Do not upload compiled <code>.class</code> files.</p>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2026-11-22 13:31:02 -0500
+</div>
+</div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+})
+MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
+  MathJax.InputJax.AsciiMath.postfilterHooks.Add(function (data, node) {
+    if ((node = data.script.parentNode) && (node = node.parentNode) && node.classList.contains("stemblock")) {
+      data.math.root.display = "block"
+    }
+    return data
+  })
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>
