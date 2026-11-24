@@ -231,8 +231,8 @@
 |*Recap OOP in Java (Abstract Classes, Interfaces, Files, Exceptions), Intro to Maps*
 
 * Assignment 05: link:assts/homework05.html[Reading Tracer: Abstract Classes & Interfaces], due Dec 7
-* Assignment 04: link:assts/homework04.html[Word Play & Blackjack], due Oct 26 at midnight
-* Lab Nov 24: link:assts/lab09.html[Object-Oriented File Processing]
+* Watch on your own: link:https://youtu.be/Zuaca2bADfc[Video Lecture on OOP, and HashMaps]
+* (Async) Lab Nov 24: link:assts/lab09.html[Object-Oriented File Processing], due Dec 2
 
 |
 

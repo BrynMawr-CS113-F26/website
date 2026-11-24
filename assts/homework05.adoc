@@ -8,7 +8,7 @@ include::header.adoc[]
 [discrete]
 = {title}
 
-**Due Dec 1 at midnight**
+**Due Dec 7 at midnight**
 
 [discrete]
 = Overview
